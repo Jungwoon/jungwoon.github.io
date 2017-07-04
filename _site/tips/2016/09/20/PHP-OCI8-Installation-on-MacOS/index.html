@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="EVERYTHING YOU NEED FOR DEVELOPMENT">
+
+    <title>PHP OCI8 Installation on MacOS - Jungwoon Blog</title>
+
+    <link rel="canonical" href="http://localhost:4000/tips/2016/09/20/PHP-OCI8-Installation-on-MacOS/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jungwoon Blog" />
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Jungwoon Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+				
+                <li>
+                    <a href="/about/">About</a>
+                </li>
+				
+                
+				
+                <li>
+                    <a href="/contact/">Contact</a>
+                </li>
+				
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>PHP OCI8 Installation on MacOS</h1>
+                    
+                    <span class="meta">Posted by Jungwoon Blog on September 20, 2016</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<h3 id="macos에서-oci8-설치가이드">MacOS에서 OCI8 설치가이드!!</h3>
+
+<p>El Capitan 이후 버전에서는 다음 설정을 해주어야 설치가 됩니다.</p>
+
+<ul>
+  <li>Restart your Mac.</li>
+  <li>Before OS X starts up, hold down Command-R and keep it held down until you see an Apple icon and a progress bar. Release. This boots you into Recovery.</li>
+  <li>From the Utilities menu, select Terminal.</li>
+  <li>At the prompt type exactly the following and then press Return: csrutil disable</li>
+  <li>Terminal should display a message that SIP was disabled.</li>
+  <li>From the  menu, select Restart.</li>
+</ul>
+
+<p>일단은 아래 사이트에서 밑에 3가지 파일을 다운 받습니다.</p>
+
+<p><a href="http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html">다운로드 사이트</a></p>
+
+<p><code class="highlighter-rouge">instantclient-basic-macos.x64–11.2.0.3.0.zip</code></p>
+
+<p><code class="highlighter-rouge">instantclient-sqlplus-macos.x64–11.2.0.3.0.zip</code></p>
+
+<p><code class="highlighter-rouge">instantclient-sdk-macos.x64–11.2.0.3.0.zip</code></p>
+
+<p>그 다음 터미널에서 unzip 명령을 써서 압축을 풀어줍니다.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ unzip instantclient-sdk-macos.x32–11.2.0.4.0.zip
+</code></pre>
+</div>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*r33cqEGtYOERVM7EjsuHDg.png" alt="img" /></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*_zHUTwkdBp0jpCiO4aHoRQ.png" alt="img" /></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*On-7LrbRcR1v9feetMOIAw.png" alt="img" /></p>
+
+<p>이렇게 다 풀고 나면 각각 폴더가 생기는 것이 아니라 하나의 폴더에 들어갑니다.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*G_EcFvc34YJ0zLI2F8jQGw.png" alt="img" /></p>
+
+<p><code class="highlighter-rouge">Directory Name : instantclient_11_2</code></p>
+
+<p>그 다음 /usr/local에 oracle 디렉토리를 만들고 위에서 생성된 ‘instantclient_11_2’를 oracle 밑에 이동시켜줍니다.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ mkdir /usr/local/oracle
+$ mv instantclient_11_2 /usr/local/oracle
+</code></pre>
+</div>
+
+<p>그 다음 문서에서 처럼 심볼릭 링크를 잡아주어야 합니다.</p>
+
+<p>(<em>Tip</em> : 여기서 <code class="highlighter-rouge">/usr/local/oracle/instantclient_11_2/</code> 는 위에서 설정한 부분입니다.)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ln -sf /usr/local/oracle/instantclient_11_2/sdk/include/*.h /usr/local/include/
+$ ln -sf /usr/local/oracle/instantclient_11_2/sqlplus /usr/local/bin/
+$ ln -sf /usr/local/oracle/instantclient_11_2/*.dylib /usr/local/lib/
+$ ln -sf /usr/local/oracle/instantclient_11_2/*.dylib.11.1 /usr/local/lib/
+$ ln -sf /usr/local/oracle/instantclient_11_2/libclntsh.dylib.11.1 /usr/local/lib/libclntsh.dylib
+</code></pre>
+</div>
+
+<p>이렇게 한 다음 각 링크를 건 곳에 들어가면 다음과 같이 심볼릭 링크가 걸린것을 볼 수 있습니다.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*Frtnv7hEOUlM7hRMZKLKrw.png" alt="img" /></p>
+
+<p>일단 여기까지가 중요합니다!!!
+(이 부분까지 확실히 해 주어야 합니다)
+그 다음 oci8 설치를 위해서 ‘pecl’이라는 명령어가 필요한데 이를 위해서 먼저 perl 부터 설치해주어야 합니다.
+perl 설치는 다음을 따라서 합니다.(터미널에서)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ pear version (우선 pear이 있는지 체크)
+$ cd /usr/local
+$ curl -O http://pear.php.net/go-pear.phar
+(여기서 만약 Permission Denied 에러가 뜨면 아래와 같이 sudo를 붙인다)
+$ sudo curl -O http://pear.php.net/go-pear.phar
+$ sudo php -d detect_unicode=0 go-pear.phar (이걸로 인스톨)
+</code></pre>
+</div>
+
+<p>설치는 끝났고 Profile에 PATH를 설정해야 합니다.
+(맥같은 경우는 기본적으로 <code class="highlighter-rouge">~/.bash_profile</code> 이 위치입니다.)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ vi ~/.bash_profile
+</code></pre>
+</div>
+
+<p>그 다음 아래 코드를 추가합니다.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>export PATH=”/Users/JW/pear/bin:$PATH”
+export PATH=”/usr/local/mysql/bin:/Users/JW/pear/bin:$PATH”
+</code></pre>
+</div>
+
+<p>그 다음 아래 명령어를 통해서 설치를 마무리 합니다.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ source ~/.bash_profile (이걸로 새로고침)
+$ pear version (이걸로 버젼확인하고)
+$ pear upgrade pear (이걸로 업그레이드)
+$ pear upgrade (이걸로 업그레이드)
+</code></pre>
+</div>
+
+<p>이걸로 pear 설치는 끝났습니다.</p>
+
+<p>.bash_profile 설정 부분 캡쳐</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*sWguQeUK7xQs0CKes0aHrQ.png" alt="img" /></p>
+
+<p>OCI 관련된 부분도 다음과 같이 설정을 해 놓아야 합니다.
+아래는 위에 소스를 입력한 부분입니다.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code># added byJW for oci_connect — 20150702
+export ORACLE_HOME=/usr/local/oracle/instantclient_11_2
+export OCI_INC_DIR=/usr/local/oracle/instantclient_11_2/sdk/include/
+export OCI_LIB_DIR=/usr/local/oracle/instantclient_11_2
+export LD_LIBRARY_PATH=/usr/local/oracle/instantclient_11_2
+export DYLD_LIBRARY_PATH=/usr/local/oracle/instantclient_11_2:$DYLD_LIBRARY_PATH
+# added byJW set node PATH
+export PATH=/usr/local/bin:$PATH
+#added byJW for pear
+export PATH=”/Users/JW/pear/bin:$PATH”
+export PATH=”/usr/local/mysql/bin:/Users/JW/pear/bin:$PATH”
+</code></pre>
+</div>
+
+<p>위까지가 준비 과정입니다.
+(준비가 안되면 다 지우고 다시 해야하는 문제가 발생합니다)</p>
+
+<p>이 부분부터 실제 OCI8 설치 (with pecl)</p>
+
+<p>아래 명령어를 치면 설치가 시작됩니다.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo pecl install oci8
+</code></pre>
+</div>
+
+<p>중간에 ‘if you’re compiling with Oracle Instant Client [autodetect] :’ 라고 나오면</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>instantclient,/usr/local/lib
+</code></pre>
+</div>
+
+<p>이라고 입력하고 엔터를 치면 설치가 시작됩니다.</p>
+
+<p>만약 auto_configure 관련된 에러가 나오면</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ brew install autoconf
+</code></pre>
+</div>
+
+<p>brew를 이용해서 설치를 해줍니다.
+(만약 brew가 설치가 안되어있으면 먼저 설치를 해야합니다)</p>
+
+<p>그럼 다음과 같이 설치 끝</p>
+
+<p>정말 마지막으로 php.ini에</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>extension=oci8.so
+</code></pre>
+</div>
+
+<p>를 추가해주면 정말로 끝이 납니다.</p>
+
+<p>참고사이트</p>
+
+<p><a href="https://gist.github.com/gido/5237100">https://gist.github.com/gido/5237100</a>
+<a href="http://coolestguidesontheplanet.com/installing-pear-osx-10-9-mavericks-osx10-810-7/">http://coolestguidesontheplanet.com/installing-pear-osx-10-9-mavericks-osx10-810-7/</a>
+<a href="http://dummy.pe.kr/1696">http://dummy.pe.kr/1696</a></p>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/android/2016/09/19/Background-Processing-with-AsyncTask/" data-toggle="tooltip" data-placement="top" title="Background Processing with AsyncTask">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/android/2016/09/21/Android-Firebase-Setting/" data-toggle="tooltip" data-placement="top" title="Android Firebase 세팅하기">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://twitter.com/byPJW">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://www.facebook.com/byjw.park">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/jungwoon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="mailto:byjungwoon@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Your/Project/Corporate Name 2017</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.min.js "></script>
+
+
+    
+
+
+</body>
+
+</html>

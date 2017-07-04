@@ -1,0 +1,25 @@
+# Site settings
+title: Jungwoon Blog
+header-img: img/home-bg.jpg
+email: byjungwoon@gmail.com
+copyright_name: byJW
+description: "Everything You need for development"
+baseurl: ""
+url: "http://jungwoon.github.io"
+twitter_username: byPJW
+github_username:  jungwoon
+facebook_username:  byjw.park
+email_username:  byjungwoon@gmail.com
+
+# Google Analytics
+# To enable google analytics, uncomment below line with a valid Google Tracking ID
+# google_tracking_id:
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]

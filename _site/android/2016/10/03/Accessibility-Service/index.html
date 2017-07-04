@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="EVERYTHING YOU NEED FOR DEVELOPMENT">
+
+    <title>Accessibility Service 사용방법 - Jungwoon Blog</title>
+
+    <link rel="canonical" href="http://localhost:4000/android/2016/10/03/Accessibility-Service/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jungwoon Blog" />
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Jungwoon Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+				
+                <li>
+                    <a href="/about/">About</a>
+                </li>
+				
+                
+				
+                <li>
+                    <a href="/contact/">Contact</a>
+                </li>
+				
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Accessibility Service 사용방법</h1>
+                    
+                    <span class="meta">Posted by Jungwoon Blog on October 3, 2016</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<h2 id="안드로이드-접근성-서비스를-이용하는-방법">안드로이드 접근성 서비스를 이용하는 방법</h2>
+
+<h3 id="설정해야하는-순서">설정해야하는 순서</h3>
+<ol>
+  <li>android.accessibilityservice.AccessibilityService에서 상속받는 클래스 만들기</li>
+  <li>AndroidManifest.xml에 접근성 서비스 등록하기</li>
+  <li>res/xml/accessibility_service_config.xml 만들기</li>
+  <li>res/values/strings.xml 에 accessibility_description 추가하기</li>
+</ol>
+
+<h3 id="mainactivity">MainActivity</h3>
+<p>해당 앱의 패키지 네임을 가지고 접근성 권한을 가지고 있는지
+비교하여, 권한을 가지고 있지 않으면 다이얼로그를 띄워서 설정을 하도록 설정화면을 띄워줍니다.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">byjw</span><span class="o">.</span><span class="na">accessibilityservice</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.accessibilityservice.AccessibilityServiceInfo</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.app.AlertDialog</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.content.Context</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.content.DialogInterface</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.content.Intent</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.provider.Settings</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.support.v7.app.AppCompatActivity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.accessibility.AccessibilityManager</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">TAG</span> <span class="o">=</span> <span class="s">"MainActivity"</span><span class="o">;</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+        <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
+
+        <span class="c1">// 접근성 권한이 없으면 접근성 권한 설정하는 다이얼로그 띄워주는 부분</span>
+        <span class="k">if</span><span class="o">(!</span><span class="n">checkAccessibilityPermissions</span><span class="o">())</span> <span class="o">{</span>
+            <span class="n">setAccessibilityPermissions</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="c1">// 접근성 권한이 있는지 없는지 확인하는 부분</span>
+    <span class="c1">// 있으면 true, 없으면 false</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">checkAccessibilityPermissions</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">AccessibilityManager</span> <span class="n">accessibilityManager</span> <span class="o">=</span> <span class="o">(</span><span class="n">AccessibilityManager</span><span class="o">)</span> <span class="n">getSystemService</span><span class="o">(</span><span class="n">Context</span><span class="o">.</span><span class="na">ACCESSIBILITY_SERVICE</span><span class="o">);</span>
+
+        <span class="c1">// getEnabledAccessibilityServiceList는 현재 접근성 권한을 가진 리스트를 가져오게 된다</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">AccessibilityServiceInfo</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="n">accessibilityManager</span><span class="o">.</span><span class="na">getEnabledAccessibilityServiceList</span><span class="o">(</span><span class="n">AccessibilityServiceInfo</span><span class="o">.</span><span class="na">DEFAULT</span><span class="o">);</span>
+
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">list</span><span class="o">.</span><span class="na">size</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="n">AccessibilityServiceInfo</span> <span class="n">info</span> <span class="o">=</span> <span class="n">list</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+
+            <span class="c1">// 접근성 권한을 가진 앱의 패키지 네임과 패키지 네임이 같으면 현재앱이 접근성 권한을 가지고 있다고 판단함</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">info</span><span class="o">.</span><span class="na">getResolveInfo</span><span class="o">().</span><span class="na">serviceInfo</span><span class="o">.</span><span class="na">packageName</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">getApplication</span><span class="o">().</span><span class="na">getPackageName</span><span class="o">()))</span> <span class="o">{</span>
+                <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="c1">// 접근성 설정화면으로 넘겨주는 부분</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAccessibilityPermissions</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">AlertDialog</span><span class="o">.</span><span class="na">Builder</span> <span class="n">gsDialog</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AlertDialog</span><span class="o">.</span><span class="na">Builder</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+        <span class="n">gsDialog</span><span class="o">.</span><span class="na">setTitle</span><span class="o">(</span><span class="s">"접근성 권한 설정"</span><span class="o">);</span>
+        <span class="n">gsDialog</span><span class="o">.</span><span class="na">setMessage</span><span class="o">(</span><span class="s">"접근성 권한을 필요로 합니다"</span><span class="o">);</span>
+        <span class="n">gsDialog</span><span class="o">.</span><span class="na">setPositiveButton</span><span class="o">(</span><span class="s">"확인"</span><span class="o">,</span> <span class="k">new</span> <span class="n">DialogInterface</span><span class="o">.</span><span class="na">OnClickListener</span><span class="o">()</span> <span class="o">{</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onClick</span><span class="o">(</span><span class="n">DialogInterface</span> <span class="n">dialog</span><span class="o">,</span> <span class="kt">int</span> <span class="n">which</span><span class="o">)</span> <span class="o">{</span>
+                <span class="c1">// 설정화면으로 보내는 부분</span>
+                <span class="n">startActivity</span><span class="o">(</span><span class="k">new</span> <span class="n">Intent</span><span class="o">(</span><span class="n">Settings</span><span class="o">.</span><span class="na">ACTION_ACCESSIBILITY_SETTINGS</span><span class="o">));</span>
+                <span class="k">return</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}).</span><span class="na">create</span><span class="o">().</span><span class="na">show</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<h3 id="accessibilityservice">AccessibilityService</h3>
+<p>접근성 권한을 가지게 되면 동작하게 되는 부분으로 여기서 연결과 이벤트 발생시 콜백을 받을 수 있습니다.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">byjw</span><span class="o">.</span><span class="na">accessibilityservice</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.accessibilityservice.AccessibilityServiceInfo</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.util.Log</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.accessibility.AccessibilityEvent</span><span class="o">;</span>
+
+<span class="cm">/**
+ * Created by JW on 16. 10. 3..
+ */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AccessibilityService</span> <span class="kd">extends</span> <span class="n">android</span><span class="o">.</span><span class="na">accessibilityservice</span><span class="o">.</span><span class="na">AccessibilityService</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">TAG</span> <span class="o">=</span> <span class="s">"AccessibilityService"</span><span class="o">;</span>
+
+    <span class="c1">// 이벤트가 발생할때마다 실행되는 부분</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onAccessibilityEvent</span><span class="o">(</span><span class="n">AccessibilityEvent</span> <span class="n">event</span><span class="o">)</span> <span class="o">{</span>
+<span class="c1">//        Log.e(TAG, "Catch Event : " + event.toString());</span>
+        <span class="n">Log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Catch Event Package Name : "</span> <span class="o">+</span> <span class="n">event</span><span class="o">.</span><span class="na">getPackageName</span><span class="o">());</span>
+        <span class="n">Log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Catch Event TEXT : "</span> <span class="o">+</span> <span class="n">event</span><span class="o">.</span><span class="na">getText</span><span class="o">());</span>
+        <span class="n">Log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Catch Event ContentDescription  : "</span> <span class="o">+</span> <span class="n">event</span><span class="o">.</span><span class="na">getContentDescription</span><span class="o">());</span>
+        <span class="n">Log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"Catch Event getSource : "</span> <span class="o">+</span> <span class="n">event</span><span class="o">.</span><span class="na">getSource</span><span class="o">());</span>
+        <span class="n">Log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="n">TAG</span><span class="o">,</span> <span class="s">"========================================================================="</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="c1">// 접근성 권한을 가지고, 연결이 되면 호출되는 함수</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onServiceConnected</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">AccessibilityServiceInfo</span> <span class="n">info</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AccessibilityServiceInfo</span><span class="o">();</span>
+
+        <span class="n">info</span><span class="o">.</span><span class="na">eventTypes</span> <span class="o">=</span> <span class="n">AccessibilityEvent</span><span class="o">.</span><span class="na">TYPES_ALL_MASK</span><span class="o">;</span> <span class="c1">// 전체 이벤트 가져오기</span>
+        <span class="n">info</span><span class="o">.</span><span class="na">feedbackType</span> <span class="o">=</span> <span class="n">AccessibilityServiceInfo</span><span class="o">.</span><span class="na">DEFAULT</span> <span class="o">|</span> <span class="n">AccessibilityServiceInfo</span><span class="o">.</span><span class="na">FEEDBACK_HAPTIC</span><span class="o">;</span>
+        <span class="n">info</span><span class="o">.</span><span class="na">notificationTimeout</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span> <span class="c1">// millisecond</span>
+
+        <span class="n">setServiceInfo</span><span class="o">(</span><span class="n">info</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onInterrupt</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// TODO Auto-generated method stub</span>
+        <span class="n">Log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="s">"TEST"</span><span class="o">,</span> <span class="s">"OnInterrupt"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<h3 id="androidmanifestxml">AndroidManifest.xml</h3>
+<p>application 태그 안에 accessibilityservice 등록을 합니다</p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;manifest</span> <span class="na">package=</span><span class="s">"com.byjw.accessibilityservice"</span>
+          <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;application</span>
+        <span class="na">android:allowBackup=</span><span class="s">"true"</span>
+        <span class="na">android:icon=</span><span class="s">"@mipmap/ic_launcher"</span>
+        <span class="na">android:label=</span><span class="s">"@string/app_name"</span>
+        <span class="na">android:supportsRtl=</span><span class="s">"true"</span>
+        <span class="na">android:theme=</span><span class="s">"@style/AppTheme"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;activity</span> <span class="na">android:name=</span><span class="s">".MainActivity"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;intent-filter&gt;</span>
+                <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">"android.intent.action.MAIN"</span><span class="nt">/&gt;</span>
+
+                <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">"android.intent.category.LAUNCHER"</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;/intent-filter&gt;</span>
+        <span class="nt">&lt;/activity&gt;</span>
+
+        <span class="c">&lt;!-- 접근성 관련 서비스 부분 --&gt;</span>
+        <span class="nt">&lt;service</span>
+            <span class="na">android:name=</span><span class="s">"AccessibilityService"</span>
+            <span class="na">android:permission=</span><span class="s">"android.permission.BIND_ACCESSIBILITY_SERVICE"</span> <span class="nt">&gt;</span>
+            <span class="nt">&lt;intent-filter&gt;</span>
+                <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">"android.accessibilityservice.AccessibilityService"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/intent-filter&gt;</span>
+
+            <span class="nt">&lt;meta-data</span>
+                <span class="na">android:name=</span><span class="s">"android.accessibilityservice"</span>
+                <span class="na">android:resource=</span><span class="s">"@xml/accessibility_service_config"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/service&gt;</span>
+
+    <span class="nt">&lt;/application&gt;</span>
+
+<span class="nt">&lt;/manifest&gt;</span>
+</code></pre>
+</div>
+
+<h3 id="accessibility_service_configxml">accessibility_service_config.xml</h3>
+<p>res밑에 xml이란 디렉토리를 만들고 해당 xml 파일을 새로 생성해야 합니다.</p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+
+<span class="nt">&lt;accessibility-service</span>
+    <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+    <span class="na">android:accessibilityEventTypes=</span><span class="s">"typeAllMask"</span>
+    <span class="na">android:accessibilityFeedbackType=</span><span class="s">"feedbackAllMask"</span>
+    <span class="na">android:notificationTimeout=</span><span class="s">"100"</span>
+    <span class="na">android:description=</span><span class="s">"@string/accessibility_description"</span>
+    <span class="na">android:canRetrieveWindowContent=</span><span class="s">"true"</span> <span class="nt">/&gt;</span>
+</code></pre>
+</div>
+
+<h3 id="stringxml">string.xml</h3>
+<p>접근성 권한 설정하는 화면에서 왜 해당 권한이 필요한지에 대한 설명을 넣어줍니다.</p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;resources&gt;</span>
+    <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">"app_name"</span><span class="nt">&gt;</span>AccessibilityService<span class="nt">&lt;/string&gt;</span>
+    <span class="c">&lt;!-- Accessibility --&gt;</span>
+    <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">"accessibility_description"</span><span class="nt">&gt;</span>접근성 권한을 필요로 합니다.<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;/resources&gt;</span>
+
+</code></pre>
+</div>
+
+<h3 id="결과">결과</h3>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*OnMNgLpNwP4QHzKP12aukA.png" alt="img" /></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/400/1*mgdlBJZNIpF2VovvCOBuQw.png" alt="img" /></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/1200/1*p-vzB9Q9UCl4sSNh1VEEpA.png" alt="img" /></p>
+
+<hr />
+
+<p>예제는 <a href="https://github.com/Jungwoon/AccessibilityService">github</a>에 올라가 있습니다.</p>
+
+<p>주석으로 큰 설명은 다 달아놨지만 궁금하신 부분이 있으시면 코멘트 남겨주세요!!</p>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/android/2016/09/28/Gradle-library-duplication/" data-toggle="tooltip" data-placement="top" title="Gradle에 라이브러리 중복 선언">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/android/2016/10/07/ADB-Command/" data-toggle="tooltip" data-placement="top" title="ADB 명령어">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://twitter.com/byPJW">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://www.facebook.com/byjw.park">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/jungwoon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="mailto:byjungwoon@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Your/Project/Corporate Name 2017</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.min.js "></script>
+
+
+    
+
+
+</body>
+
+</html>

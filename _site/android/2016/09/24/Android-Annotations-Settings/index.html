@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="EVERYTHING YOU NEED FOR DEVELOPMENT">
+
+    <title>Android Annotations 설정 방법 - Jungwoon Blog</title>
+
+    <link rel="canonical" href="http://localhost:4000/android/2016/09/24/Android-Annotations-Settings/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jungwoon Blog" />
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Jungwoon Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+				
+                <li>
+                    <a href="/about/">About</a>
+                </li>
+				
+                
+				
+                <li>
+                    <a href="/contact/">Contact</a>
+                </li>
+				
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Android Annotations 설정 방법</h1>
+                    
+                    <span class="meta">Posted by Jungwoon Blog on September 24, 2016</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<h2 id="android-annotations-설정방법">Android Annotations 설정방법</h2>
+<p>내가 사용하고 있는 프로젝트에 안드로이드 어노테이션 적용을 하려고 보니 초기 설정 해줘야 하는 부분들이 있어서 이 부분 공유 드립니다.</p>
+
+<h3 id="setting-설정">Setting 설정</h3>
+
+<ul>
+  <li>우선 Annotations 설정을 허용해줘야 합니다.</li>
+  <li>File -&gt; Other Settings -&gt; Default Settings… 로 이동합니다.</li>
+</ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*nolZaC500rFyWw7DDqS2Fw.png" alt="img" /></p>
+
+<ul>
+  <li>Build, Execution, Deployment -&gt; Compiler -&gt; Annotation Processors 로 이동합니다.</li>
+  <li>그 다음 Enable annotation processing 부분을 체크 합니다.</li>
+</ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*LnmqZhsdT1brVeX5OuXoPQ.png" alt="img" /></p>
+
+<h3 id="gradle-설정">Gradle 설정</h3>
+<ul>
+  <li>build.gradle(Project)</li>
+  <li>아래 코드를 dependencies에 추가합니다.</li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+</code></pre>
+</div>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*Xs-Nd7c8gpDma-yW0dnzBQ.png" alt="img" /></p>
+
+<ul>
+  <li>build.gradle(app)</li>
+  <li>아래 코드를 맨 윗쪽에 추가</li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>apply plugin: 'com.neenbedankt.android-apt'
+def AAVersion = '4.1.0'
+</code></pre>
+</div>
+
+<ul>
+  <li>dependencies 를 만들어 아래 코드 추가</li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>dependencies {
+  apt "org.androidannotations:androidannotations:$AAVersion"
+  compile "org.androidannotations:androidannotations-api:$AAVersion"
+}
+</code></pre>
+</div>
+
+<ul>
+  <li>android -&gt; dependencies에 아래 코드 추가</li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>compile 'org.androidannotations:androidannotations:4.1.0'
+</code></pre>
+</div>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*bVW0foXiv0NmNP1mMouIlA.png" alt="img" /></p>
+
+<ul>
+  <li>기본 생성되는 MainActivity를 다음과 같이 수정합니다.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="nd">@EAActivity</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">)</span> <span class="c1">// 기본 레이아웃</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
+  <span class="c1">// 내용  </span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*sBFbr7j2bZRCwxmqgEh_YA.png" alt="img" /></p>
+
+<ul>
+  <li>AndroidManifest.xml 에서 activity 이름을 MainActivity -&gt; MainActivity_ 로 바꿔서 Rebuild를 해줍니다.</li>
+</ul>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*aVZS7mbFlPv63ExbkTzH0w.png" alt="img" /></p>
+
+<h3 id="마무리">마무리</h3>
+<p>이렇게 하면 Android Annotations 초기 설정이 끝납니다. 버전 부분은 달라질 수 있습니다. AndroidAnnotations는 기본적으로 클래스명_ 과 같이 형태를 가지고 있습니다. 이후 생성되는 class는 자동으로 _ 가 붙어서 생성이 됩니다.</p>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/android/2016/09/22/TextWatcher-%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%87%E1%85%A5%E1%86%B8/" data-toggle="tooltip" data-placement="top" title="TextWatcher 예제">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/android/2016/09/28/Gradle-library-duplication/" data-toggle="tooltip" data-placement="top" title="Gradle에 라이브러리 중복 선언">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://twitter.com/byPJW">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://www.facebook.com/byjw.park">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/jungwoon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="mailto:byjungwoon@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Your/Project/Corporate Name 2017</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.min.js "></script>
+
+
+    
+
+
+</body>
+
+</html>

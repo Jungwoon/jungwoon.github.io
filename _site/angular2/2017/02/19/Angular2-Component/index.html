@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="EVERYTHING YOU NEED FOR DEVELOPMENT">
+
+    <title>Angular2 Component - Jungwoon Blog</title>
+
+    <link rel="canonical" href="http://localhost:4000/angular2/2017/02/19/Angular2-Component/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/clean-blog.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jungwoon Blog" />
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Jungwoon Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                
+				
+                <li>
+                    <a href="/about/">About</a>
+                </li>
+				
+                
+				
+                <li>
+                    <a href="/contact/">Contact</a>
+                </li>
+				
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+    <!-- Post Header -->
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Angular2 Component</h1>
+                    
+                    <span class="meta">Posted by Jungwoon Blog on February 19, 2017</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				<h2 id="angular2-component">Angular2 Component</h2>
+
+<p>: HTML과 CSS, Javascript를 하나의 단위로 묶어주는 기술로 최근에 나온 기술이기 때문에, 웹 컴포넌트를 이용하기 위해서는 webcomponent.js, Polymer 같은 라이브러리르 이용하여야 합니다.</p>
+
+<h3 id="웹-컴포넌트의-기술-요소">웹 컴포넌트의 기술 요소</h3>
+<ul>
+  <li>HTML 템플릿</li>
+  <li>템플릿 호출</li>
+  <li>쉐도우 DOM</li>
+  <li>커스텀 엘리먼트</li>
+</ul>
+
+<h3 id="컴포넌트-구조">컴포넌트 구조</h3>
+<ul>
+  <li>import 영역</li>
+  <li>@Component 장식자</li>
+  <li>컴포넌트 클래스 영역</li>
+</ul>
+
+<h4 id="컴포넌트-샘플-소스">컴포넌트 샘플 소스</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>import { Component } from '@angular/core';
+
+@Component({
+	selector: 'intro -component',
+	template: `&lt;div&gt; App Hello &lt;/div&gt;`,
+	style: [`div { background: blue; }`]
+})
+
+export class AppHello { }
+</code></pre>
+</div>
+
+<h4 id="import-영역">import 영역</h4>
+<p>Angular 라이브러리 모듈은 @를 붙이는데, 이는 다른 모듈과 구분하기위해서입니다. 만약 여러분이 모듈을 정의했다면 상대 경로를 통해 호출합니다.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>import { Component } from '@angular/core';
+</code></pre>
+</div>
+
+<h4 id="component-장식자">@Component 장식자</h4>
+<p>컴포넌트 장식자에는 컴포넌트와 관련된 설정 정보를 입력할 수 있습니다.</p>
+
+<ul>
+  <li>selector : 컴포넌트 이름을 정의합니다, 이 속성은 실제 html에서 사용하게 되는 커스텀 엘리먼트의 이름이 됩니다.</li>
+  <li>template : UI를 표현하기 위한 HTML이 들어오게 됩니다.</li>
+  <li>styles : CSS가 들어오게 됩니다.</li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>@Component({
+	selector: 'intro -component',
+	template: `&lt;div&gt; App Hello &lt;/div&gt;`,
+	style: [`div { background: blue; }`]
+})
+</code></pre>
+</div>
+
+<h4 id="컴포넌트-클래스-영역">컴포넌트 클래스 영역</h4>
+<p>처리해야할 로직이 들어오게 됩니다.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>export class AppHello { }
+</code></pre>
+</div>
+
+<h3 id="컴포넌트-기초-실습">컴포넌트 기초 실습</h3>
+
+<ul>
+  <li>컴포넌트 추가</li>
+  <li>컴포넌트 모듈에 등록</li>
+</ul>
+
+<h4 id="실습">실습</h4>
+<p>컴포넌트 파일의 이름은 다음과 같은 형태로 만듭니다.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>[형식] : 이름.component.ts
+[예] : hello.component.ts
+</code></pre>
+</div>
+
+<h4 id="컴포넌트-생성-위치">컴포넌트 생성 위치</h4>
+<p>프로젝트를 생성하면 안쪽에 프로젝트명/src/app/이 자동생성되는데, app안에 넣어줍니다.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*UK9k-saWzlpsI3NRtBkFBw.png" alt="img" /></p>
+
+<p>여기서는 구분을 해주기 위해서, hello라는 디렉토리를 만들어주고
+그 안에 hello.component.ts라는 파일을 만듭니다.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*zdHWJL7BLafoQrq2yqiZkg.png" alt="img" /></p>
+
+<p>그리고 아래 소스를 입력해줍니다.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>import { Component } from '@angular/core';
+
+@Component({
+	selector: 'my-component',
+	template: `
+		&lt;h1&gt;&lt;/h1&gt;
+		&lt;input type="text" [(ngModel)]="title"&gt;
+		&lt;textarea [(ngModel)]="title"&gt;&lt;/textarea&gt;
+	styles : [`input, textarea { margin-top:20px; display: block; } `]
+})
+
+export class MyComponent {
+	title = 'Hello Component';
+}
+</code></pre>
+</div>
+
+<p>[Screenshot]
+<img src="https://cdn-images-1.medium.com/max/2000/1*NqLRqp99GvymFSt_E3aapQ.png" alt="img" /></p>
+
+<p>그 다음 컨포넌트를 모듈에 등록해주기 위해서
+/프로젝트명/src/app/app.module.ts를 열어주고,</p>
+
+<p>import { MyComponent } from ‘./hello/hello.component’; 를 추가 시켜주고,</p>
+
+<p>declarations와 bootstrap 부분에 MyComponent를 등록해줍니다.</p>
+
+<p>[app.module.ts]</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
+import { MyComponent } from './hello/hello.component';
+
+@NgModule({
+  declarations: [
+    MyComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule
+  ],
+  providers: [],
+  bootstrap: [MyComponent]
+})
+export class AppModule { }
+</code></pre>
+</div>
+
+<p>[Screenshot]
+<img src="https://cdn-images-1.medium.com/max/2000/1*4A8czRW2TrIaF-hiqTkVKg.png" alt="img" /></p>
+
+<p>마지막으로</p>
+
+<p>프로젝트명 /src/index.html 에 지정한 커스텀 엘리먼트(my-component)를 넣어줍니다.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*kCGMxl6jertfW_W5YsagIA.png" alt="img" /></p>
+
+<p>[index.html]</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>AngularProject<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;base</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"icon"</span> <span class="na">type=</span><span class="s">"image/x-icon"</span> <span class="na">href=</span><span class="s">"favicon.ico"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;my-component&gt;</span>HelloWorld<span class="nt">&lt;/my-component&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<p>[Screenshot]</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*fg-6xZlGDjmVduFLnUsJaA.png" alt="img" /></p>
+
+<p>그리고</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ng serve
+</code></pre>
+</div>
+
+<p>를 이용하여 서버를 실행시키면 Compile이 되고
+다음과 같은 화면이 Browser를 통해 나타나게 됩니다.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*pT56ZLI4Sm_Vcm7mH6YEHQ.png" alt="img" /></p>
+
+
+                <hr>
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/angular2/2017/02/16/Angular2-Setting-for-Mac/" data-toggle="tooltip" data-placement="top" title="Angular2 사전 세팅 for Mac">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/android/2017/02/19/Realm-Review/" data-toggle="tooltip" data-placement="top" title="Realm 훑어보기">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+<hr>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="https://twitter.com/byPJW">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://www.facebook.com/byjw.park">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="https://github.com/jungwoon">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="mailto:byjungwoon@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <p class="copyright text-muted">Copyright &copy; Your/Project/Corporate Name 2017</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/clean-blog.min.js "></script>
+
+
+    
+
+
+</body>
+
+</html>
