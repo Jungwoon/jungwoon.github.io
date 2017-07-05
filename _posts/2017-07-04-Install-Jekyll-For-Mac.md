@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Mac에 Jekyll 설치하기"
+title: "GitHub를 이용해서 블로그 하기 #2"
 image: '/assets/img/'
 description: 'Mac에 Jekyll 설치하기'
 tags:
@@ -25,13 +25,6 @@ $ gem install github-pages
 
 ```
 
-설치가 완료된 후 아래 와 같이 명령을 누르면 http://localhost:4000 로 확인이 가능합니다.
-
-```
-
-$ jekyll serve
-
-```
 
 ## 설치 과정 스크린샷
 
@@ -46,5 +39,3 @@ $ jekyll serve
 ![](https://cdn-images-1.medium.com/max/2000/1*Vv9qKmBjqCKhJ3me0YTKnQ.png)
 
 ![](https://cdn-images-1.medium.com/max/2000/1*6quNcrkujfi2bbZNnD0NhQ.png)
-
-![](https://cdn-images-1.medium.com/max/2000/1*mMpMfs8Bn-QqH7MJytg8Eg.png)
