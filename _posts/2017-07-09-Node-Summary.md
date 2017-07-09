@@ -97,7 +97,9 @@ app.listen(3000, function() {
 });
 ```
 
-아래와 같이 express.static으로 경로를 잡아주면 해당 부분에 대해서 절대 경로를 매번 써주지 않아도 된다.
+아래와 같이 express.static으로 경로를 잡아주면 `static file(js, css, image...)` 절대 경로를 매번 써주지 않아도 된다.
+`html파일은 static file이 아님`
+
 
 ```javascript
 // 이렇게 하면 public 아래에 있는 부분에 대해서 따로 디렉토리 설정을 하지 않아도 된다.
