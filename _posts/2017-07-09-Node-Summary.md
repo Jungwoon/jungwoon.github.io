@@ -12,7 +12,7 @@ categories:
 
 ## Node.js 정리
 
-### Node 프로젝트 만들기
+### Node.js 프로젝트 만들기
 ```
 $ mkdir MyProject
 $ cd MyProject
