@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Node.JS 내용 저일"
+title: "Node.js 내용 정리"
 image: '/assets/img/'
-description: 'Jekyll을 이용해서 블로그 하기'
+description: 'Node.js 내용 정리'
 tags:
 - Node.js
 - Web
