@@ -15,7 +15,7 @@ categories:
 ## Native Source에서 Log를 찍어서 Logcat 이용하기
 아래와 같이 선언을 해준다.(cpp 파일 위쪽이나 header 파일로 빼준다.)
 
-### 선언하기
+### 선언 하기
 
 ```c
 //
