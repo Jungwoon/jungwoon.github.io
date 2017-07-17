@@ -7,7 +7,6 @@ tags:
 - Android
 - NDK
 - Logcat
--
 categories:
 - NDK
 ---
