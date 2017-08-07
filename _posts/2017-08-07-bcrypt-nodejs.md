@@ -29,7 +29,7 @@ bcrypt에서 "work factor" 인자는 하나의 해시 다이제스트를 생성�
 #### 필요한 사전 설치 패키지
 
 ```
-$ npm install bcrypt-nodejs --save-dev
+$ npm install bcrypt-nodejs --save
 ```
 
 #### 기본 사용법
