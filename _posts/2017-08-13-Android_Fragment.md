@@ -50,8 +50,8 @@ Activity 내의 Fragment를 관리하기 위해서는 FragmentManager를 사용�
 
 FragmentManager가 할 수 있는 일
 - `findFragmentById()` or `findFragmentByTag()`로 Fragment 가져오기
-- popBackStack()을 사용하여 Fragment를 BackStack에서 꺼내기
-- FragmentTransaction을 가져오기
+- `popBackStack()`을 사용하여 Fragment를 BackStack에서 꺼내기
+- `beginTransaction()`을 사용하여 FragmentTransaction을 가져오기
 
 ```java
 
@@ -72,9 +72,9 @@ FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
 위에서 가져온 FragmentTransaction을 이용하여 아래와 같은 작업을 할 수 있습니다
 
-- add() : Fragment 추가
-- remove() : Fragment 제거
-- replace() : Fragment 변경
+- `add()` : Fragment 추가
+- `remove()` : Fragment 제거
+- `replace()` : Fragment 변경
 
 ```java
 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
