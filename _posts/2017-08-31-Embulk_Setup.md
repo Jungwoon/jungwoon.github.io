@@ -12,7 +12,9 @@ categories:
 ## Embulk 설치 및 기본 사용법
 
 ### Embulk?
- 
+
+![](https://cdn-images-1.medium.com/max/2000/1*L1y27SO415-mIpf3TxeM7A.png)
+
 Embulk는 Sqoop과 거의 같은 기능을 하는 솔루션으로 여러 데이터 소스로 읽어와서 부어주는 기능을 하는 솔루션입니다 
 
 ### Embulk 특징
