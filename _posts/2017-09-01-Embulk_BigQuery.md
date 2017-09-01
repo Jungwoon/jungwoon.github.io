@@ -46,29 +46,29 @@ Embulk 에서 BigQuery를 쓰면 데이터가 중간에 연결이 끊길수도 �
 ```
 in:
     type: mysql
-    host: 111.111.111.111                                                       # DB 서버 주소
+    host: 111.111.111.111   # DB 서버 주소
     port: 3306
-    user: root                                                                  # DB 아이디
-    password: root                                                              # DB 비밀번호 
-    database: test_database                                                     # DB 이름
-    table: test_table                                                           # 테이블 명
-    select: "*"                                                                 # 가져올 데이터 
-    where: "id >= 1 and id < 5000000"                                           # 조건식
+    user: root   # DB 아이디
+    password: root   # DB 비밀번호 
+    database: test_database   # DB 이름
+    table: test_table   # 테이블 명
+    select: "*"   # 가져올 데이터 
+    where: "id >= 1 and id < 5000000"   # 조건식
 out:
     type: bigquery
     mode: replace
     auth_method: private_key
     service_account_email: byjungwoon@jayden-project.iam.gserviceaccount.com    # 구글 클라우드 서비스 계정 ID
-    p12_keyfile: /Users/jungwoon/Embulk/Jayden-Project-69990d9f0891.p12         # 구글 클라우드 비공개 다운받은 키 경로 
-    project: jayden-project                                                     # 구글 클라우드 프로젝트명 
-    dataset: reservation                                                        # 빅쿼리 데이터셋
-    table: reservation                                                          # 빅쿼리 테이블명
-    auto_create_table: true                                                     # 스키마를 안만들어져 있으면 자동으로 만들어주게끔 설정
-    gcs_bucket: byjungwoon-byjw                                                 # Google Cloud Storage 버킷 이름
-    auto_create_gcs_bucket: true                                                # 만약 Google Cloud Storage 버킷이 없으면 생성
-    ignore_unknown_values: true                                                 # 알 수 없는 값이 들어왔을때 무시
-    allow_quoted_newlines: true                                                 # quote가 들어올때 새로운 라인 생성
-    auto_create_dataset: true                                                   # 빅쿼리에 미리 데이터셋이 만들어져 있지 않으면 자동으로 생성
+    p12_keyfile: /Users/jungwoon/Embulk/Jayden-Project-69990d9f0891.p12   # 구글 클라우드 비공개 다운받은 키 경로 
+    project: jayden-project   # 구글 클라우드 프로젝트명 
+    dataset: reservation   # 빅쿼리 데이터셋
+    table: reservation   # 빅쿼리 테이블명
+    auto_create_table: true   # 스키마를 안만들어져 있으면 자동으로 만들어주게끔 설정
+    gcs_bucket: byjungwoon-byjw   # Google Cloud Storage 버킷 이름
+    auto_create_gcs_bucket: true   # 만약 Google Cloud Storage 버킷이 없으면 생성
+    ignore_unknown_values: true   # 알 수 없는 값이 들어왔을때 무시
+    allow_quoted_newlines: true   # quote가 들어올때 새로운 라인 생성
+    auto_create_dataset: true   # 빅쿼리에 미리 데이터셋이 만들어져 있지 않으면 자동으로 생성
 ```
 
 실제 캡처 화면
