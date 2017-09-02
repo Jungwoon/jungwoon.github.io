@@ -2,7 +2,7 @@
 layout: post
 title: "Embulk로 Bigquery에 데이터 로딩하기"
 image: '/assets/img/'
-description: 'Embulk로 Bigquery에 데이터 로딩하기'
+description: 'Embulk로 BigQuery에 데이터 로딩하기'
 tags:
 - Embulk
 - BigQuery
@@ -10,7 +10,7 @@ categories:
 - BigData
 ---
 
-## Embulk로 Bigquery에 데이터 로딩하기
+## Embulk로 BigQuery에 데이터 로딩하기
 
 최근에 Google Cloud에 큰 관심이 가지면서 자연스럽게 BigQuery에 자연스럽게 관심을 가지게 되었습니다
 
