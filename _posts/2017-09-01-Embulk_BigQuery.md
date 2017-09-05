@@ -12,7 +12,7 @@ categories:
 
 ## Embulk로 BigQuery에 데이터 로딩하기
 
-최근에 Google Cloud에 큰 관심이 가지면서 자연스럽게 BigQuery에 자연스럽게 관심을 가지게 되었습니다
+최근에 Google Cloud에 큰 관심을 가지면서 자연스럽게 BigQuery에 자연스럽게 관심을 가지게 되었습니다
 
 그래서 이번에는 스터디를 하면서 알게된 Embulk를 통해서 BigQuery에 데이터를 넣는 방법을 포스팅 해보겠습니다
 
@@ -31,8 +31,6 @@ $ embulk gem install embulk-input-mysql # MySQL에서 데이터를 읽기 위한
 $ embulk gem install embulk-ouput-bigquery # BigQuery에 데이터를 넣기 위한 플러그인
 ```
 
-우선 완성된 yml 파일을 먼저 보여드리고 각각 하는 방법을 설명 드리겠습니다
-
 Embulk 에서 BigQuery를 쓰면 데이터가 중간에 연결이 끊길수도 있고 그래서 안정성을 위해 다음과 같은 과정을 합니다
 
 > Embulk 정말 좋은거 같아요! 알아서 안정성관련된 부분까지 처리를 다 해주네요 
@@ -42,6 +40,9 @@ Embulk 에서 BigQuery를 쓰면 데이터가 중간에 연결이 끊길수도 �
  - 임시 테이블에서 실제 테이블로 데이터 로딩
  
  그래서 설정에서 gcs_bucket 부분을 설정 합니다
+
+
+우선 완성된 yml 파일을 먼저 보여드리고 각각 하는 방법을 설명 드리겠습니다
 
 ```
 in:
