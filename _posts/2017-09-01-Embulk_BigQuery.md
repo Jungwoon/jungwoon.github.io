@@ -28,7 +28,7 @@ Embulk는 관련 플러그인을 설치하고 `yml파일` 에 설정만 하면 �
 
 ```
 $ embulk gem install embulk-input-mysql # MySQL에서 데이터를 읽기 위한 플러그인
-$ embulk gem install embulk-ouput-bigquery # BigQuery에 데이터를 넣기 위한 플러그인
+$ embulk gem install embulk-output-bigquery # BigQuery에 데이터를 넣기 위한 플러그인
 ```
 
 Embulk 에서 BigQuery를 쓰면 데이터가 중간에 연결이 끊길수도 있고 그래서 안정성을 위해 다음과 같은 과정을 합니다
