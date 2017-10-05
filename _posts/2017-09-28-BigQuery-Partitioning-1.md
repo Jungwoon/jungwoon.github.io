@@ -20,12 +20,14 @@ categories:
 빅쿼리 자체적으로 Partitiond Tables를 지원합니다, 자세한 내용은 다음 링크를 참조합니다
 (참고 - [https://cloud.google.com/bigquery/docs/partitioned-tables](https://cloud.google.com/bigquery/docs/partitioned-tables))
 
+---
 
 ### 구글 빅쿼리의 partitioned table 제한 (2017.09.28. 기준)
 
 - Daily limit : 테이블당 2,000 파티션
 - Rate limit : 매 10초당 50개의 파티션 업데이트
 
+---
 
 ### 빅쿼리 파티셔닝 하는 방법
 
@@ -48,6 +50,7 @@ Embulk를 이용해서 시간을 가지고 월별로 데이터를 쪼개서 파�
 
 `(** 빅쿼리는 기본적으로 UTC만 지원하기 때문에 글로벌 서비스를 하는 경우에는 UTC로 저장을 해놓고 데이터 추출시에 Local Time에 맞춰서 변경 한다음에 이용하는게 좋습니다)`
 
+---
 
 #### 데이터 스키마
 
@@ -76,6 +79,7 @@ Embulk를 이용해서 시간을 가지고 월별로 데이터를 쪼개서 파�
 
 ![](https://cdn-images-1.medium.com/max/1600/1*-VzTUUAM3xn33GsIwK1Xiw.png)
 
+---
 
 #### 1월 데이터 로딩용 yml (ods_jan.yml)
 
