@@ -136,8 +136,8 @@ in:
             state,
             used_at,
             zid"
-    where: "start_at >= '2017-01-01 00:00:00'
-        and start_at < '2017-02-01 00:00:00'"
+    where: "start_at >= '2017-02-01 00:00:00'
+        and start_at < '2017-03-01 00:00:00'"
 out:
     type: bigquery
     mode: replace # 이 부분이 replace로 되어 있어야 함
@@ -146,7 +146,7 @@ out:
     p12_keyfile: /Users/jungwoon/GoogleCredential/key.p12
     project: jayden-project
     dataset: ods_partition
-    table: customers$20170101 # 이 부분에서 테이블 이름을 가지고 파티셔닝을 함
+    table: customers$20170102 # 이 부분에서 테이블 이름을 가지고 파티셔닝을 함
     gcs_bucket: byjungwoon-byjw
     auto_create_gcs_bucket: true
     auto_create_dataset: true
