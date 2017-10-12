@@ -109,6 +109,28 @@ done
 
 ```
 $ chmod 755 job.sh
+
+
+설명)
+chmod 명령어 : 파일 권한을 관리하는 명령어입니다
+
+권한 : r(읽기), w(쓰기), x(실행)
+ 
+    (User)   (Group)  (Other)
+    rwx      rwx      rwx
+    421      421      421
+
+위와 같은 형태로 각 User, Group, Other에 대해서 주고 싶은 권한에 대해서
+아래 숫자를 더하면 권한이 바뀌게 됩니다
+
+예로 위에서 755 이면 User[4(r)+2(w)+1(x)] Group[4(r)+1(x)] Other[4(r)+1(x)]의
+권한으로
+ 
+    User : 읽기 쓰기 실행
+    Group : 읽기 실행
+    Other : 읽기 실행
+
+이 권한이 설정되게 됩니다
 ```
 
 그 다음에 job.sh를 실행합니다
@@ -178,7 +200,7 @@ sed는 Stream EDiter의 약자로 간단하게 텍스트를 파싱하고 변형�
 
 ---
 
-### Rundeck 설치하기
+### Rundeck 설치 및 워크플로우 등록하기
 
 Rundeck은 CI툴의 일종으로 보고 라이브 배포시에 이용할 수 있습니다 위에서 만든 쉘 스크립트를 Rundeck에서 제어 해보도록 하겠습니다
 
@@ -297,6 +319,47 @@ job이 성공이 되면 아래와 같이 `Complete`가 됩니다
 ![](https://cdn-images-1.medium.com/max/2000/1*cIzDnZ4xYZVKmR-74lkNbQ.png)
 
 ---
+
+### Rundeck 스케쥴링을 통한 반복 설정하기
+
+job의 오른쪽의 `화살표`를 눌러서 `edit this job...`을 선택합니다.
+
+![](https://cdn-images-1.medium.com/max/1600/1*W4sKGmz0MypWGN6le-COWw.png)
+
+스크롤을 내려서 좌측의 `Schedule to run repeatedly?`를 찾아서 `Yes`를 누릅니다
+
+손쉽게 `Simple`을 통해서 특정 시간에 해당 `Job`을 반복하게 설정할 수 있습니다
+
+![](https://cdn-images-1.medium.com/max/2000/1*TmLsB8Ake2iRqrbvsK3KQQ.png)
+
+좀 더 디테일한 설정을 하고 싶으면 `Crontab` Tab을 눌러서 Linux의 Crontab과 동일 한 설정을 할 수 있습니다
+
+`(** 설정은 아래를 참고하세요)`
+
+
+```
+*  *  *  *  *  수행할 명령어
+┬ ┬ ┬ ┬ ┬
+│ │ │ │ │
+│ │ │ │ │
+│ │ │ │ └───────── 요일 (0 - 6) (0:일요일, 1:월요일, 2:화요일, …, 6:토요일)
+│ │ │ └───────── 월 (1 - 12)
+│ │ └───────── 일 (1 - 31)
+│ └───────── 시 (0 - 23)
+└───────── 분 (0 - 59)
+```
+
+![](https://cdn-images-1.medium.com/max/2000/1*e3fLPkdfBNkLYgkheGQz7g.png)
+
+---
+
+### Rundeck 작업 Notification 보내기
+
+스크롤을 내려서 좌측의 `Send Notification?`을 찾아서 `Yes`를 누릅니다
+
+그 다음 Notification을 보내고자 하는, 상태(`성공`, `실패`, `시작`)에 대해서 `Mail`을 설정할 수 있습니다
+
+![](https://cdn-images-1.medium.com/max/2000/1*yix2y_cfLjuF607unSEueg.png)
 
 ### 마무리
 
