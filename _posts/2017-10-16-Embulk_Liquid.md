@@ -123,7 +123,6 @@ Source)
 
 ```
 in:
-{% include 'in/mysql' %}
     table: customers
     select: "cid,
         end_at,
@@ -135,7 +134,6 @@ in:
     where: "start_at >= '2017-02-01 00:00:00'
         and start_at < '2017-03-01 00:00:00'"
 out:
-{% include 'out/bigquery' %}
     table: customers$20170201
 ```
 
