@@ -17,7 +17,7 @@ categories:
 
 $ xcode-select --install
 \curl -sSL https://get.rvm.io | bash -s stable
-$ souce ~/.prifle
+$ source ~/.profile
 $ rvm install 2.2.0
 $ gem install jekyll
 $ gem install bundler
