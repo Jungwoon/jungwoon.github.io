@@ -5,7 +5,6 @@ image: '/assets/img/'
 description: 'Embulk 공통 설정 외부로 분리하기'
 tags:
 - BigQuery
-- Google Cloud
 categories:
 - BigQuery
 ---
