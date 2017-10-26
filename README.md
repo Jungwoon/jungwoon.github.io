@@ -1,6 +1,8 @@
 ## Jungwooon Blog
 
-My Personal Blog
+![](https://cdn-images-1.medium.com/max/1800/1*wxMC3Q1fwfdU-7UdKA47gQ.png)
+
+[Jungwoon Blog](https://jungwoon.github.io)
 
 ## Support
 
