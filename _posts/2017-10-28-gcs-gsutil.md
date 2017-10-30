@@ -57,6 +57,32 @@ $ gsutil ls -L gs://버킷이름/파일이름     # 파일 정보 보기
 
 ---
 
+### gsutil의 성능을 향상시키기 (`-m 옵션`)
+
+Facebook의 [Google Cloud Platform 커뮤니티](https://www.facebook.com/groups/googlecloudkorea/) 에서 알려줘서 추가로 
+업데이트 합니다
+
+`-m` 옵션을 주게되면 처리가 Parallel 하게 처리가 되기 때문에 성능이 비약적으로 향상됩니다.
+
+> 관련해서 자세한 문서는 [Top-Level Command-Line Options](https://cloud.google.com/storage/docs/gsutil/addlhelp/TopLevelCommandLineOptions)
+를 참고해주세요 
+
+#### -m을 지원하는 명령어들
+
+```
+$ gsutil -m acl ch [해당 명령어 관련 설정]      # Access Control List 변경
+$ gsutil -m acl set [해당 명령어 관련 설정]     # Access Control List 세팅
+$ gsutil -m cp [해당 명령어 관련 설정]          # 복사
+$ gsutil -m mv [해당 명령어 관련 설정]          # 이동
+$ gsutil -m rm [해당 명령어 관련 설정]          # 삭제
+$ gsutil -m rsync [해당 명령어 관련 설정]       # 원본과 버킷 사이에 동기화
+$ gsutil -m setmeta [해당 명령어 관련 설정]     # 메타데이터 셋
+``` 
+
+> 명령어에 대한 자세한 설명은 [gsutil Commands](https://cloud.google.com/storage/docs/gsutil/commands/cp)를 참고해주세요
+
+---
+
 ### 실습
 
 #### 나의 버킷 리스트 보기
