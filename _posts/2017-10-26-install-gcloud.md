@@ -142,7 +142,7 @@ $ gcloud init
 
 ![](https://cdn-images-1.medium.com/max/2000/1*iTQa3xD2IlJTf_UFUi--8g.png)
 
-이렇게 하면 아래와 같이 문구가 나옴녀서 설정이 끝나게 됩니다
+이렇게 하면 아래와 같이 문구가 나오면서 설정이 끝나게 됩니다
 
 ![](https://cdn-images-1.medium.com/max/2000/1*X3_-dL1c9fQMVKEqRbULDQ.png)
 
