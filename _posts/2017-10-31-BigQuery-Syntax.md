@@ -11,7 +11,7 @@ categories:
 ---
 
 
-## Big Query 기본 사용법
+## BigQuery 기본 사용법
 
 Big Query에서 사용하는 문법은 크게 Legacy SQL와 Standard SQL이 있는데,
 LegacySQL은 Big Query 초기부터 사용되던 문법이나 2.0 이후에 Standard SQL이 지원되었기 때문에,
@@ -128,7 +128,7 @@ ORDER BY 컬럼
 - Dataset : my_dataset
 - Table : product
 
-Origin
+Origin)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
@@ -139,14 +139,14 @@ Origin
 | A005 | USB | 20
 
 
-Query
+Query)
 
 ```sql
 SELECT *
 FROM `jayden-project.my_dataset.product`;
 ```
 
-Result
+Result)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
@@ -166,7 +166,7 @@ Result
 - Dataset : my_dataset
 - Table : product
 
-Origin
+Origin)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
@@ -177,14 +177,14 @@ Origin
 | A005 | USB | 20
 
 
-Query
+Query)
 
 ```sql
 SELECT HELLO.*
 FROM `jayden-project.my_dataset.product` AS HELLO;
 ```
 
-Result
+Result)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
@@ -204,7 +204,7 @@ Result
 - Dataset : my_dataset
 - Table : product
 
-Origin
+Origin)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
@@ -214,15 +214,14 @@ Origin
 | A004 | CUP | 5
 | A005 | USB | 20
 
-
-Query
+Query)
 
 ```sql
 SELECT * EXCET (PRODUCT_ID)
 FROM `jayden-project.my_dataset.product`;
 ```
 
-Result
+Result)
 
 | PRODUCT | PRICE
 | :---: | :---:
@@ -240,7 +239,7 @@ Result
 - Dataset : my_dataset
 - Table : product
 
-Origin
+Origin)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
@@ -250,15 +249,14 @@ Origin
 | A004 | CUP | 5
 | A005 | USB | 20
 
-
-Query
+Query)
 
 ```sql
 SELECT * REPLACE (PRICE * 0.8 AS PRICE)
 FROM `jayden-project.my_dataset.product`;
 ```
 
-Result
+Result)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
@@ -270,14 +268,14 @@ Result
 
 ---
 
-Query
+Query)
 
 ```sql
 SELECT * REPLACE ("SOLD OUT" AS PRODUCT)
 FROM `jayden-project.my_dataset.product`;
 ```
 
-Result
+Result)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
@@ -297,7 +295,7 @@ Result
 - Dataset : my_dataset
 - Table : product
 
-Origin
+Origin)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
@@ -307,7 +305,7 @@ Origin
 | A004 | CUP | 5
 | A005 | USB | 20
 
-Query
+Query)
 
 ```sql
 SELECT * FROM `product`;
@@ -317,7 +315,7 @@ or
 SELECT * FROM `jayden-project.my_dataset.product`;
 ```
 
-Result
+Result)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
@@ -337,7 +335,7 @@ Result
 - Dataset : my_dataset
 - Table : product, producer
 
-Origin A (product)
+Origin)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
@@ -346,7 +344,7 @@ Origin A (product)
 | A003 | BOOK | 8
 | A004 | CUP | 5
 
-Query
+Query)
 
 ```sql
 SELECT *
@@ -354,12 +352,14 @@ FROM `jayden-project.my_dataset.product`
 WHERE PRICE >= 5
 ```
 
-Result
+Result)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
 | A003 | BOOK | 8
 | A004 | CUP | 5
+
+---
 
 #### GROUP BY
 
@@ -370,7 +370,7 @@ Result
 - Dataset : my_dataset
 - Table : product
 
-Origin (product)
+Origin)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
@@ -381,7 +381,7 @@ Origin (product)
 | A005 | BOOK | 20
 | A006 | BOOK | 43
 
-Query
+Query)
 
 ```sql
 SELECT PRODUCT
@@ -389,7 +389,7 @@ FROM `jayden-project.my_dataset.product`
 GROUP BY PRODUCT
 ```
 
-Result
+Result)
 
 | PRODUCTD
 | :---: 
@@ -409,7 +409,7 @@ Result
 - Dataset : my_dataset
 - Table : product
 
-Origin (product)
+Origin)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
@@ -420,7 +420,7 @@ Origin (product)
 | A005 | BOOK | 20
 | A006 | BOOK | 43
 
-Query
+Query)
 
 ```sql
 SELECT *
@@ -428,7 +428,7 @@ FROM `jayden-project.my_dataset.product`
 ORDER BY PRODUCT_ID
 ```
 
-Result
+Result)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
@@ -439,7 +439,7 @@ Result
 | A005 | BOOK | 20
 | A006 | BOOK | 43
 
-Query
+Query)
 
 ```sql
 SELECT *
@@ -447,7 +447,7 @@ FROM `jayden-project.my_dataset.product`
 ORDER BY PRODUCT_ID DESC
 ```
 
-Result
+Result)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
@@ -469,7 +469,7 @@ Result
 - Dataset : my_dataset
 - Table : product
 
-Origin
+Origin)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
@@ -479,7 +479,7 @@ Origin
 | A004 | CUP | 5
 | A005 | USB | 20
 
-Query
+Query)
 
 ```sql
 SELECT TEMP.*
@@ -490,7 +490,8 @@ FROM (
 ) AS TEMP;
 
 ```
-Result
+
+Result)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
@@ -511,7 +512,7 @@ Result
 - Dataset : my_dataset
 - Table : product
 
-Origin A (product)
+Origin)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
@@ -525,7 +526,7 @@ Origin A (product)
 - Dataset : bq_test
 - Table : access_log
 
-Origin B (access_log)
+Origin)
 
 | agent | code | host | method | path | referer | size | user | time
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
@@ -533,13 +534,13 @@ Origin B (access_log)
 | Mozilla/5.0 Jorgee | 404 | 2 | 213.135.229.55	| http://130.211.208.3:80/PMA2013/ | - | 0 | - | null
 | Mozilla/5.0 Jorgee | 404 | 2 | 213.135.229.55	| http://130.211.208.3:80/db/phpMyAdmin3/ | - | 0 | - | null
 
-Query
+Query)
 
 ```sql
 SELECT *
 FROM `jayden-project.my_dataset.product` CROSS JOIN `jayden-project.bq_test.access_log`
 ```
-Result
+Result)
 
 | PRODUCT_ID | PRODUCT | PRICE | agent | code | host | method | path | referer | size | user | time
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
@@ -561,7 +562,7 @@ Result
 - Dataset : my_dataset
 - Table : product, producer
 
-Origin A (product)
+Origin)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
@@ -572,7 +573,7 @@ Origin A (product)
 | A005 | USB | 20
 | A006 | EARPHONE | 10
 
-Origin A (producer)
+Origin)
 
 | PRODUCT_ID | PRODUCER | UNIT_COST
 | :---: | :---: | :---:
@@ -582,7 +583,7 @@ Origin A (producer)
 | A004 | HG | 3
 | A005 | HG | 12
 
-Query
+Query)
 
 ```sql
 SELECT *
@@ -590,7 +591,7 @@ FROM `jayden-project.my_dataset.product` LEFT JOIN `jayden-project.my_dataset.pr
 USING (PRODUCT_ID);
 ```
 
-Result
+Result)
 
 | PRODUCT_ID | PRODUCT | PRICE | PRODUCT_ID | PRODUCER | UNIT_COST
 | :---: | :---: | :---: | :---: | :---: | :---:
@@ -615,7 +616,7 @@ Result
 - Dataset : my_dataset
 - Table : product, producer
 
-Origin A (product)
+Origin)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
@@ -624,7 +625,7 @@ Origin A (product)
 | A003 | BOOK | 8
 | A004 | CUP | 5
 
-Origin A (producer)
+Origin)
 
 | PRODUCT_ID | PRODUCER | UNIT_COST
 | :---: | :---: | :---:
@@ -634,7 +635,7 @@ Origin A (producer)
 | A004 | HG | 3
 | A005 | HG | 12
 
-Query
+Query)
 
 ```sql
 SELECT *
@@ -642,7 +643,7 @@ FROM `jayden-project.my_dataset.product` LEFT JOIN `jayden-project.my_dataset.pr
 USING (PRODUCT_ID);
 ```
 
-Result
+Result)
 
 | PRODUCT_ID | PRODUCT | PRICE | PRODUCT_ID | PRODUCER | UNIT_COST
 | :---: | :---: | :---: | :---: | :---: | :---:
@@ -665,7 +666,7 @@ Result
 - Dataset : my_dataset
 - Table : product, producer
 
-Origin A (product)
+Origin)
 
 | PRODUCT_ID | PRODUCT | PRICE
 | :---: | :---: | :---:
@@ -674,7 +675,7 @@ Origin A (product)
 | A003 | BOOK | 8
 | A004 | CUP | 5
 
-Origin A (producer)
+Origin)
 
 | PRODUCT_ID | PRODUCER | UNIT_COST
 | :---: | :---: | :---:
@@ -684,7 +685,7 @@ Origin A (producer)
 | A004 | HG | 3
 | A005 | HG | 12
 
-Query
+Query)
 
 ```sql
 SELECT *
@@ -692,7 +693,7 @@ FROM `jayden-project.my_dataset.product` LEFT JOIN `jayden-project.my_dataset.pr
 USING (PRODUCT_ID);
 ```
 
-Result
+Result)
 
 | PRODUCT_ID | PRODUCT | PRICE | PRODUCT_ID | PRODUCER | UNIT_COST
 | :---: | :---: | :---: | :---: | :---: | :---:
