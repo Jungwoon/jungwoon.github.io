@@ -67,7 +67,6 @@ A 도착 -> B 도착할때까지 버퍼에 저장 -> B 도착 -> 조인하여 �
 
 ![img](https://cdn-images-1.medium.com/max/600/1*-jjGTYkw5WAW2F6Q8wM4UQ.png)
 
-
 - Approximation algorithms  
 시급한 분석이 필요한 경우, 전체 데이터를 분석하지 않고 일부만 분석하거나, 대략적인 데이터의 근사값만을 구하는 방법으로 대표적으로 K-means나 Approximate Top-N등이 있다.  
 ex) VOD에서 최근 10분간 인기있는 비디오 목록, 12시간 동안 가장 많이 팔린 제품  
