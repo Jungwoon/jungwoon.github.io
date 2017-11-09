@@ -15,9 +15,9 @@ categories:
 # 스트리밍 데이터 처리 개념
 다음 내용들은 조대협님의 블로그의 내용들을 공부하면서 정리한 내용입니다.
 
-[조대협의 블로그](http://bcho.tistory.com)
+> [조대협님의 블로그](http://bcho.tistory.com)
 
-### Bounded data vs UnBounded data
+### Bounded data vs Unbounded data
 - Bounded data : 데이터가 저장되고 더 이상 증가나 변경이 없이 유지되는 데이터  
 ex) 1월 정산 데이터
 - Unbounded data : 데이터의 수가 정해져있지 않고 계속해서 추가되는 데이터  
