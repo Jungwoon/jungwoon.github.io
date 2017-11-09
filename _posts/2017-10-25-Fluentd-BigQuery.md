@@ -65,7 +65,7 @@ twitter - 6.2.0
 
 ---
 
-#### Fluentd 설치하기
+#### Fluentd 설치하기 (아래 설치 순서 `반드시` 지켜야 함)
 
 ```
 $ sudo apt-get update
@@ -301,4 +301,39 @@ webhdfs (0.8.0)
 yajl-ruby (1.3.0)
 zip-zip (0.3)
 zonefile (1.06)
+```
+---
+
+#### PubSub 데이터가 들어오는지 확인하기 위한 소스 (Node.js)
+
+```javascript
+var gcloud = require('google-cloud');
+var pubsubClient = gcloud.pubsub({
+    projectId:'beer-coding',
+    keyFilename: '/Users/jungwoon/GoogleCredential/key.json'
+});
+
+var topic = pubsubClient.topic('projects/beer-coding/topics/twitter');
+
+topic.createSubscription('twitter', function(err, subscription, apiResponse) {
+
+    if (err !== null){
+        console.log('subscription creation failed :' + err);
+        exit(1);
+    }
+
+    subscription.on('error', function(err){
+        console.log('error:' + err);
+    });
+
+    // subscription.on('message', function(message) {
+    subscription.on('message', function (message) {
+        console.log(message);
+    })
+
+    // Remove listeners to stop pulling for messages.
+    subscription.removeListener('message', function (message) {});
+
+    subscription.removeListener('error', function (error) {});
+});
 ```
