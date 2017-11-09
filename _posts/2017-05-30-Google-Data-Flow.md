@@ -13,7 +13,7 @@ categories:
 - Bigdata
 ---
 
-# Google DataFlow
+# Google Data Flow 알아보기
 다음 내용들은 조대협님의 블로그의 내용들을 공부하면서 정리한 내용입니다.
 
 > [조대협님의 블로그](http://bcho.tistory.com)
