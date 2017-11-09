@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Google Data Flow"
+title: "Google Data Flow 알아보기"
 image: '/assets/img/'
 description: 'Google의 Data Flow 개념 및 프로그래밍 방법'
 tags:
@@ -16,7 +16,7 @@ categories:
 # Google DataFlow
 다음 내용들은 조대협님의 블로그의 내용들을 공부하면서 정리한 내용입니다.
 
-[조대협의 블로그](http://bcho.tistory.com)
+> [조대협님의 블로그](http://bcho.tistory.com)
 
 ## Concept
 
