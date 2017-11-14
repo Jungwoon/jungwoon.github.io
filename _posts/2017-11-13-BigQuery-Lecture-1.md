@@ -485,9 +485,9 @@ GCP 서비스를 이용하기 위한 서비스 계정 키를 얻기 위해 [Goog
 ![](https://cdn-images-1.medium.com/max/2000/1*4LlcTlA_i8BeJMtUqORe2A.png)
 
 
-```
-/etc/td-agent/td-agent.conf
+#### /etc/td-agent/td-agent.conf (템플릿)
 
+```
 <source>
     @type twitter
     consumer_key    [my-consumer_key] # 위에서 얻은 트위터 consumer_key
@@ -513,6 +513,39 @@ GCP 서비스를 이용하기 위한 서비스 계정 키를 얻기 위해 [Goog
 #   project [my project name] # 본인의 구글 클라우드 프로젝트 명
 #   topic [my topic path] # 본인의 토픽 명
 #   key [my account key] # 본인의 서비스 계정 키 경로 (절대경로)
+#   flush_interval 10
+#   autocreate_topic false
+#</match>
+```
+
+#### /etc/td-agent/td-agent.conf (내 설정)
+
+```
+<source>
+    @type twitter
+    consumer_key    lvN5uFPnxBKImldP3rrmHq2vh
+    consumer_secret         kY0SAww8kRQhTA6Pp044JzCIMwSXdLyF2RKu71eam54iGtwvDj
+    access_token     2157919489-duFYYM21tjMWmMLxz1QA29U2L8mzmVZ9UkfZlsP
+    access_token_secret      ovRtUMrfjOB9dV7CYnzZy8IUI2DhOWtP0zJtokTrmgYxz
+    tag     input.twitter
+    timeline        sampling
+    keyword         iPhoneX
+    output_format   nest
+</source>
+
+### for Standout
+
+<match input.twitter>
+    @type stdout
+</match>
+
+### for Cloud Pub/Sub
+
+#<match input.twitter>
+#   @type gcloud_pubsub
+#   project beer-coding
+#   topic projects/beer-coding/topics/twitter
+#   key /home/byjungwoon/key.json
 #   flush_interval 10
 #   autocreate_topic false
 #</match>
@@ -555,6 +588,8 @@ GCP 서비스를 이용하기 위한 서비스 계정 키를 얻기 위해 [Goog
 
 ![](https://cdn-images-1.medium.com/max/2000/1*xb34p64B4vxUDWrGiJNpng.png)
 
+#### /etc/td-agent/td-agent.conf (템플릿)
+
 ```
 <source>
     @type twitter
@@ -581,6 +616,39 @@ GCP 서비스를 이용하기 위한 서비스 계정 키를 얻기 위해 [Goog
    project [my project name] # 본인의 구글 클라우드 프로젝트 명
    topic [my topic path] # 본인의 토픽 명
    key [my account key] # 본인의 서비스 계정 키 경로 (절대경로)
+   flush_interval 10
+   autocreate_topic false
+</match>
+```
+
+#### /etc/td-agent/td-agent.conf (내 설정)
+
+```
+<source>
+    @type twitter
+    consumer_key    lvN5uFPnxBKImldP3rrmHq2vh
+    consumer_secret         kY0SAww8kRQhTA6Pp044JzCIMwSXdLyF2RKu71eam54iGtwvDj
+    access_token     2157919489-duFYYM21tjMWmMLxz1QA29U2L8mzmVZ9UkfZlsP
+    access_token_secret      ovRtUMrfjOB9dV7CYnzZy8IUI2DhOWtP0zJtokTrmgYxz
+    tag     input.twitter
+    timeline        sampling
+    keyword         iPhoneX
+    output_format   nest
+</source>
+
+### for Standout
+
+#<match input.twitter>
+#    @type stdout
+#</match>
+
+### for Cloud Pub/Sub
+
+<match input.twitter>
+   @type gcloud_pubsub
+   project beer-coding
+   topic projects/beer-coding/topics/twitter
+   key /home/byjungwoon/key.json
    flush_interval 10
    autocreate_topic false
 </match>
