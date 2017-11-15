@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "BigQuery 데이터 로드시에 분할해서 로드하기 - #2"
+title: "BigQuery 데이터 로드시에 분할해서 로드하기 - #2 (Rundeck으로 자동화 하기)"
 image: '/assets/img/'
 description: 'Rundeck과 Shell Script를 이용해서 자동으로 배치 처리하기'
 tags:

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "BigQuery 데이터 로드시에 분할해서 로드하기 - #1"
+title: "BigQuery 데이터 로드시에 분할해서 로드하기 - #1 (빅쿼리 파티셔닝하기)"
 image: '/assets/img/'
 description: 'Embulk로 분할하여 로드하기'
 tags:
