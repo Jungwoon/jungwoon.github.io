@@ -80,6 +80,6 @@ GCP 서비스를 이용하기 위한 서비스 계정 키를 얻기 위해 [Goog
 
 ![](https://cdn-images-1.medium.com/max/2000/1*mxKbd5sowOYxnwNT9jZoPg.png)
 
-그 다음 해당 키의 경로를 확인해뒀다가 아래 `td-agent.conf` 파일에 입력하도록 합니다
+그 다음 해당 키의 경로를 확인해뒀다가 키가 필요한 곳에 입력하여 사용합니다
 
 ![](https://cdn-images-1.medium.com/max/1200/1*ZORWDug3gCiOUIZlv5ApXw.png)
