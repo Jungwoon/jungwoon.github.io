@@ -14,7 +14,9 @@ categories:
 ## Google Cloud에서 Natural Language API 정리
 
 [CLOUD NATURAL LANGUAGE API](https://cloud.google.com/natural-language/)는 구글 클라우드 환경에서 제공하는 자연어 분석기입니다.
-무려 한글도 정식으로 지원이 되어서 이번에 사용해버면서 내용을 좀 정리해보려고 합니다.
+무려 한글도 정식으로 지원이 되어서 이번에 사용해보면서 내용을 좀 정리해보려고 합니다.
+
+따로 설정 필요없이 알아서 한글이면 한글로 분석 영어면 영어로 분석을 합니다 아주 똑똑한 녀석이네요
 
 아래 실습 코드는 [GoogleNLP](https://github.com/Jungwoon/GoogleNLP) 에 올려놨습니다
 
