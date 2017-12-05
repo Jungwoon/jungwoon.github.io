@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Fluentd에서 PubSub로 데이터 보내기"
+title: "GCP 뽀개기 #1 - Fluentd에서 PubSub로 데이터 보내기"
 image: '/assets/img/'
-description: 'GCP를 이용한 실시간 처리하기 #1'
+description: 'Fluentd에서 PubSub로 데이터 보내기'
 tags:
 - BigQuery
 - Compute Engine
