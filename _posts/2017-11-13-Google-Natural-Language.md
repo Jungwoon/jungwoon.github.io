@@ -41,7 +41,7 @@ categories:
 
 ---
 
-### gcloud sdk 설치 후 인증받기
+#### gcloud sdk 설치 후 인증받기
 
 우선 [Google Cloud SDK(=gcloud) 설치하기](https://jungwoon.github.io/google%20cloud/2017/10/26/install-gcloud/)를
 참고하여 gcloud 설치를 먼저 해줍니다
