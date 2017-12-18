@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "모두의 텐소플로우#1 - Machine Learning 개념 정리 & Linear Regression"
+title: "모두의 텐소플로우  #1 - Machine Learning 개념 정리 & Linear Regression"
 image: '/assets/img/'
 description: 'Machine Learning 개념 정리'
 tags:
