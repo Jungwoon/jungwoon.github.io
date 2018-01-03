@@ -10,7 +10,7 @@ categories:
 ---
 
 
-## Google Cloud 서비스 계정키 얻기
+## Google Cloud의 Traslation API 사용해보기
 
 개인적으로 구글에서 가장 많이 쓰는 서비스중에 하나인 구글 번역기 API를 이용하는 방법에 대해서 공부해보려고 합니다.
 
