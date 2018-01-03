@@ -285,7 +285,7 @@ public class TranslationExample {
 
 #### 결과
 
-```java
+```
 Text Origin : This document describes how to use the Google Translation API to list supported languages.
 Translation : このドキュメントでは、Google翻訳APIを使用してサポートされている言語を一覧表示する方法について説明します。
 ```
