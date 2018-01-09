@@ -109,6 +109,8 @@ export GOOGLE_APPLICATION_CREDENTIALS=/Users/jungwoon/GoogleCredential/bigqueryb
 
 진행은 JAVA로 진행하려고 하고, 먼저 Client Library를 가져오는 방법에 대해서 봐보도록 하겠습니다.
 
+---
+
 #### Maven 설정
 
 ```xml
@@ -119,11 +121,15 @@ export GOOGLE_APPLICATION_CREDENTIALS=/Users/jungwoon/GoogleCredential/bigqueryb
 </dependency>
 ```
 
+---
+
 #### Gradle 설정
 
 ```
 compile 'com.google.cloud:google-cloud-vision:1.14.0'
 ```
+
+---
 
 #### 소스
 
@@ -152,11 +158,11 @@ private static Image getImage(String filePath) throws IOException {
 
 #### 글자 인식
 
-우선 샘플 이미지부터 보여드리겠습니다.
+샘플 이미지
 
 ![](https://cdn-images-1.medium.com/max/1400/1*Zbpjad26FqtDu0df5jFSmw.jpeg)
 
-그 다음 이 이미지에서 글자를 가져와 보겠습니다.
+소스
 
 ```java
 private static void detectText(String filePath) throws Exception {
