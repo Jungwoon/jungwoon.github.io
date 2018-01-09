@@ -695,7 +695,7 @@ vertices {
 
 #### 문서 인식
 
-샘플 이미지는 아래와 같습니다.
+샘플 이미지
 
 ![](https://cdn-images-1.medium.com/max/2000/1*fIHBLwyThpHchoF5G548xg.png)
 

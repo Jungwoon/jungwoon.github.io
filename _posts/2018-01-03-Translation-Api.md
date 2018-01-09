@@ -206,6 +206,8 @@ export GOOGLE_APPLICATION_CREDENTIALS=/Users/jungwoon/GoogleCredential/bigqueryb
 
 진행은 JAVA로 진행하려고 하고, 먼저 Client Library를 가져오는 방법에 대해서 봐보도록 하겠습니다.
 
+---
+
 #### Maven 설정
 
 ```xml
@@ -216,11 +218,15 @@ export GOOGLE_APPLICATION_CREDENTIALS=/Users/jungwoon/GoogleCredential/bigqueryb
 </dependency>
 ```
 
+---
+
 #### Gradle 설정
 
 ```
 compile 'com.google.cloud:google-cloud-translate:1.14.0'
 ```
+
+---
 
 #### 소스
 
