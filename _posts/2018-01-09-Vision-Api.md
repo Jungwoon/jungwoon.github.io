@@ -67,7 +67,7 @@ Vision API는 구글의 머신러닝 기술을 이용하여 이미지를 분석�
 
 ---
 
-#### 서비스 계정키를 다운 받아서 .bashrc에 등록하기
+#### 서비스 계정키를 다운 받아서 .bashrc에 등록하기 및 사용설정하기
 
 GCP 서비스를 이용하기 위한 서비스 계정 키를 얻기 위해 [Google Cloud Console](http://console.cloud.google.com)에서
  `메뉴 - API 및 서비스 - 서비스 계정`을 누릅니다
@@ -102,6 +102,22 @@ export GOOGLE_CLOUD_SDK_PATH=/Users/jungwoon/google-cloud-sdk
 export PATH=$PATH:$GOOGLE_CLOUD_SDK_PATH/bin
 export GOOGLE_APPLICATION_CREDENTIALS=/Users/jungwoon/GoogleCredential/bigquerybyjw.json
 ```
+
+그 다음 터미널에서 `$ gcloud auth application-default login`을 해주어야 합니다.
+
+![](https://cdn-images-1.medium.com/max/800/1*WdGVW0xeXmda4UijQGPSPg.png)
+
+그럼 아래와 같이 나오는데 여기서 `Y`를 눌러서 진행을 합니다.
+
+![](https://cdn-images-1.medium.com/max/1200/1*JP_MMkFHJA0tMuu1PBjfuA.png)
+
+그 다음 브로우저가 열리면서 어떤 계정에 연결을 할건지에 대해서 나오는데, 연결하고자 하는 계정을 클릭합니다.
+
+![](https://cdn-images-1.medium.com/max/1200/1*iG56mP8w2EKHFiVbzqOiOg.png)
+
+마지막으로 아래와 같은 화면에서 허용을 해주어야 사용할 수 있게 됩니다.
+
+![](https://cdn-images-1.medium.com/max/1000/1*DiQZv3P_SrVSn0mGZnFgdw.png)
 
 ---
 
