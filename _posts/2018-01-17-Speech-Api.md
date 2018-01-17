@@ -167,7 +167,8 @@ public class SpeechApiTest {
 
         recognitionSpeech(filePath);
     }
-
+    
+    // 1분 미만의 오디오 파일일
     public static void recognitionSpeech(String filePath) {
 
         try {
