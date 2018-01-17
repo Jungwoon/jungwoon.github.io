@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Google Cloud 서비스 계정키 얻기 및 GCS 공유하기"
+title: "Google Cloud의 Speech API 사용해보기"
 image: '/assets/img/'
-description: 'Google Cloud 서비스 계정키 얻기 및 GCS 공유하기'
+description: 'Google Cloud의 Speech API 사용해보기'
 tags:
 - Google Cloud
 categories:
