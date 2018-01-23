@@ -38,6 +38,8 @@ cost = -tf.reduce_mean(Y * tf.log(hypothesis) + (1 - Y) * tf.log(1-hypothesis))
 optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.01).minimize(cost)
 ```
 
+---
+
 #### 실습 #1
 
 소스
@@ -164,6 +166,8 @@ logits = tf.matmul(X, W) + b
 hypothesis = tf.nn.softmax(logits)
 ```
 
+---
+
 #### Softmax Cost Function
 
 ```python
@@ -174,12 +178,15 @@ cost = tf.reduce_mean(-tf.reduce_sum(Y*tf.log(hypothesis), axis=1))
 optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.1).minimize(cost)
 ```
 
+---
 
 #### One Hot Encoding
 
 여러개의 결과가 있을때 결과에 가장 근사값만 1로 나머지는 0으로 표시함으로써 구분할 수 있게 해준다.
 
 ![](https://cdn-images-1.medium.com/max/1200/1*XjBxpF1DbHc7wtMT4KzgKg.png)
+
+---
 
 #### 실습 #1
 
@@ -245,6 +252,8 @@ with tf.Session() as sess:
        [  9.02791023e-01,   8.50417688e-02,   1.21671809e-02],
        [  6.99110547e-09,   2.95337552e-04,   9.99704659e-01]], dtype=float32), array([1, 0, 2]))
 ```
+
+---
 
 #### 실습 #2 (당뇨병 예측하기)
 
@@ -345,6 +354,8 @@ logits = tf.matmul(X, W) + b # score라고도 부름
 cost_i = tf.nn.softmax_cross_entropy_with_logits(logits=logits, labels=Y_one_hot)
 cost = tf.reduce_mean(cost_i)
 ```
+
+---
 
 #### 실습 #2
 
