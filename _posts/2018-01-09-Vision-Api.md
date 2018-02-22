@@ -35,6 +35,8 @@ Vision API는 구글의 머신러닝 기술을 이용하여 이미지를 분석�
 
 이제 개발을 하기 전에 필요한 사전 설정부분에 대해서 설명 드립니다.
 
+---
+
 #### Cloud Translation API 사용 허용해주기
 
 먼저 Cloud Translation API의 사용 설정을 해줍니다.
@@ -46,6 +48,8 @@ Vision API는 구글의 머신러닝 기술을 이용하여 이미지를 분석�
 아래와 같이 나오면 `사용 설정`을 눌러서 API를 Enable 해줍니다.
 
 ![](https://cdn-images-1.medium.com/max/1000/1*03tukVRgq2XLj_5AC8xH1w.png)
+
+---
 
 #### gcloud sdk 설치 후 인증받기
 
