@@ -2,7 +2,7 @@
 layout: post
 title: "Google Cloud Function 이용하기"
 image: '/assets/img/'
-description: 'Google Cloud Function 이용하기'
+description: 'Cloud Function을 이용해서 이미지 파일들 자동으로 jpg로 변경하기'
 tags:
 - Google Cloud
 categories:
