@@ -206,7 +206,7 @@ $ mvn compile exec:java \
     - BlockingDataflowPipelineRunner : Cloud Dataflow 이용시 사용하지만 파이프라인이 기동되는 동안
      프로그램이 실행중인걸로 되어서 프로그램(IntelliJ or Eclipse)에서 멈춰버리면 전체 파이프라인이 멈춰버리게 된다
 - Project : Google Cloud Project ID
-- StgingLocation : Google Cloud Storage의 Bucket 아이디를 넣어준다
+- StagingLocation : Google Cloud Storage의 Bucket 아이디를 넣어준다
 - Streaming : 스트리밍 데이터 처리때 설정을 해 준다. 
      
 ---
