@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Google Cloud에서 Natural Language API 정리"
+title: "GCP 뽀개기 #3 - Google Cloud에서 Natural Language API 정리"
 image: '/assets/img/'
 description: 'Google Cloud에서 Natural Language API 정리'
 tags:
