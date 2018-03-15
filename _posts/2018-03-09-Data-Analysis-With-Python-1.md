@@ -338,7 +338,7 @@ print cntr.most_common()
 >>> [('a', 3), ('canal', 1), ('panama', 1), ('plan', 1), ('man', 1)]
 ```
 
-여기서 딕셔너리로 ㅎ나번 더 묶으면 딕셔너리 형태로 보기 좋게 가져올 수 있습니다
+여기서 딕셔너리로 한번 더 묶으면 딕셔너리 형태로 보기 좋게 가져올 수 있습니다
 
 ```python
 from collections import Counter
