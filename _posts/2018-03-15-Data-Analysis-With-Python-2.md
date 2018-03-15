@@ -1,20 +1,14 @@
 ---
 layout: post
-title: "파이썬으로 데이터 분석하기 #1"
+title: "파이썬으로 데이터 분석하기 #2"
 image: '/assets/img/'
-description: '파이썬으로 데이터 분석하기 #1'
+description: '파이썬에서 정규 표현식 사용하기'
 tags:
 - Python
 categories:
 - Python
 ---
 
-
-## 파이썬으로 데이터 분석하기 #2
-
-데이터 분석을 할때, 파이썬을 이용하여 분석할 수 있는 부분에 대해서 알아보겠습니다.
-
----
 
 ## 파이썬에서 정규표현식 사용하기
 
