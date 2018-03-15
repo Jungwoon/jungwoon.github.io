@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "정규 표현식(Regular Expression) 정리하기"
+title: "정규 표현식(Regular Expressions) 정리하기"
 image: '/assets/img/'
-description: '정규 표현식(Regular Expression) 정리하기'
+description: '정규 표현식(Regular Expressions) 정리하기'
 tags:
 - Regex
 categories:
@@ -10,7 +10,7 @@ categories:
 ---
 
 
-## 정규 표현식(Regular Expression) 정리하기
+## 정규 표현식(Regular Expressions) 정리하기
 
 이번에는 정규 표현식을 한번 정리해보도록 하겠습니다.
 정규 표현식은 텍스트에서 특정 패턴만 골라서 가져올 수 있는 기술로
@@ -22,7 +22,7 @@ categories:
 
 포스팅한 PDF 다운로드는 아래 공유 드리도록 하겠습니다.
 
-> 다운로드 : [PDF 다운로드](https://www.dropbox.com/s/aa0jhrt2qma20r9/Regex_wide.pdf?dl=0)
+> 다운로드 : [PDF 다운로드](https://www.dropbox.com/s/du6hrakweehua9l/Regex_wide.pdf?dl=0)
 
 > 정규 표현식 연습 사이트 : [연습 사이트](https://regexr.com)
 
