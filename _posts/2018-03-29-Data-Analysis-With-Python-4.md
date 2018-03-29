@@ -110,11 +110,11 @@ import pymysql
 
 # 우선 database 정보를 입력하여 데이터를 가져오도록 하겠습니다.
 connection = pymysql.connect(
-    host='35.225.116.42',
-    port=3306,
-    user='root',
-    passwd='frip1!',
-    db='employees',
+    host='데이터 베이스 IP',
+    port=3306, # MySQL기본 포트 = 3306
+    user='아이디',
+    passwd='비밀번호',
+    db='사용하고자 하는 데이터 베이스 이름',
     charset='utf8mb4')
 
 cursor = connection.cursor()
@@ -149,11 +149,11 @@ import pymysql
 
 # 우선 database 정보를 입력하여 데이터를 가져오도록 하겠습니다.
 connection = pymysql.connect(
-    host='35.225.116.42',
-    port=3306,
-    user='root',
-    passwd='frip1!',
-    db='employees',
+    host='데이터 베이스 IP',
+    port=3306, # MySQL기본 포트 = 3306
+    user='아이디',
+    passwd='비밀번호',
+    db='사용하고자 하는 데이터 베이스 이름',
     charset='utf8mb4')
 
 cursor = connection.cursor()
@@ -187,11 +187,11 @@ import pymysql
 
 # 우선 database 정보를 입력하여 데이터를 가져오도록 하겠습니다.
 connection = pymysql.connect(
-    host='35.225.116.42',
-    port=3306,
-    user='root',
-    passwd='frip1!',
-    db='employees',
+    host='데이터 베이스 IP',
+    port=3306, # MySQL기본 포트 = 3306
+    user='아이디',
+    passwd='비밀번호',
+    db='사용하고자 하는 데이터 베이스 이름',
     charset='utf8mb4')
 
 cursor = connection.cursor()
