@@ -133,33 +133,6 @@ $ ./atlassian-jira-software-7.8.2-x64.bin
 
 ![](https://cdn-images-1.medium.com/max/1000/1*lSBR7SKgF-WWCdPR-7RuRA.png)
 
----
-
-## Bitbucket 설치하기
-
-[아카이브 다운로드 페이지](https://ko.atlassian.com/software/bitbucket/download-archives)에
-들어가서 `BIN` 파일 다운로드 링크를 가져와서 `wget`으로 다운로드 받습니다
-
-### Bitbucket 다운로드 (*.bin)
-
-```bash
-$ wget https://www.atlassian.com/software/stash/downloads/binary/atlassian-bitbucket-5.9.0-x64.bin
-or
-$ wget --no-check-certificate https://www.atlassian.com/software/stash/downloads/binary/atlassian-bitbucket-5.9.0-x64.bin
-```
-
-### 권한 변경
-
-```bash
-$ chmod a+x atlassian-bitbucket-5.9.0-x64.bin
-```
-
-### 설치 하기
-
-```bash
-$ ./atlassian-bitbucket-5.9.0-x64.bin
-```
----
 
 ## 마무리
 
