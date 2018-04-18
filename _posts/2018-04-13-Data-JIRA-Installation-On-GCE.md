@@ -5,10 +5,10 @@ image: '/assets/img/'
 description: 'Compute Engine에 JIRA 설치하기'
 tags:
 - JIRA
-- Compute Engine
+- Google Cloud
 categories:
 - JIRA
-- Compute Engine
+- Google Cloud
 ---
 
 ## Compute Engine에 JIRA 설치하기
