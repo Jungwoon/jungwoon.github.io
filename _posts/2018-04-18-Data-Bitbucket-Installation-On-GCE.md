@@ -137,7 +137,7 @@ $ gcloud compute instances add-tags [VM_NAME] --tags allow-tcp-7990
 
 아래와 같이 나타나면 자신에 맞게 설정을 하고 `Next`를 누릅니다.
 
-![](https://cdn-images-1.medium.com/max/1000/1*HRrRolKu4Uw_nX1cdyxBEg.png
+![](https://cdn-images-1.medium.com/max/1000/1*HRrRolKu4Uw_nX1cdyxBEg.png)
 
 그럼 다음과 같은 화면이 나타나는데, 여기서는 먼저 로그인을 하기 위해서 `I have an account`를
 클릭합니다.
