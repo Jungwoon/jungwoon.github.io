@@ -229,8 +229,8 @@ GCP에서의 MySQL과 PostgreSQL을 지원
 | | Cloud Datastore | Bigtable | Cloud Storage | Cloud SQL | Cloud Spanner | Big Query
 | :--- | :--- | :--- | :--- | :--- | :---
 | Type | NoSQL | NoSQL with column | Blockstore | 관계형 SQL for OLTP | 관계형 SQL for OLTP | 관계형 SQL for OLAP
-| Best for | Semi-structured application data, durable key-value data | `Flat` data, Heavy R/W, events, analytical data | Structured and unstructured binary or object data | Web frameworks, existing applications | Large-scale database application | interactive querying, offline analytics
-| Use cases | Getting started, App Engine Applications | AdTech, Financial and IoT data | Image, Large media files, Backups | User credentials, customer orders | Whenever high I/O, global consitency is needed | Data warehousing
+| Best for | 반 정형화된 어프리케이션 데이터, 영속성 있는 키-밸류 데이터 | `Flat` 데이터, 큰 규모의 읽기/쓰기, 이벤트, 분석 데이터 | 여러 형태의 파일들 | 웹 프레임워크, 어플리케이션 | 큰 규모의 데이터베이스 어플리케이션 | 쿼리를 이용한 데이터 분석
+| Use cases | App Engine 어플리케이션 | 광고, 금융 및 IoT 데이터 | 이미지, 미디어 파일, 백업 | 사용자 신용정보, 고객 주문 | 글로벌 규모의 큰 데이터 처리 | 데이터 웨어하우스
 
 ---
 
@@ -245,7 +245,7 @@ GCP의 대표적인 컨테이너 서비스
 
 ### Kubernetes
 
-![](http://www.cienciaedados.com/kubernetes-pods-nodes-containers-e-clusters/)
+![](https://cdn-images-1.medium.com/max/2000/1*f6RGkBXdwtU0L4NJmUXpYA.png)
 
 컨테이너 관리 시스템
 
