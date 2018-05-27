@@ -198,3 +198,11 @@ Google Compute Engine은 GCP의 대표적인 서비스로 인스턴스를 만들
 2. Upload : 손 쉽게 개발된 소스를 업로드 할 수 있습니다.
 3. Scales & Reliably : 손 쉽게 스케일 아웃을 할 수 있습니다.
 4. Managing : 배포나 업데이트등의 관리를 손 쉽게 할 수 있도록 도와줍니다.
+
+---
+
+## Google Dataproc
+
+![](https://cdn-images-1.medium.com/max/800/1*Iw4Iggm5s1qVaKaZeIpPBQ.png)
+
+구글의 Dataproc은 하둡 에코시스템(Hadoop, Spark, Hive, Pig...)을 지원해주는 서비스 입니다.
