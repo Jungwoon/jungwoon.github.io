@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Google Cloud Platform의 빅데이터 제품 살펴보기#1 - GCS, GCE"
+title: "Google Cloud Platform의 빅데이터 제품 살펴보기 - GCS, GCE"
 image: '/assets/img/'
 description: 'Google Cloud Storage, Google Compute Engine'
 tags:
@@ -9,7 +9,7 @@ categories:
 - Google Cloud
 ---
 
-## Google Cloud Platform의 빅데이터 제품 살펴보기#1 - GCS, GCE
+## Google Cloud Platform의 빅데이터 제품 살펴보기 - GCS, GCE
 
 이번 5월부터 [Google Cloud Professional Data Engineer](https://cloud.google.com/certification/data-engineer)을
 취득하기 위해 준비하면서 공부하는 내용들을 틈틈히 포스팅 해보려고 합니다.
