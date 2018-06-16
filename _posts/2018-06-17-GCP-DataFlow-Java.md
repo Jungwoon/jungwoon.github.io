@@ -2,7 +2,7 @@
 layout: post
 title: "Google Cloud Platform의 DataFlow(Java) 살펴보기"
 image: '/assets/img/'
-description: 'Google Cloud Platform의 DataFlow(Java) 살펴보기'
+description: '데이터 플로우 살펴보기'
 tags:
 - Google Cloud
 categories:
