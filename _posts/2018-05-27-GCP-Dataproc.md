@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Google Cloud Platform에서 Hadoop 및 Spark 사용해보기 - Dataproc"
+title: "Google Cloud Platform의 Dataproc(=Hadoop 및 Spark) 사용해보기"
 image: '/assets/img/'
-description: 'GCP에서 Hadoop 사용하기'
+description: '구글 클라우드에서 하둡 사용해보기'
 tags:
 - Google Cloud
 categories:
