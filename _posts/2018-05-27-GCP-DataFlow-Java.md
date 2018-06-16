@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Google Cloud Platform의 빅데이터 제품 살펴보기 - DataFlow(Java)"
+title: "Google Cloud Platform의 DataFlow(Java) 살펴보기"
 image: '/assets/img/'
-description: 'Google Cloud Platform의 빅데이터 제품 살펴보기 - DataFlow(Java)'
+description: 'Google Cloud Platform의 DataFlow(Java) 살펴보기'
 tags:
 - Google Cloud
 categories:
