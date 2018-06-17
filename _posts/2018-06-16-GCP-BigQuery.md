@@ -757,3 +757,33 @@ Result)
 | A003 | BOOK | 8 | A003 | HG | 4
 | A004 | CUP | 5 | A004 | HG | 3
 
+#### WITH
+
+`WITH` 절은 서브 쿼리와 비슷한 문법으로 미리 `WITH`절과 `별칭`으로 만들어 놓고
+다른 쿼리에서 미리 만들어 놓은 쿼리에 참조를 할 수 있습니다.
+
+- Project Name : jayden-project
+- Dataset : my_dataset
+- Table : product
+
+Origin)
+
+| PRODUCT_ID | PRODUCT | PRICE
+| :---: | :---: | :---:
+| A001 | PEN | 3
+| A002 | CANDY | 1
+| A003 | BOOK | 8
+| A004 | CUP | 5
+| A005 | USB | 20
+
+Query)
+
+```sql
+WITH temp AS (
+    SELECT *
+    FROM `jayden-project.my_dataset.product
+    WHERE PRICE >=5`
+)
+SELECT *
+FROM temp;
+```
