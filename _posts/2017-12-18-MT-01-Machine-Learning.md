@@ -76,7 +76,7 @@ categories:
 - Variables : 변수로 값의 변화는 텐소가 연산되면서 바뀌게 됩니다.
     - 선언 : tf.Variable(값, name='이름')
     - 예시 : tf.Variable([1, 2, 3, 4, 5], name='weight')
-- PlaceHolder : 여러가지 데이터 타입을 닮을 수 있는 자료형으로 초기값 없이 선언하고, 나중에 `feed_dict`을 통해 데이터를 주입한다
+- PlaceHolder : 여러가지 데이터 타입을 담을 수 있는 자료형으로 초기값 없이 선언하고, 나중에 `feed_dict`을 통해 데이터를 주입한다
     - 선언 : tf.placeHolder(dtype=데이터 타입, shape=[n,n], name='이름')
     - 예시 : tf.placeholder(tf.float32, shape=None, name='Hello')
     
