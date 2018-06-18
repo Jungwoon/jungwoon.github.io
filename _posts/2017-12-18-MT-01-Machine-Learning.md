@@ -114,7 +114,6 @@ Y = tf.placeholder(tf.float32, shape=[None])
 
 # Our Hypothesis H(x) = Wx + b
 hypothesis = X * W + b
-b = tf.Variable(tf.random_normal([1]), name='bias')
 
 # cost/Loss function
 cost = tf.reduce_mean(tf.square(hypothesis - Y)) # tf.reduce_mean() : 지정한 차원을 따라 평균을 계산
@@ -128,7 +127,7 @@ sess = tf.Session()
 sess.run(tf.global_variables_initializer()) # for use Variable
 
 for step in range(2001):
-  # feed_dict을 통해서 X와 Y에 변수를 넣어줍니
+  # feed_dict을 통해서 X와 Y에 변수를 넣어줍니다
   cost_val, W_val, b_val, _ = sess.run([cost, W, b, train], feed_dict={X: [1, 2, 3, 4, 5], Y: [2.1, 3.1, 4.1, 5.1, 6.1]})
   
   if step % 20 == 0:
