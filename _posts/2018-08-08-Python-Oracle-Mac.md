@@ -21,7 +21,7 @@ categories:
 우선 [다운로드 페이지](http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html)에 들어갑니다.
 그럼 아래와 같은 사이트가 보이는데요.
 
-![[](https://cdn-images-1.medium.com/max/1600/1*AxgGcip2btUMPZLA_CuAaA.png)
+![](https://cdn-images-1.medium.com/max/1600/1*AxgGcip2btUMPZLA_CuAaA.png)
 
 여기서 아래 파일들을 다운로드 받아줍니다.
 
