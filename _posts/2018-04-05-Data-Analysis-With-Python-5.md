@@ -206,7 +206,7 @@ plt.show()
 ![](https://cdn-images-1.medium.com/max/600/1*ubISoMxJ0Hz0INndxu1ebQ.png)
 
 ```python
-# np.random.randn(행, 열 or 크기) : 행:열 또는 크기 만큼의 정규 분포로 난수(0~1 사이) 생성
+# np.random.randn(행, 열 or 크기) : 기댓값이 0이고 표준편차가 1인 가우시안 표준 정규 분포를 따르는 난수를 생성
 arr_randn = np.random.randn(3, 2)
 arr_randn
 
