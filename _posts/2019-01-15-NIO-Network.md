@@ -205,7 +205,7 @@ Channel 생성하고 중요한 점은 `configureBlocking(false)`를 해서 `논�
 
 ```java
 ServerSocketChannel serverSocket = ServerSocketChannel.open(); // Server Socket Channel 열고
-serverSocket.bind(new InetSocketAddress( 5454));
+serverSocket.bind(new InetSocketAddress(5454));
 serverSocket.configureBlocking(false); // Non-blocking 설정, 필수!!
 ```
 
