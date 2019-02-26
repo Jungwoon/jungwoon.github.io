@@ -42,7 +42,7 @@ java.nio.channels.SocketChannel       // 클라이언트용
 ```java
 ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
 serverSocketChannel.configureBlocking(true); // 블로킹 방식
-serverSocketChannel.bind(new InetSocketAddress(12345)); // 포트 12345를 연결을 위해서 연어놓음
+serverSocketChannel.bind(new InetSocketAddress(12345)); // 포트 12345를 연결을 위해서 열어놓음
 
 SocketChannel socketChannel = serverSocketChannel.accept(); // 이 부분에서 연결이 될때까지 블로킹
 ```
@@ -118,7 +118,7 @@ Sending Success
 
 ```java
 import java.io.IOException;
-        import java.net.InetSocketAddress;
+import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.Charset;
