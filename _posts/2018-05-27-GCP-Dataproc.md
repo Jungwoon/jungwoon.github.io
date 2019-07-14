@@ -134,14 +134,14 @@ categories:
 ![](https://cdn-images-1.medium.com/max/2000/1*f5ac5-LUEXiqOQfB7TXxvA.png)
 
 웹 브라우저의 주소창에 `External IP:9870 (ex - 35.189.188.108:9870)`를
-입력하면 다음과 같이 `Hadoop의 Resource Manager용 웹 UI`를 볼 수 있습니다.
+입력하면 다음과 같이 `Hadoop의 NameNode UI 관리 페이지`를 볼수 있습니다.
 
 `(위의 방화벽 설정을 하지 않으면 접속이 되지 않습니다)`
 
 ![](https://cdn-images-1.medium.com/max/2000/1*lpDuWD_AOayHzi8_Ei4x6A.png)
 
 이번에는 웹 브라우저의 주소창에 `External IP:8088 (ex - 35.189.188.108:8088)`를
-입력하면 다음과 같이 `Hadoop의 NameNode UI 관리 페이지`를 볼수 있습니다.
+입력하면 다음과 같이 `Hadoop의 Resource Manager용 웹 UI`를 볼 수 있습니다.
 
 `(위의 방화벽 설정을 하지 않으면 접속이 되지 않습니다)`
 
