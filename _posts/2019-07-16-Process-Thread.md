@@ -47,7 +47,7 @@ categories:
 
 ####  프로세스(Process)
 
-![](https://miro.medium.com/max/1000/1*vkt8DB9ywk_4n2znWDMgyA.png)
+![](https://miro.medium.com/max/1000/1*UhN3WWDfMTXkV0l4IXbAtg.png)
 
 - 의미
     - 메모리에 올라와 실행되고 있는 프로그램 인스턴스
@@ -56,10 +56,10 @@ categories:
 - 시스템으로 부터 할당받는 자원
     - CPU 시간
     - 주소 공간
-    - Code, Data, Stack, Heap의 구조로 되어 있는 독립된 메모리 영역
+    - `Stack`, `Heap`, `Data`, `Text`의 구조로 되어 있는 독립된 메모리 영역
 - 특징
-    - 프로세스는 각각 독립된 메모리 영역(Code, Data, Stack, Heap)을 할당 받습니다.
-    - 프로세스당 최소 하나 이상의 스레드(=메인 스레드)를 갖습니다.
+    - 프로세스는 `각각 독립된 메모리 영역(Stack, Heap, Data, Text)`을 할당 받습니다.
+    - 프로세스당 최소 `하나 이상의 스레드(=메인 스레드)`를 갖습니다.
     - 각각의 프로세스는 별도의 주소 공간에서 실행되며, 한 프로세스는 다른 프로세스의 변수나 자료구조에 접근할 수 없습니다.
     - 독립된 공간이기 때문에 한 프로세스가 다른 프로세스의 자원에 접근하려면 프로세스간 통신(IPC)를 사용해야 합니다. 
 
