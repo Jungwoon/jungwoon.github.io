@@ -272,8 +272,10 @@ class MyServiceActivity : AppCompatActivity() {
 
 구현 방법은 아래와 같습니다.
 
+```
 서버 : BindingService.kt
 클라이언트 : BindingActivity.kt
+```
 
 1. `클라이언트(=액티비티)`가 호출할 수 있도록 Service 내에 `Binder`를 상속받는 `inner class`를 만들고 `inner class` 내에 해당 서비스 인스턴스를 반환하는 메서드 생성
 2. onBind() 콜백 메서드에서는 위에서 만든 `Binder`를 상속받은 클래스의 인스턴스를 반환
@@ -389,8 +391,10 @@ class BindingActivity : AppCompatActivity() {
 
 구현 방법은 아래와 같습니다.
 
+```
 서버 : MessengerService.kt
 클라이언트 : MessengerActivity.kt
+```
 
 1. `서버(=서비스)`안에 `클라인언트(=액티비티)`로부터 각 호출에 대해 콜백을 받는 `Handler`를 구현합니다.
 2. `Handler`를 사용하여 `Messenger 객체`를 생성합니다.
