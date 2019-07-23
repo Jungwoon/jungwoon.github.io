@@ -2,7 +2,7 @@
 layout: post
 title: "안드로이드 서비스(Android Service)"
 image: '/assets/img/'
-description: '안드로이드 서비스(Android Service)
+description: '안드로이드 서비스(Android Service)'
 tags:
 - Android
 categories:
