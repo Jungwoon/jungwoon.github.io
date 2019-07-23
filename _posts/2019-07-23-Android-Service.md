@@ -83,6 +83,7 @@ Marshalling 을 수행함으로써 복잡한 통신, 사용자 정의/복잡한 
 ![](https://developer.android.com/images/service_lifecycle.png?hl=ko)
 > 출처 : [서비스 - 구글 공식 문서](https://developer.android.com/guide/components/services?hl=ko)
 
+
 - `시작된 서비스`
     - `onCreate()` : 서비스가 생성될 때 가장 먼저 호출되는 콜백 메서드로, 서비스 자신의 초기 설정을 합니다.
     - `onStartCommand()` : `startService()`를 호출하면 이 콜백 메서드가 호출이 됩니다. 이 부분에서 `Intent`를 전달받습니다.
