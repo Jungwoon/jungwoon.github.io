@@ -105,10 +105,31 @@ categories:
 
 - 장점 : 여러 프로세스 중 하나가 죽어도 다른 프로세스에는 영향이 없습니다. (서로 독립된 공간이기 때문에)
 - 단점
-    - Context Switching 오버 헤드 : Context Switching 과정에서 캐시 메모리 초기화 등 무거운 작업이 진행되고 많은 시간이 소보되는 등의 오버헤드가 발생합니다.
+    - `Context Switching 오버 헤드` : Context Switching 과정에서 캐시 메모리 초기화 등 무거운 작업이 진행되고 많은 시간이 소보되는 등의 오버헤드가 발생합니다.
     - 프로세스는 각각의 독립된 메모리 영역을 할당받았기 때문에 프로세스 사이에서 공유하는 메모리가 없어 매번 캐시에 있는 모든 데이터를 리셋하고 다시 캐시 정보를 불러야 합니다.
-    - 서로 별도의 공간을 가지기 때문에 프로세스간 통신이 어렵습니다. 통신을 위해서 IPC 같은 복잡한 기법을 사용해야합니다. 
+    - 서로 별도의 공간을 가지기 때문에 프로세스간 통신이 어렵습니다. 통신을 위해서 IPC 같은 복잡한 기법을 사용해야합니다.
 
+```
+** Context Switching
+
+현재 진행하고 있는 Task(Process, Thread)의 상태를 젖아하고 다음 진행할 Task의 상태 값을 읽어 적용하는 과정을 발생합니다.
+
+Context Switching 과정
+1. Task의 대부분 정보는 Register에 저장되고 PCB(Process Control Block)로 관리되고 있습니다.
+2. 현재 실행하고 있는 Task의 PCB 정보를 저장하게 됩니다. (Process Stack, Ready Queue)
+3. 다음 실행할 Task의 PCB 정보를 읽어 Register에 적재하고 CPU가 이전에 진행했던 과정을 연속적으로 수행할 수 있습니다.
+
+Context Switching Cost
+- 캐시 초기화
+- Memory Mapping 초기화
+- 메모리 접근을 위해 커널은 항상 실행되어야 합니다.
+
+Process vs Thread
+Process가 Thread보다 많은 비용이 발생합니다.
+Thread는 Stack을 제외한 모든 메모리를 공하기 때문에 Context Switching 발생시 Stack 영역만 변경을 진행하면 됩니다.
+
+```
+    
 ---
 
 #### 멀티 스레드(Multi Thread)
