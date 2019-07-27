@@ -78,7 +78,7 @@ categories:
  
 #### 스레드(Thread)
 
-![](https://miro.medium.com/max/1000/1*XyDBmDeKodIT3uPQExcpVQ.png)
+![](https://miro.medium.com/max/1000/1*EMXGwiKPr8VZcz8AosvOPQ.png)
  
 - 의미
     - 프로세스의 특정한 수행 경로
