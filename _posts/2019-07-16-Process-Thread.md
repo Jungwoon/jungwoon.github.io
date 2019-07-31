@@ -84,11 +84,21 @@ categories:
 
 ![](https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/images/Chapter3/3_02_ProcessState.jpg)
 > 출처 : https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/3_Processes.html
+
 1. new : 프로세스 생성 중
 2. ready : CPU에 할당되기는 대기하는 중
 3. running : CPU에서 명령이 실행 되는 중
 4. waiting : 프로세스에서 어떤 사건이 발생하기를 기다리는 중
 5. terminated : 프로세스가 종료하는 중
+
+---
+
+### 프로세스 상태 전이
+
+1. Dispatch (ready -> running) : 여러 프로세들 중 한 프로세스를 선정하여 CPU에 할당
+2. Time Run Out (running -> ready) : 할당된 시간이 지나면 Timeout Interrupt
+3. Event Wait (running -> waiting) : I/O 입출력 발생 (CPU 사용 중 I/O 행위가 필요하여 대기 상태로 이동)
+4. Wake-Up (waiting -> ready) : I/O 요청이 완료되면 다시 ready 상태로 전이
 
 ---
 
@@ -104,14 +114,12 @@ categories:
 
 #### 컨텍스트 스위칭 (Context Switching)
 
-스케줄러가 CPU를 프로세스에게 할당하려고 할 때 현재 프로세스의 *context를 PCB에 저장하고 새로운 프로세스의 PCB로 교체하는 것
+스케줄러가 `CPU`를 프로세스에게 할당하려고 할 때 현재 프로세스의 context(프로세스 제어를 위한 다양한 정보)를 
+`PCB`에 저장하고 새로운 프로세스의 `PCB`로 교체하는 것
 
-```
-* context : 프로세스 제어를 위한 다양한 정보 (PCB에 저장되는 정보)
-```
 
 Context Switching 과정
-1. Task의 대부분 정보는 Register에 저장되고 PCB(Process Control Block)로 관리되고 있습니다.
+1. 프로세스의 대부분 정보는 Register에 저장되고 PCB(Process Control Block)로 관리되고 있습니다.
 2. 프로세스의 상태가 바뀔때 현재 실행하고 있는 프로세스의 PCB 정보를 저장하게 됩니다.
 3. 다음 실행할 프로세스의 PCB 정보를 읽어 실행을 합니다.
 4. 다시 `2.`의 프로세스가 실행될때 이전에 저장한 PCB 정보를 읽어서 다시 실행하게 됩니다.
@@ -127,11 +135,11 @@ Context Switching Cost
 
 ![](https://miro.medium.com/max/700/1*8lLFF_wsBIpcXDk92CsKNQ.png)
 
-- 여러개의 프로세스 중 어떤 프로세스를 CPU에 할당할지를 정하는 것
+- 여러개의 프로세스 중 `어떤 프로세스를 CPU에 할당할지를 정하는 것`
 - 많은 수의 프로세스가 활성화 되어 CPU 이용률을 높임
 - 한 순간에 하나의 프로세스만 CPU를 사용
 - 다중 프로그래밍 및 시분할 기능을 실현하기 위한 핵심 수단
-- 프로세스 상태를 ready -> running 으로 바꾸는 과정
+- 프로세스 상태를 ready -> running 으로 바꾸는 과정 (`Dispatch`)
 - 스케쥴링 큐에서 상태를 전이할 프로세스를 선택하는 것
 - 스케줄링 정책 혹은 스케줄링 알고리즘이 중요
 
@@ -139,38 +147,32 @@ Context Switching Cost
 
 #### 스케줄링 알고리즘 (Scheduling Algorithm)
 
-1. 선입 선처리 (First-Come, First-Served, `FCFS`)
-    - 먼저 들어온 순서대로 처리
+1. `FCFS` (First-Come, First-Served)
+    - `먼저 들어온 순서대로 처리`
     - 비선점 스케줄링
     - 평규 대기 시간이 길어질 수 있음
         - 프로세스의 도착 순서에 따라 다른 결과
-    - CPU와 I/O 자원의 ㅣ이용률이 낮아질 수 있음
+    - CPU와 I/O 자원의 이용률이 낮아질 수 있음
         - Convoy 효과 : 여러 프로세스가 CPU를 얻기 위해 하나의 긴 프로세스를 기다리는 상황
-2. 최단 작업 우선 (Shortest-Job-First, `SJF`)
-    - 가장 짧은 CPU 타임을 가진 프로세스를 실행
+2. `SJF` (Shortest-Job-First)
+    - `가장 짧은 CPU 타임을 가진 프로세스를 실행`
     - 평균 대기 시간 기준으로 최적의 스케줄링 알고리즘
     - 프로세스의 다음 CPU 타임을 정확히 알 수 없기 때문에 어려움
-3. 우선순위 (`Priority`)
-    - 우선순위에 따라 프로세스의 우선순위가 높은것부터 CPU에 할당
-    - 우선순위가 동일하다면 FCFS 스케줄링 적용
+3. `Priority`
+    - 우선순위에 따라 프로세스의 `우선순위가 높은것부터 CPU에 할당`
+    - 우선순위가 동일하다면 `FCFS 스케줄링` 적용
     - 문제점 : 새로 도착하는 프로세스들의 우선순위가 계속 높으면 낮은 우선순위의 프로세스가 무한히 대기하는 경우가 발생 (starvation)
         - 해결 방법 : 대기 시간이 길어질때마다 우선순위를 높여줌 (aging)
-4. 라운드 로빈 (Round-Robin, `RR`)
-    - 하나의 CPU에서 여러 프로세스가 실행되는거처럼 보이게 하는 것
+4. `RR` (Round-Robin)
+    - `하나의 CPU에서 여러 프로세스가 실행되는거처럼 보이게 하는 것`
     - Ready Queue는 Circular FIFO Queue로 구현
     - 매 Time Quantum 마다 스케줄링 수행
     - Time Quantum에 따라 알고리즘 성능이 작아짐
-5. 다단계 큐 (`Multilevel Queue`)
-    - Ready Queue에 있는 것들을 각각의 Queue에 넣어서 목적에 따라 서로 다른 스케줄링 알고리즘을 사용
+5. `Multilevel Queue`
+    - Ready Queue에 있는 것들을 각각의 Queue에 넣어서 `목적에 따라 서로 다른 스케줄링 알고리즘을 사용`
     - 특성이 상이한 프로세스 그룹에 따라 별도의 ready queue를 구현
-        - Foreground 프로세스 : RR
-        - Background 프로세스 : FCFS
-
----
-
-Process vs Thread
-Process가 Thread보다 많은 비용이 발생합니다.
-Thread는 Stack을 제외한 모든 메모리를 공하기 때문에 Context Switching 발생시 Stack 영역만 변경을 진행하면 됩니다.
+        - Foreground 프로세스 : `RR`
+        - Background 프로세스 : `FCFS`
 
 ---
 
@@ -202,7 +204,7 @@ Thread는 Stack을 제외한 모든 메모리를 공하기 때문에 Context Swi
 
 - 장점 : 여러 프로세스 중 하나가 죽어도 다른 프로세스에는 영향이 없습니다. (서로 독립된 공간이기 때문에)
 - 단점
-    - `Context Switching 오버 헤드` : Context Switching 과정에서 캐시 메모리 초기화 등 무거운 작업이 진행되고 많은 시간이 소보되는 등의 오버헤드가 발생합니다.
+    - `Context Switching Overhead` : Context Switching 과정에서 캐시 메모리 초기화 등 무거운 작업이 진행되고 많은 시간이 소보되는 등의 오버헤드가 발생합니다.
     - 프로세스는 각각의 독립된 메모리 영역을 할당받았기 때문에 프로세스 사이에서 공유하는 메모리가 없어 매번 캐시에 있는 모든 데이터를 리셋하고 다시 캐시 정보를 불러야 합니다.
     - 서로 별도의 공간을 가지기 때문에 프로세스간 통신이 어렵습니다. 통신을 위해서 IPC 같은 복잡한 기법을 사용해야합니다.
 ---
@@ -226,7 +228,7 @@ Thread는 Stack을 제외한 모든 메모리를 공하기 때문에 Context Swi
 
 ---
 
-### 프로세스 수명 주기
+### 안드로이드의 프로세스 수명 주기
 
 안드로이드 시스템은 최대한 오래 어플리케이션 프로세스를 유지하려고 하지만 우선순위를 통해서 더 중요한 프로세스에서 사용할 메모리를 확보해야 합니다.
 이때 유지할 프로세스와 종료할 프로세스를 결정하기 위해 각각의 구성 요소의 상태에 기초하여 프로세스에 `중요 계층`을 부여하고 중요도가 낮은 프로세스부터 제거됩니다.
