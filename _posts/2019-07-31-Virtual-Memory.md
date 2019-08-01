@@ -40,7 +40,7 @@ categories:
 
 #### 스와핑 (Swapping)
 
-![](https://miro.medium.com/max/1000/1-m8Eghg9oNMLMl8_IQVN3BQ.png)
+![](https://miro.medium.com/max/1000/1*m8Eghg9oNMLMl8_IQVN3BQ.png)
 
 CPU에서 실행 중이지 않은 프로세스의 메모리 이미지를 저장장치에 이동 (메모리 사용의 효율성 증가)
 
@@ -62,7 +62,7 @@ CPU에서 실행 중이지 않은 프로세스의 메모리 이미지를 저장�
 
 ####  페이징 (Paging)
 
-![](https://miro.medium.com/max/1000/1-TuZX6dsVI8RvR1S4hcclJQ.png)
+![](https://miro.medium.com/max/1000/1*TuZX6dsVI8RvR1S4hcclJQ.png)
 
 - 프로세스가 사용하는 주소 공간을 여러 개로 분할하여 비연속적인 물리 메모리 공간에 할당, 가상 메모리를 모두 같은 크기의 블록으로 편
 - 단위
@@ -80,7 +80,7 @@ CPU에서 실행 중이지 않은 프로세스의 메모리 이미지를 저장�
 
 #### 세그멘테이션 (Segmentation)
 
-![](https://miro.medium.com/max/1000/1-xLMVNt4u00UvP3XnNOlMaw.png)
+![](https://miro.medium.com/max/1000/1*xLMVNt4u00UvP3XnNOlMaw.png)
 
 - 프로세스가 필요로 하는 메모리 공간을 분할하여 비연속적인 물리 메모리 공간에 할당
 - 단위 : 세그먼트 (서로 다른 크기를 가짐)
@@ -120,7 +120,7 @@ CPU에서 실행 중이지 않은 프로세스의 메모리 이미지를 저장�
 
 ### 페이지 교체 (Page Replacement)
 
-![](https://miro.medium.com/max/700/1-pZMlETpX_C0TWgUSLWhkaQ.png)
+![](https://miro.medium.com/max/700/1*pZMlETpX_C0TWgUSLWhkaQ.png)
 
 메모리 공간이 부족하면 특정 페이지를 스왑하여 교체
 
