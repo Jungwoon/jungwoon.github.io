@@ -89,7 +89,7 @@ Lock을 걸어 해결합니다.
     - wait(S) : lock 획득
     - signal(S) : lock 해제
 - 세마포어 구현의 문제
-    - Busy waiting 문제 - lock의 해제르 갇리닌 드ㅗㅇ아안 빈 반복문을 계속 도는걸 반복하기 때문에 `Context Switching`이 발생
+    - Busy waiting 문제 - lock의 해제를 기다리는 동안 빈 반복문을 계속 도는걸 반복하기 때문에 `Context Switching`이 발생
         - 프로세스가 Lock을 기다리는 동안 계속 순환(spin) 실행됨
             - 짧은 Lock을 기다리는 경우, `Context Switching` 비용을 절약할 수 있음
             - 일반적으로는 CPU를 점유한 상태로 기다리므로 자원 낭비
