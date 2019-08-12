@@ -129,3 +129,54 @@ class Singleton {
     }
 }
 ```
+
+---
+
+### 번외
+
+코틀린에서는 만들어진 `object` 클래스 선언만으로 손쉽게 싱글톤 패턴을 이용할 수 있습니다. 그럼 해당 Kotlin의 Object 클래스는 Java에서는 어떻게
+표현이 되는지 한번 살펴보도록 하겠습니다.
+
+먼저 Kotlin 코드를 보도록 하겠습니다.
+
+```java
+object SingletoneTest {
+
+    fun test() {
+        println("Hello World")
+    }
+
+}
+```
+
+다음은 아래 Kotlin 코드를 자바 코드로 디컴파일 한 부분을 살펴보도록 하겠습니다.
+보면 `INSTANCE`를 `static`으로 만들어 놓고 `static 블록`에서 할당하는 것을 볼 수 있습니다. 
+
+```java
+import kotlin.Metadata;
+
+@Metadata(
+   mv = {1, 1, 15},
+   bv = {1, 0, 3},
+   k = 1,
+   d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\bÆ\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0006\u0010\u0003\u001a\u00020\u0004¨\u0006\u0005"},
+   d2 = {"LSingletoneTest;", "", "()V", "test", "", "com.jw.DataStructure.main"}
+)
+public final class SingletoneTest {
+   public static final SingletoneTest INSTANCE;
+
+   public final void test() {
+      String var1 = "Hello World";
+      boolean var2 = false;
+      System.out.println(var1);
+   }
+
+   private SingletoneTest() {
+   }
+
+   static {
+      SingletoneTest var0 = new SingletoneTest();
+      INSTANCE = var0;
+   }
+}
+```
