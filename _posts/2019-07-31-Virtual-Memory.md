@@ -2,7 +2,6 @@
 layout: post
 title: "메모리 관리 전략(Memory Managing Strategy) 및 가상 메모리 (Virtual Memory)"
 image: '/assets/img/'
-예전에는 실행되는 코드의 전부를 물리 메모리에 할당하여야 했고, 메모리
 description: '메모리 관리 전략(Memory Managing Strategy) 및 가상 메모리 (Virtual Memory)'
 tags:
 - OS
