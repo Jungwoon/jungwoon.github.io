@@ -92,7 +92,8 @@ End of input at line 1 column 1 ...
 ```kotlin
 fun errorHandle(throwable: Throwable) {
     when (getErrorResponse(throwable)?.errorCode) { // 성공
-        404_00_0_00 -> Toast.makeText(contet, getErrorResponse(throwable).errorMessage, Toast.LENGTH_LONG).show() // 실패
+        // 실패
+        404_00_0_00 -> Toast.makeText(contet, getErrorResponse(throwable).errorMessage, Toast.LENGTH_LONG).show()
     }
 }
 ```
@@ -104,7 +105,7 @@ fun errorHandle(throwable: Throwable) {
     val errorResponse = getErrorResponse(throwable) // 한번에 받아와서 이걸 가지고 재사용
 
     when (errorResponse.errorCode) {
-        404_00_0_00 -> Toast.makeText(contet, errorResponse.errorMessage, Toast.LENGTH_LONG).show() // 실패
+        404_00_0_00 -> Toast.makeText(contet, errorResponse.errorMessage, Toast.LENGTH_LONG).show()
     }
 }
 ```
