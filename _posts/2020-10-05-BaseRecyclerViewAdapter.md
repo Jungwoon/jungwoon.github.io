@@ -25,6 +25,9 @@ categories:
 
 ![](https://cdn-images-1.medium.com/max/1600/1*1MCd7jb1rO5snUR0fEtdKQ.png)
 
+
+실제 소스는 [BaseAdapterSample](https://github.com/Jungwoon/BaseAdapterSample)에 올렸습니다.
+
 ---
 
 ## 보통 RecyclerView Adapter를 만드는 방식
