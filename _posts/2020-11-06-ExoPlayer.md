@@ -491,11 +491,11 @@ class MainActivity : AppCompatActivity() {
 
 ## 삽질노트
 
-저는 ExoPlayer를 이용하여 틱톡가 같이 스와이프로 계속 동영상 시청을 할 수 있는 프로젝트를 진행했는데, 잘 나오던 동영상이 어느 시점만 넘어가면
-화면이 까맣게 나오면서 재생이 되지 않는 문제가 발생하였습니다. 알아본본 결과최대 SimpleExoPlayer 인스턴스를 만들어 재생할 수 있는 최대 개수가 저의 경우엔
-15개가 한계였습니다.(만들 수 있는 decor 개수)
+저는 `ExoPlayer`를 이용하여 틱톡가 같이 스와이프로 계속 동영상 시청을 할 수 있는 프로젝트를 진행했는데, 잘 나오던 동영상이 어느 시점만 넘어가면
+화면이 까맣게 나오면서 재생이 되지 않는 문제가 발생하였습니다. 알아본본 결과최대 `SimpleExoPlayer 인스턴스`를 만들어 재생할 수 있는 `최대 개수가` 저의 경우엔
+15개가 한계였습니다.(`만들 수 있는 decor 개수`)
 
-만약 사용하려면 매번 만들어진 인스턴스를 release()를 통해 풀어주고 사용해야 합니다. 아니면 PlayerView.switchTargetView() 메소드를 통해서 만들어놓은 인스턴스를 재 활용해야합니다.
+만약 사용하려면 매번 만들어진 인스턴스를 `release()`를 통해 풀어주고 사용해야 합니다. 아니면 `PlayerView.switchTargetView()` 메소드를 통해서 만들어놓은 인스턴스를 `재활용`해야합니다.
 
 ```java
 PlayerView.switchTargetView(player 인스턴스, 바꾸기 전 PlayerView, 바꿀 PlayerView)
