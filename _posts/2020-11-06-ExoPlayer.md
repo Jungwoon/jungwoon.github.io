@@ -189,6 +189,7 @@ val extendMediaItem = MediaItem.Builder().apply {
 `MediaSource`의 종류와 만드는 방법은 아래와 같습니다.
 
 - ProgressiveMediaSource : 일반 미디어 파일 형식 재생
+
 ```java
 // 비디오 URL
 val url = "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
@@ -203,6 +204,7 @@ val progressiveMediaSource = ProgressiveMediaSource.Factory(factory).createMedia
 ```
 
 - DashMediaSource : DASH 형식 재생
+
 ```java
 // 비디오 URL
 val url = "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
@@ -217,6 +219,7 @@ val dashMediaSource = DashMediaSource.Factory(factory).createMediaSource(mediaIt
 ```
 
 - SsMediaSource : SmoothStreaming 형식 재생
+
 ```java
 // 비디오 URL
 val url = "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
@@ -231,6 +234,7 @@ val ssMediaSource = SsMediaSource.Factory(factory).createMediaSource(mediaItem)
 ```
 
 - HlsMediaSource : HLS 형식 재생
+
 ```java
 // 비디오 URL
 val url = "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
