@@ -321,6 +321,94 @@ SimpleExoPlayer.Builder(context).build().apply {
 }
 ```
 
+---
+
+## 캐시 기능 넣어서 사용하기
+
+캐시를 바로는 사용하는 방법은 (저는)못찾았고, 찾아보니 `DataSource.Factory`를 상속하여 만들어서 사용하는 방법을 찾아서 그 방법에 대해 말해보려고 합니다.
+우선 아래 `CacheDataSourceFactory.kt`를 구현합니다.
+
+```java
+import android.content.Context
+import com.google.android.exoplayer2.database.ExoDatabaseProvider
+import com.google.android.exoplayer2.upstream.DataSource
+import com.google.android.exoplayer2.upstream.DefaultDataSource
+import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
+import com.google.android.exoplayer2.upstream.FileDataSource
+import com.google.android.exoplayer2.upstream.cache.CacheDataSink
+import com.google.android.exoplayer2.upstream.cache.CacheDataSource
+import com.google.android.exoplayer2.upstream.cache.LeastRecentlyUsedCacheEvictor
+import com.google.android.exoplayer2.upstream.cache.SimpleCache
+import com.google.android.exoplayer2.util.Util
+import java.io.File
+
+class CacheDataSourceFactory(
+    val context: Context,
+    maxCacheSize: Long,
+    maxFileSize: Long
+) : DataSource.Factory {
+
+    private val simpleCache = SimpleCache(
+        File(context.cacheDir, "media"), // 1번 설명
+        LeastRecentlyUsedCacheEvictor(maxCacheSize), // 2번 설명
+        ExoDatabaseProvider(context) // 3번 설명
+    )
+
+    private val cacheDataSink = CacheDataSink(simpleCache, maxFileSize) // 4번 설명
+
+    override fun createDataSource(): DataSource {
+        // 5번 설명
+        return CacheDataSource(
+            simpleCache,
+            getDefaultDataSource(),
+            FileDataSource(),
+            cacheDataSink,
+            CacheDataSource.FLAG_BLOCK_ON_CACHE or CacheDataSource.FLAG_IGNORE_CACHE_ON_ERROR,
+            null
+        )
+    }
+
+    private fun getDefaultDataSource(): DefaultDataSource {
+        val userAgent = Util.getUserAgent(context, context.applicationInfo.name)
+        return DefaultDataSourceFactory(context, userAgent).createDataSource()
+    }
+}
+```
+
+[CacheDataSourceFactory.kt]
+
+위에서 주요 구성요소들에 대해서 알아보도록 하겠습니다.
+
+1. `SimpleCache` : 메모리 내에 캐시를 구현해주며, 한번에 하나의 SimpleCache만 사용할 수 있습니다. (동일한 경로에 캐시를 동시에 사용못함), 기본적으로
+`/data/user/0/[자신의 앱 패키지 네임]/cache` 경로를 사용하는데 위에서는 `media`를 넣어서 `/data/user/0/[자신의 앱 패키지 네임]/cache/media`
+와 같이 media란 서브 디렉토리가 같이 생성이 되었습니다.
+2. `LeastRecentlyUsedCacheEvictor` : 가장 최근에 사용한 캐시를 우선적으로 제거
+3. `ExoDatabaseProvider` : 독립 실행형 ExoPlayer 데이터베이스의 인스턴스를 제공하는 SQLiteOpenHelper로 자체 데이터베이스가 구축이 되어 있지 않거나
+ExoPlayer 테이블을 자체 데이터베이스에서 격리된 상태로 유지하여 사용하고자 할때 적합합니다.
+4. `CacheDataSink` : 캐시에 데이터를 기록하는 역할을 합니다.
+5. `CacheDataSource` : 캐시를 읽고 쓰는 DataSource로 캐시가 가능한 경우 캐시에서 요청되어 수행이 되며, 데이터가 캐시되고 있지 않으면 upstream DataSource에 
+요청하여 캐시에 기록합니다.
+
+
+사용 방법은 아래와 같이 사용할 수 있습니다. 바뀌는 부분은 아래 부분으로 `MediaSource` 생성시 `cacheDataSourceFactory`를 이용하여 생성합니다.
+
+```java
+private val cacheDataSourceFactory = CacheDataSourceFactory(
+    context = context,
+    maxCacheSize = 50.MB(), // 이 부분은 직접 계산해야합니다.
+    maxFileSize = 100.MB()  // 이 부분은 직접 계산해야합니다.
+)
+
+val videoUrl = "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
+val uri = Uri.parse(videoUrl)
+val mediaItem = MediaItem.fromUri(uri)
+val mediaSource = ProgressiveMediaSource.Factory(cacheDataSourceFactory).createMediaSource(mediaItem) // <- 이 부분
+val simpleExoPlayer = SimpleExoPlayer.Builder(context).build()
+
+simpleExoPlayer.setMediaSource(currentItem?.source!!)
+simpleExoPlayer.prepare()
+simpleExoPlayer.play()
+```
 
 ---
 
