@@ -521,9 +521,10 @@ dependency {
 6. `SimpleExoPlayer` 준비 및 재생
 
 
-여기서 중요한 점은 `MediaItem`을 통해서 `MediaSource`를 만들어야지 `재생 가능한 객체가 생성` 됩니다.
+여기서 중요한 점은 `MediaItem`와 `DataSource` 통해서 `MediaSource`를 만들어야지 `재생 가능한 객체가 생성` 됩니다.를
+아래는 제가 생각한 이미지입니다.
 
-![](https://miro.medium.com/max/700/1*mpgLUceGZWqI2B2xPYD_vA.png)
+![](https://miro.medium.com/max/1716/1*qN5SAQQ9SgeYLrUNOJPBQw.png)
 
 
 ```java
