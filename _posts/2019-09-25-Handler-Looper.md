@@ -115,7 +115,7 @@ sendMessage() -> handleMessage()
 | :---: | :--- | :---
 | prepare() | void | 루퍼를 생성
 | loop() | void | 무한히 루프를 돌며 Message Queue에 쌓인 Message나 Runnable객체를 핸들러에 전달
-| quit() | void | 루프 종
+| quit() | void | 루프 종료
 
 ---
 
