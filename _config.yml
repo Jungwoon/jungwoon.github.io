@@ -33,7 +33,7 @@ theme_settings:
   gitter:
   google_plus:
   instagram:
-  linkedin:  # Full URL
+  linkedin:  "https://www.linkedin.com/in/jungwoon-park/" # Full URL
   pinterest:
   reddit:
   soundcloud:
@@ -70,7 +70,7 @@ theme_settings:
   post_navigation: false
 
 # PAGINATION
-paginate: 10
+paginate: 15
 paginate_path: "blog/page:num"
 
 # BUILD SETTINGS
