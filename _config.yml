@@ -48,19 +48,19 @@ theme_settings:
   google_analytics: "UA-79172120-2" # Tracking ID, e.g. "UA-000000-01"
   disqus_shortname: "jungwoon"
   katex: true # Enable if using math markup
-  search: false # Enable the search feature
+  search: true # Enable the search feature
 
   # Localization strings
   str_follow_on: "Follow on"
   str_rss_follow: "Follow RSS feed"
   str_email: "Email"
-  str_next_post: "Next post"
-  str_previous_post: "Previous post"
-  str_next_page: "Next"
-  str_previous_page: "Prev"
-  str_continue_reading: "Continue reading"
-  str_javascript_required_disqus: "Please enable JavaScript to view comments."
-  str_search_no_results: "No results found."
+  str_next_post: "다음 포스트"
+  str_previous_post: "이전 포스트"
+  str_next_page: "다음"
+  str_previous_page: "이전"
+  str_continue_reading: "자세히 보기"
+  str_javascript_required_disqus: "Comments를 확인하려면 Java스크립트를 활성화 하여야 합니다."
+  str_search_no_results: "검색 결과가 없습니다"
 
   # Colours, typography and padding
   # Open the "_sass > base" folder, and open "_variables.scss"
