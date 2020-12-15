@@ -48,12 +48,12 @@ theme_settings:
   google_analytics: "UA-79172120-2" # Tracking ID, e.g. "UA-000000-01"
   disqus_shortname: "jungwoon"
   katex: true # Enable if using math markup
-  search: true # Enable the search feature
+  search: false # Enable the search feature
 
   # Localization strings
   str_follow_on: "Follow on"
   str_rss_follow: "Follow RSS feed"
-  str_email: "Email"
+  str_email: "이메일"
   str_next_post: "다음 포스트"
   str_previous_post: "이전 포스트"
   str_next_page: "다음"
