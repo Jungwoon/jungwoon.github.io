@@ -46,7 +46,7 @@ theme_settings:
 
   # Scripts
   google_analytics: "UA-79172120-2" # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname:
+  disqus_shortname: "jungwoon"
   katex: true # Enable if using math markup
   search: false # Enable the search feature
 
@@ -70,7 +70,7 @@ theme_settings:
   post_navigation: false
 
 # PAGINATION
-paginate: 5
+paginate: 10
 paginate_path: "blog/page:num"
 
 # BUILD SETTINGS
