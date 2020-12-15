@@ -11,6 +11,8 @@ categories:
 - React.js
 ---
 
+React.js 툴 설치방법에 대해서 알아보겠습니다.
+
 ## React.js를 위한 툴 설치
 Udemy에서 제공되는 React.js 강좌에서 사전세팅에 필요한 것들로 browser 환경에서 Node 모듈을 사용할 수 있게끔 함
 

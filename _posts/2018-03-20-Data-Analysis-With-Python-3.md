@@ -9,9 +9,6 @@ categories:
 - Python
 ---
 
-
-## BeautifulSoup를 이용하여 html파일 읽어오기
-
 이번에는 BeautifulSoup 이라는 강력한 파이썬 모듈을 이용하여 HTML 문서를 일고 파싱하는 방법에 대해서
 알아보도록 하겠습니다.
 

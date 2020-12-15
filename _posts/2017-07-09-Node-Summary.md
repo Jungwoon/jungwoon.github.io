@@ -10,7 +10,7 @@ categories:
 - Node.js
 ---
 
-## Node.js 정리
+Node.js에 대해 간략히 내용 정리를 하도록 하겠습니다.
 
 ### Node.js 프로젝트 만들기
 ```

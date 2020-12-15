@@ -10,6 +10,8 @@ categories:
 - Jekyll
 ---
 
+이번에는 Jekyll을 설치하여 GitHub을 이용해서 블로그 하는 방법에 대해서 알아보겠습니다.
+
 ## Mac에 Jekyll 설치하기
 터미널에 아래와 같이 입력을 하면 Jekyll 설치가 끝이 납니다.
 

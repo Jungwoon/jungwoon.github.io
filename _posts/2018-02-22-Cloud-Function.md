@@ -9,9 +9,6 @@ categories:
 - Google Cloud
 ---
 
-
-## Google Cloud Function 이용하기
-
 Google Cloud 중에 별도의 서버 없이 이벤트 처리를 할 수 있는 Cloud Function을 소개하려고 합니다. (* 아직 베타 서비스)
 
 아쉽지만 아직은 Node.js만 지원하고 있습니다. 그래서 사전에 Node.js 설치가 필 수 입니다.

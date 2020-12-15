@@ -11,8 +11,6 @@ categories:
 - Android
 ---
 
-## Stream을 이용하여 파일 읽고 쓰기
-
 다음 소스는 Stream을 이용하여 파일을 읽고 쓰는 예제입니다.
 
 ```java

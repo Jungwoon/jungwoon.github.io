@@ -11,6 +11,7 @@ categories:
 - Bigdata
 ---
 
+AWS EC2에 하둡 설치하는 방법에 대해 알아보겠습니다.
 
 # Hadoop 설치하기
 

@@ -11,6 +11,8 @@ categories:
 - NDK
 ---
 
+Native Source에서 Logcat 이용하는 방법에 대해서 알아보겠습니다.
+
 ## Native Source에서 Log를 찍어서 Logcat 이용하기
 아래와 같이 선언을 해준다.(cpp 파일 위쪽이나 header 파일로 빼준다.)
 

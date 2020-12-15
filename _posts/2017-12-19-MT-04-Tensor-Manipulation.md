@@ -11,9 +11,6 @@ categories:
 - ToE
 ---
 
-
-## Tensor 다루기
-
 구글에서 진행했던 조대협님의 텐소플로우 강의와 [김성 교수님의 강의](https://hunkim.github.io/ml/)를 듣고
 개인적으로 공부하면서 정리한 내용입니다
 

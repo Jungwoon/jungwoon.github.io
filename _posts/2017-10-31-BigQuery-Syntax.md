@@ -10,9 +10,6 @@ categories:
 - BigQuery
 ---
 
-
-## BigQuery 기본 사용법
-
 Big Query에서 사용하는 문법은 크게 Legacy SQL와 Standard SQL이 있는데,
 LegacySQL은 Big Query 초기부터 사용되던 문법이나 2.0 이후에 Standard SQL이 지원되었기 때문에,
 여기서는 `Standard SQL` 기준으로 포스팅하도록 하겠습니다.

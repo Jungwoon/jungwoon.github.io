@@ -10,7 +10,7 @@ categories:
 - Tips
 ---
 
-# Zen Coding(=Emmet)
+젠코딩을 통해서 생산성을 높이는 방법에 대해서 알아보도록 하겠습니다.
 
 ### Grammer
 - ID, CLASS 속성 : ID - ```#```, CLASS - ```.```

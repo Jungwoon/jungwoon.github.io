@@ -10,7 +10,6 @@ categories:
 - Android
 ---
 
-### Firebase 설정하기
 16년 Google I/O에서 발표해서 핫했던, Firebase 설정하는 방법을 공유하고자 합니다.
 
 1.`console.firebase.google.com`에 들어가서 로그인 하고 새 프로젝트 만들기를 클릭

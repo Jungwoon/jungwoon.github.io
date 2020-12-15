@@ -9,8 +9,6 @@ categories:
 - Java
 ---
 
-## NIO 정리
-
 이번에 업무에서 NIO를 사용할 일이 있어서 공부하면서 내용을 정리해보고자 합니다.
 
 > 해당 포스팅은 [palpit Vlog](http://palpit.tistory.com/644)님의 블로그의 내용을 보면서 정리한 내용입니다.

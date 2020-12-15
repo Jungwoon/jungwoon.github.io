@@ -10,8 +10,6 @@ categories:
 - Firebase
 ---
 
-## Google AppScript를 이용하여 Firebase Databse로부터 데이터 가져오기 #2
-
 회사내에서 테스트 결과를 매번 산출해서 정리해서 매니저한테 보고를 했어야 했는데 이 과정이 너무 귀찮아서
 
 다음 포스팅 내용을 진행했었습니다 실시간으로 데이터를 읽어와서 매니저한테 Google Sheets만 공유하고

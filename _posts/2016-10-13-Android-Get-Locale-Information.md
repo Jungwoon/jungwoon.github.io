@@ -8,7 +8,8 @@ tags:
 categories:
 - Android
 ---
-### 안드로이드 시스템에 설정된 지역 언어/지역 정보 가져오기
+
+안드로이드 시스템에 설정된 지역 언어/지역 정보 가져오기
 
 ```java
 Locale systemLocale = getApplicationContext().getResources().getConfiguration().locale;

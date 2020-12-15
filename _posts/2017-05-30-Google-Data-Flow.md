@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Google Data Flow 알아보기"
+title: "Google DataFlow 알아보기"
 image: '/assets/img/'
-description: 'Google의 Data Flow 개념 및 프로그래밍 방법'
+description: 'Google의 DataFlow 개념 및 프로그래밍 방법'
 tags:
 - Realtime Data
 - Streaming
@@ -13,7 +13,9 @@ categories:
 - Bigdata
 ---
 
-# Google Data Flow 알아보기
+Google의 DataFlow에 대해 알아보겠습니다.
+
+# Google DataFlow 알아보기
 다음 내용들은 조대협님의 블로그의 내용들을 공부하면서 정리한 내용입니다.
 
 > [조대협님의 블로그](http://bcho.tistory.com)

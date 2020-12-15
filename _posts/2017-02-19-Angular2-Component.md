@@ -10,10 +10,12 @@ categories:
 - Angular2
 ---
 
+이번에는 Angular2의 컴포넌트 이용방법에 대해 알아보도록 하겠습니다.
+
 ## Angular2 Component
 
-
-: HTML과 CSS, Javascript를 하나의 단위로 묶어주는 기술로 최근에 나온 기술이기 때문에, 웹 컴포넌트를 이용하기 위해서는 webcomponent.js, Polymer 같은 라이브러리르 이용하여야 합니다.
+: HTML과 CSS, Javascript를 하나의 단위로 묶어주는 기술로 최근에 나온 기술이기 때문에, 웹 컴포넌트를 이용하기 위해서는 webcomponent.js, Polymer 
+같은 라이브러리를 이용하여야 합니다.
 
 ### 웹 컴포넌트의 기술 요소
 - HTML 템플릿

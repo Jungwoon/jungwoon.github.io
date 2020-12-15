@@ -9,8 +9,6 @@ categories:
 - Google Cloud
 ---
 
-## Google Cloud SDK(=gcloud) 설치하기
-
 MacOS에서 gcloud 명령어를 사용하기 위해서 세팅하는 방법을 포스팅하려고 합니다
 
 다른 운영체제의 경우에는 아래 공식 가이드를 참고하시기 바랍니다

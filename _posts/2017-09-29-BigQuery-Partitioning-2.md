@@ -10,8 +10,6 @@ categories:
 - BigQuery
 ---
 
-## Rundeck과 Shell Script를 이용해서 자동으로 배치 처리하기
-
 [BigQuery 데이터 로드시에 분할해서 로드하기 - #1](https://jungwoon.github.io/bigquery/2017/09/28/BigQuery-Partitioning-1/) 에서
 빅쿼리 테이블 파티셔닝 하는 방법을 배웠는데요, 매번 날짜만 바꿔서 새로 *.yml 파일을 새로 만들어서 돌리는 작업이 번거로우니,
 이번에는 쉘스크립트와 Rundeck을 이용하여 자동화를 해보려고 합니다.

@@ -10,8 +10,6 @@ categories:
 - Firebase
 ---
 
-## Google AppScript를 이용하여 Firebase Database부터 데이터 가져오기 #1
-
 요즘 계속 느끼고 있는건데, 구글이 정말 미친거 같습니다 자기네 서비스들끼리, 왠만한건 다 연결할 수 있도록 하고 있습니다
 
 오늘 포스팅할 내용은 Android에서 실시간으로 전송하기 입니다

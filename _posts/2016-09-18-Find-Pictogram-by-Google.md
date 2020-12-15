@@ -10,6 +10,8 @@ categories:
 - Tips
 ---
 
+구글에서 지원하는 무료 픽토그램 이용하는 방법에 대해서 알아보겠습니다.
+
 #### Google에서 지원하는 픽토그램 찾기
 1. [https://design.google.com/icons/](https://design.google.com/icons/) 사이트로 들어갑니다.
 ![sample image](https://github.com/Jungwoon/jungwoon.github.img/blob/master/google_supported_pictogram/1.png?raw=true)

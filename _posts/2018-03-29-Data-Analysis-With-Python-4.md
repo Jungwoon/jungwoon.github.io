@@ -9,9 +9,6 @@ categories:
 - Python
 ---
 
-
-## PyMySql이용해서 데이터 베이스 서버와 통신하기
-
 이번에는 PyMySql 모듈을 이용해서 Python에서 데이터베이스와 연결을 해보도록 하겠습니다.
 
 [PyMYSql의 공식 사이트](https://github.com/PyMySQL/PyMySQL)에서 좀 더 자세한

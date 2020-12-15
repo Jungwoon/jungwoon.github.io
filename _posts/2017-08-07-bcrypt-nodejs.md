@@ -11,7 +11,7 @@ categories:
 - Node.js
 ---
 
-## bcrypt를 이용하여 로그인 암호 해싱하기
+bcrypt를 이용하여 로그인 암호 해싱하는 방법에 대해서 알아보도록 하겠습니다.
 
 ### bcrypt
 

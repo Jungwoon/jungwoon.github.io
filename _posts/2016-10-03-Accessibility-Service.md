@@ -10,7 +10,7 @@ categories:
 - Android
 ---
 
-## 안드로이드 접근성 서비스를 이용하는 방법
+안드로이드의 접근성 서비스를 사용하는 방법에 대해서 알아보겠습니다.
 
 ### 설정해야하는 순서
 1. android.accessibilityservice.AccessibilityService에서 상속받는 클래스 만들기

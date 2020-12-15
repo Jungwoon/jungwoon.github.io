@@ -10,9 +10,8 @@ categories:
 - Android
 ---
 
-## Android Support Annotaions를 활용하여 Debug를 줄이자
-
-Android에서는 기본적으로 [Android Support Annotations](http://tools.android.com/tech-docs/support-annotations)를 제공합니다. 이를 이용하여 코드 상에 문제를 찾아낼 수 있는데, Android Studio와 통합되면서 좀 더 편하게 Annotation을 활용할 수 있게되었습니다.
+Android에서는 기본적으로 [Android Support Annotations](http://tools.android.com/tech-docs/support-annotations)를 제공합니다. 
+이를 이용하여 코드 상에 문제를 찾아낼 수 있는데, Android Studio와 통합되면서 좀 더 편하게 Annotation을 활용할 수 있게되었습니다.
 
 ### Support Annotations 필요 환경
 - Android Plugin for Gradle 1.3 버전 이상

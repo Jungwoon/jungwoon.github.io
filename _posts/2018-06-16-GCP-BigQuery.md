@@ -9,8 +9,6 @@ categories:
 - Google Cloud
 ---
 
-## Google Cloud Platform의 BigQuery 살펴보기
-
 이번 5월부터 [Google Cloud Professional Data Engineer](https://cloud.google.com/certification/data-engineer)을
 취득하기 위해 준비하면서 공부하는 내용들을 틈틈히 포스팅 해보려고 합니다.
 

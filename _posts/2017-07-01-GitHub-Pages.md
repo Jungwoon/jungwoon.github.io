@@ -10,6 +10,8 @@ categories:
 - Blog
 ---
 
+GitHub Pages 기능을 이용해 호스팅 하는 방법에 대해 알아보도록 하겠습니다.
+
 ### Github로 블로그 만들기
 
 1. GitHub 페이지로 가서 새로운 repository를 만듭니다.

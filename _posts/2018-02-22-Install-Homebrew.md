@@ -9,9 +9,6 @@ categories:
 - Google Cloud
 ---
 
-
-## Homebrew 설치하기
-
 제가 Mac을 사면 가장 먼저 설치하는게, Homebrew 입니다.
 `Homebrew`는 맥에서 사용할 수 있는 리눅스의 `yum`이나 `apt-get`같은 패키지 관리자
 입니다.  

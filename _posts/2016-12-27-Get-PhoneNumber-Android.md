@@ -10,8 +10,6 @@ categories:
 - Android
 ---
 
-## Telephony를 통한 핸드폰 번호 가져오기
-
 다음 소스는 TelephonyManager를 통한 핸드폰 번호 가져오기
 
 ```java

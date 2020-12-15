@@ -9,9 +9,6 @@ categories:
 - Google Cloud
 ---
 
-
-## Google Cloud의 Vision API 사용해보기
-
 이번에는 구글의 Vision API를 한번 정리해보도록 하겠습니다. 
 
 Vision API는 구글의 머신러닝 기술을 이용하여 이미지를 분석해주는 기술입니다.

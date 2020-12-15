@@ -2,8 +2,154 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4979a70-8291-4510-8b77-0b72e1e65c1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2020-01-19-Kubernetes-1.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-01-19-Kubernetes-1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-09-18-Activity-Lifecycle.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-09-18-Activity-Lifecycle.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-09-18-Bottom-Navigation.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-09-18-Bottom-Navigation.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-09-18-Find-Pictogram-by-Google.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-09-18-Find-Pictogram-by-Google.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-09-18-Glide.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-09-18-Glide.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-09-18-NetworkOnMainThreadException-Solutions.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-09-18-NetworkOnMainThreadException-Solutions.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-09-18-SharedPreference-Sync-Issues.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-09-18-SharedPreference-Sync-Issues.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-09-18-Show-Setting-Dialog.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-09-18-Show-Setting-Dialog.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-09-19-Background-Processing-with-AsyncTask.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-09-19-Background-Processing-with-AsyncTask.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-09-20-PHP-OCI8-Installation-on-MacOS.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-09-20-PHP-OCI8-Installation-on-MacOS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-09-21-Android-Firebase-Setting.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-09-21-Android-Firebase-Setting.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-09-22-TextWatcher-Guide.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-09-22-TextWatcher-Guide.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-09-24-Android-Annotations-Settings.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-09-24-Android-Annotations-Settings.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-09-28-Gradle-library-duplication.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-09-28-Gradle-library-duplication.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-10-03-Accessibility-Service.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-10-03-Accessibility-Service.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-10-07-ADB-Command.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-10-07-ADB-Command.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-10-10-Android-Support-Annotations-Guide.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-10-10-Android-Support-Annotations-Guide.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-10-13-Android-Annotations-Guide.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-10-13-Android-Annotations-Guide.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-10-13-Android-Get-Locale-Information.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-10-13-Android-Get-Locale-Information.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-12-27-Check-Usage-Stats-Authority.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-12-27-Check-Usage-Stats-Authority.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-12-27-Coding-Naming-Rules.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-12-27-Coding-Naming-Rules.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-12-27-File-IO-with-Stream.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-12-27-File-IO-with-Stream.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-12-27-Get-PhoneNumber-Android.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-12-27-Get-PhoneNumber-Android.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-01-09-Zencoding-Guide.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-01-09-Zencoding-Guide.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-01-13-Firebase-Authentication-Facebook.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-01-13-Firebase-Authentication-Facebook.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-01-13-Firebase-Authentication-Google-Login-API.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-01-13-Firebase-Authentication-Google-Login-API.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-01-13-Firebase-Authentication.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-01-13-Firebase-Authentication.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-01-13-Firebase-Setting-with-Android-Studio.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-01-13-Firebase-Setting-with-Android-Studio.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-01-17-Ok-Http3-Guide.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-01-17-Ok-Http3-Guide.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-02-01-TypeScript.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-02-01-TypeScript.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-02-15-Recycler-View-Practice.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-02-15-Recycler-View-Practice.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-02-16-Angular2-Setting-for-Mac.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-02-16-Angular2-Setting-for-Mac.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-02-19-Angular2-Component.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-02-19-Angular2-Component.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-02-19-Realm-Review.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-02-19-Realm-Review.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-02-27-AVD-Error.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-02-27-AVD-Error.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-03-08-Realm-MVP-Pattern-Practice.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-03-08-Realm-MVP-Pattern-Practice.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-03-23-HADOOP-SETUP-EC2.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-03-23-HADOOP-SETUP-EC2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-03-27-ANDROID-EXPORT-DECOMPILE.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-03-27-ANDROID-EXPORT-DECOMPILE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-05-30-Google-Data-Flow.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-05-30-Google-Data-Flow.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-05-30-Realtime-Data-Processing-Concept.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-05-30-Realtime-Data-Processing-Concept.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-06-14-Android-App-Launch-On-Web.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-06-14-Android-App-Launch-On-Web.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-06-18-Sqoop-with-MySQL.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-06-18-Sqoop-with-MySQL.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-07-01-GitHub-Pages.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-07-01-GitHub-Pages.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-07-04-Install-Jekyll-For-Mac.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-07-04-Install-Jekyll-For-Mac.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-07-05-Publish-Jekyll-With-Github.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-07-05-Publish-Jekyll-With-Github.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-07-09-Node-Summary.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-07-09-Node-Summary.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-07-11-pthread.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-07-11-pthread.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-07-17-Node_with_MySQL.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-07-17-Node_with_MySQL.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-07-17-native-logcat.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-07-17-native-logcat.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-07-19-UML.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-07-19-UML.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-07-20-React-Preset.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-07-20-React-Preset.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-07-31-Solid-Principle.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-07-31-Solid-Principle.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-08-01-NPM-without-sudo-on-mac.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-08-01-NPM-without-sudo-on-mac.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-08-01-Node-NPM.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-08-01-Node-NPM.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-08-01-ejs.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-08-01-ejs.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-08-02-Google-Cloud-SQL.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-08-02-Google-Cloud-SQL.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-08-02-Google-Cloud-with-Terminal.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-08-02-Google-Cloud-with-Terminal.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-08-07-Node-Passport-Kakao.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-08-07-Node-Passport-Kakao.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-08-07-bcrypt-nodejs.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-08-07-bcrypt-nodejs.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-08-10-Node-Express.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-08-10-Node-Express.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-08-13-Android_Fragment.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-08-13-Android_Fragment.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-08-20-Android_Get_Battery_Temperature.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-08-20-Android_Get_Battery_Temperature.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-08-20-Android_Get_Cpu_Temperature.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-08-20-Android_Get_Cpu_Temperature.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-08-31-Embulk_Setup.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-08-31-Embulk_Setup.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-09-01-Embulk_BigQuery.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-09-01-Embulk_BigQuery.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-09-06-Google_AppScript_1.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-09-06-Google_AppScript_1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-09-06-Google_AppScript_2.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-09-06-Google_AppScript_2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-09-07-Android-bitmap-with-drawable.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-09-07-Android-bitmap-with-drawable.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-09-07-Android-webview-enhance-performance.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-09-07-Android-webview-enhance-performance.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-09-11-Android-Bottom-Navigation-Push-Up-Icon.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-09-11-Android-Bottom-Navigation-Push-Up-Icon.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-09-28-BigQuery-Partitioning-1.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-09-28-BigQuery-Partitioning-1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-09-29-BigQuery-Partitioning-2.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-09-29-BigQuery-Partitioning-2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-10-16-Embulk-Liquid.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-10-16-Embulk-Liquid.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-10-26-GCP-IAM.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-10-26-GCP-IAM.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-10-26-install-gcloud.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-10-26-install-gcloud.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-10-27-Google-Datalab_1.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-10-27-Google-Datalab_1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-10-28-gcs-gsutil.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-10-28-gcs-gsutil.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-10-31-BigQuery-Syntax.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-10-31-BigQuery-Syntax.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-11-13-BigQuery-Lecture-1.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-11-13-BigQuery-Lecture-1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-11-13-BigQuery-Lecture-2.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-11-13-BigQuery-Lecture-2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-11-13-BigQuery-Lecture-3.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-11-13-BigQuery-Lecture-3.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-11-16-DAO-VO-DTO.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-11-16-DAO-VO-DTO.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-11-17-Get-Service-Account-Key.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-11-17-Get-Service-Account-Key.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-12-14-RxJava-4.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-12-14-RxJava-4.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-12-18-MT-01-Machine-Learning.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-12-18-MT-01-Machine-Learning.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-12-18-MT-02-Logistic-Regression.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-12-18-MT-02-Logistic-Regression.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-12-18-MT-03-MNIST-Tips.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-12-18-MT-03-MNIST-Tips.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-12-19-MT-04-Tensor-Manipulation.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-12-19-MT-04-Tensor-Manipulation.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-01-03-Translation-Api.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-01-03-Translation-Api.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-01-09-Vision-Api.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-01-09-Vision-Api.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-01-11-Google-Application-Default-Credential.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-01-11-Google-Application-Default-Credential.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-01-12-Python-1.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-01-12-Python-1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-01-12-Python-2.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-01-12-Python-2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-01-12-Python-3.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-01-12-Python-3.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-01-12-Python-4.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-01-12-Python-4.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-01-12-Python-5.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-01-12-Python-5.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-01-12-Python-6.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-01-12-Python-6.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-01-17-Speech-Api.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-01-17-Speech-Api.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-02-22-Cloud-Function.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-02-22-Cloud-Function.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-02-22-Install-Homebrew.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-02-22-Install-Homebrew.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-02-28-Dataprep.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-02-28-Dataprep.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-03-04-BigQuery-CSV.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-03-04-BigQuery-CSV.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-03-05-PubSub.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-03-05-PubSub.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-03-09-Data-Analysis-With-Python-1.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-03-09-Data-Analysis-With-Python-1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-03-11-GCP-Hackathon-2018.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-03-14-Regular-Expressions.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-03-14-Regular-Expressions.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-03-15-Data-Analysis-With-Python-2.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-03-15-Data-Analysis-With-Python-2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-03-20-Data-Analysis-With-Python-3.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-03-20-Data-Analysis-With-Python-3.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-03-29-Data-Analysis-With-Python-4.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-03-29-Data-Analysis-With-Python-4.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-04-04-Install-JIRA-On-Demand.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-04-04-Install-JIRA-On-Demand.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-04-05-Data-Analysis-With-Python-5.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-04-05-Data-Analysis-With-Python-5.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-04-12-Crawling-1.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-04-12-Crawling-1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-04-12-Crawling-2.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-04-12-Crawling-2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-04-13-Data-JIRA-Installation-On-GCE.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-04-13-Data-JIRA-Installation-On-GCE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-04-18-Data-Bitbucket-Installation-On-GCE.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-04-18-Data-Bitbucket-Installation-On-GCE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-05-11-GCP-Products.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-05-11-GCP-Products.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-05-27-GCP-Bigdata-Products.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-05-27-GCP-Bigdata-Products.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-05-27-GCP-Dataproc.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-05-27-GCP-Dataproc.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-06-16-GCP-BigQuery.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-06-16-GCP-BigQuery.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-06-17-GCP-DataFlow-Java.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-06-17-GCP-DataFlow-Java.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-08-08-Python-Oracle-Mac.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-08-08-Python-Oracle-Mac.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-08-16-Java-Serialize.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-08-16-Java-Serialize.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-01-10-Google-Cloud-SQL-Enable-Emojis.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-01-10-Google-Cloud-SQL-Enable-Emojis.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-01-11-Docker-1.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-01-11-Docker-1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-01-13-Docker-2.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-01-13-Docker-2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-01-13-Docker-3.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-01-13-Docker-3.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-01-13-Docker-4.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-01-13-Docker-4.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-01-13-Docker-5.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-01-13-Docker-5.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-01-13-Docker-6.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-01-13-Docker-6.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-01-13-Docker-7.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-01-13-Docker-7.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-01-13-Docker-8.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-01-13-Docker-8.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-01-14-NIO.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-01-14-NIO.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-01-15-NIO-Network.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-01-15-NIO-Network.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-01-31-Api-Summary.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-01-31-Api-Summary.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-02-26-Airflow.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-02-26-Airflow.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-07-05-RxJava-1.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-07-05-RxJava-1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-07-05-RxJava-2.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-07-05-RxJava-2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-07-05-RxJava-3.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-07-05-RxJava-3.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-07-05-RxJava-4.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-07-05-RxJava-4.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-07-05-RxJava-5.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-07-05-RxJava-5.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-07-11-Retrofit.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-07-11-Retrofit.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-07-15-Activity.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-07-15-Activity.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-07-16-Process-Thread.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-07-16-Process-Thread.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-07-22-Android-Service.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-07-22-Android-Service.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-07-24-Kotlin-apply-let-also-run.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-07-24-Kotlin-apply-let-also-run.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-07-27-Garbage-Collection.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-07-27-Garbage-Collection.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-07-31-Process-Synchronization.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-07-31-Process-Synchronization.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2019-07-31-Virtual-Memory.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2019-07-31-Virtual-Memory.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +169,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -34,7 +186,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608004387773</updated>
-      <workItem from="1608004391144" duration="1109000" />
+      <workItem from="1608004391144" duration="2555000" />
     </task>
     <task id="LOCAL-00001" summary="new blog theme">
       <created>1608004732990</created>
@@ -50,7 +202,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608005143397</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="new blog theme">
+      <created>1608005511456</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608005511456</updated>
+    </task>
+    <task id="LOCAL-00004" summary="new blog theme">
+      <created>1608005738501</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608005738501</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

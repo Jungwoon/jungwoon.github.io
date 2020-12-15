@@ -11,8 +11,7 @@ categories:
 ---
 
 
-## Firebase Authentication을 이용한 로그인 및 회원가입(feat. Butterknife)
-> Butterknife를 이용해서 Dependency Injection을 주어서 코드가 좀 더 간결 합니다, 해당 기능을 이용하기 위해서는 Firebase 연동이 되어 있어야 합니다. Firebase 연동은 포스팅된 내용을 확인 바랍니다.
+Butterknife를 이용해서 Dependency Injection을 주어서 코드가 좀 더 간결 합니다, 해당 기능을 이용하기 위해서는 Firebase 연동이 되어 있어야 합니다. Firebase 연동은 포스팅된 내용을 확인 바랍니다.
 
 
 #### [Firebase Console](www.console.firebase.google.com) 에 들어가서 이메일/비밀번호 설정을 합니다.

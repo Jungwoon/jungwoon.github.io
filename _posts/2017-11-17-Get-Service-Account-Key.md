@@ -9,9 +9,6 @@ categories:
 - Google Cloud
 ---
 
-
-## Google Cloud 서비스 계정키 얻기
-
 Google Cloud API를 이용하려면 `서비스 계정 키`가 필요하기 때문에, 이를 생성하는 방법과 공유 하는 방법에 대해서
 공유하려고 합니다
 

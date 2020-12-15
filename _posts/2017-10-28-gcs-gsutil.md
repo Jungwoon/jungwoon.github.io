@@ -9,9 +9,6 @@ categories:
 - BigQuery
 ---
 
-
-## Google Cloud Storage의 gsutil 명령어 살펴보기
-
 Google Cloud의 Storage인 GCS(=Google Cloud Storage)는 AWS(Amazon Web Service)의 S3에
 해당하는 서비스입니다 
 

@@ -10,8 +10,6 @@ categories:
 - Android
 ---
 
-## Android 키보드 입력시 Bottom Navigation 아이콘 올라오는 문제 해결 방법
-
 Bottom Navigation이 공식적으로 지원이 되면서 사용하고 있는데 Keyboard 입력을 받을때,
 
 Bottom Navigation의 아이콘도 같이 올라가는 문제가 있습니다. 이를 해결하는 방법을 포스팅 해보려고 합니다

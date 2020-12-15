@@ -10,8 +10,6 @@ categories:
 - Android
 ---
 
-## Usage Stats 권한을 가지고 있는지 확인
-
 다음 소스는 해당 프로젝트의 Usage 권한이 있는지 확인하는 예제입니다.
 
 ```java

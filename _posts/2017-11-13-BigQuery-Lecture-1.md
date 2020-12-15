@@ -11,9 +11,6 @@ categories:
 - BigQuery
 ---
 
-
-## Fluentd에서 PubSub로 데이터 보내기
-
 Fluentd를 활용하여 Twitter의 Feed를 PubSub으로 보내기
 
 ---

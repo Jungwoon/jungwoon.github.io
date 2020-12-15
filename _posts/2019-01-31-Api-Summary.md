@@ -9,8 +9,6 @@ categories:
 - Infra, API, Cloud
 ---
 
-## API 정리
-
 이번에 업무에서 API와 관련된 기술에 대해서 정리하도록 하겠습니다.
 
 > 해당 포스팅은 [그림으로 배우는 클라우드 인프라와 API의 구조](https://book.naver.com/bookdb/book_detail.nhn?bid=12071725) 책의 내용을

@@ -10,6 +10,8 @@ categories:
 - Material Design
 ---
 
+Material Design의 Bottom Navigation에 대해서 알아보겠습니다.
+
 ## 만들려고 하는 Design
 
 ![Bottom Navigation](https://material-design.storage.googleapis.com/publish/material_v_9/0B3321sZLoP_HZHA1UVAyRFpMVDQ/components_bottomnavigation_usage5.png)

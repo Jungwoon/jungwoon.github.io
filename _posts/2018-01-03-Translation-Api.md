@@ -9,9 +9,6 @@ categories:
 - Google Cloud
 ---
 
-
-## Google Cloud의 Traslation API 사용해보기
-
 개인적으로 구글에서 가장 많이 쓰는 서비스중에 하나인 구글 번역기 API를 이용하는 방법에 대해서 공부해보려고 합니다.
 
 자세한 부분은 [공식 문서](https://cloud.google.com/translate/docs/)를 확인해주세요 

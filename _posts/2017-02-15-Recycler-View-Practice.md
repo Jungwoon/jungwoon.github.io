@@ -10,6 +10,8 @@ categories:
 - Android
 ---
 
+Android의 RecyclerView에 대해서 알아보도록 하겠습니다.
+
 # RecyclerView
 : 기존의 ListView 보다 유연하고 향상된 성능을 가진 RecyclerView는 안드로이드 버전 5.0에서 발표되었습니다. 기존의 ListView와의 가장 큰 차이점으로는 Layout Manager와 View Holder 패턴의 의무화가 있습니다.
 

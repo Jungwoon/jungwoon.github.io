@@ -12,7 +12,7 @@ categories:
 - TypeScript
 ---
 
-## TypeScript
+이번에는 타입스크립트의 기본적인 문법을 알아보도록 하겠습니다.
 
 #### 조심
 *.ts 파일을 tsc 명령어로 *.js로 변환후에 node를 실행시켜야 함
@@ -20,7 +20,7 @@ categories:
 
 #### var
 
-```java
+```typescript
 var emotion="happy"
 {
 	var emotion="sad";
@@ -34,7 +34,7 @@ sad
 
 #### let
 
-```java
+```typescript
 var emotion2="sad";
 
 {
@@ -50,7 +50,7 @@ happy
 
 #### Array
 
-```java
+```typescript
 var fruits2 : number[][] = [
     [1,0,0],
     [0,3,0],
@@ -72,7 +72,7 @@ console.log(fruits2[0][0]*fruits2[1][1]*fruits2[2][2]);
 
 #### Union Type : 결과값에 의한 타입추론
 
-```java
+```typescript
 var unionX : string | number | boolean = false;
 var unionY : boolean | string = "hello";
 
@@ -92,7 +92,7 @@ Tips) ' 와 "를 구분하지 않음
 
 Example)
 
-```java
+```typescript
 let multi_line : string = `
     one = 1
     two = 2
@@ -108,7 +108,7 @@ console.log(multi_line);
 
 #### 디스트럭처링 지원
 
-```java
+```typescript
 var params2 = ['happy 동물원', 100];
 let [m_name2, m_num2] = params2;
 
@@ -133,7 +133,7 @@ Array.prototype.filter()
 
 Array.prototype.forEach()
 
-```java
+```typescript
 function printArray(element, index, array) {
 	console.log('[' + index + '] = ' + element);
 }
@@ -150,7 +150,7 @@ function printArray(element, index, array) {
 
 #### 람다함수
 
-```java
+```typescript
 var pow3 = (x) => {
     return x * x;
 }
@@ -175,7 +175,7 @@ console.log(((x) => {
 
 #### getter, setter
 
-```java
+```typescript
 var obj = {
     msg: '',
 
@@ -198,7 +198,7 @@ Hello World
 
 #### 클래스 선언과 사용
 
-```java
+```typescript
 class Car {
     _brand : string;
     _numTier : number;
@@ -233,7 +233,7 @@ console.log(my.getCarName + " 자동차의 타이어 개수 : " + my._numTier);
 
 #### Interface
 
-```java
+```typescript
 interface Car {
     setTier(tier : number);
 
@@ -268,7 +268,7 @@ class CarImpl implements Car {
 
 #### Abstract Class
 
-```java
+```typescript
 abstract class SmallAnimals {
     abstract sound(): string;
 

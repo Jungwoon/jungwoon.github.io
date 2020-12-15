@@ -9,8 +9,6 @@ categories:
 - Kotlin
 ---
 
-## 코틀린(Kotlin)에서 apply, with, let, also, run 차이
-
 개인적으로 코틀린을 사용하다가 apply, with, let, also, run이 언제 어떤 케이스에 사용하는지 햇갈려서 해당 부분에 대해서 정리를 한번 해보고자 합니다.
 
 아래 예제에서의 data class는 아래와 같습니다.

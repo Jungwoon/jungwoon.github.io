@@ -12,8 +12,7 @@ categories:
 ---
 
 
-## Firebase 세팅하기
-> 이전에는 Firebase 사이트에서 일일이 세팅을 해야 했지만, Android Stduio2.2 이상이 되면서, 클릭 몇번으로 세팅이 끝나게 되었습니다.
+이전에는 Firebase 사이트에서 일일이 세팅을 해야 했지만, Android Stduio2.2 이상이 되면서, 클릭 몇번으로 세팅이 끝나게 되었습니다.
 
 
 #### 사전에 Android Studio에 구글 로그인이 되어있어야 합니다.

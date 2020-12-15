@@ -10,7 +10,7 @@ categories:
 - Node.js
 ---
 
-## Mac에서 sudo 없이 npm 이용하기
+Mac에서 sudo 없이 npm 이용하는 방법에 대해서 알아보도록 하겠습니다.
 
 >Mac에서 보통 패키지 설치할때 [Homebrew](https://brew.sh/index_ko.html)를 이용하는데
 Homebrew를 이용하여 npm을 설치하게 되면 모듈 설치시 매번 sudo를 요청합니다.

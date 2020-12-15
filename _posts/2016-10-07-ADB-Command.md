@@ -10,6 +10,8 @@ categories:
 - Android
 ---
 
+간단한 ADB 명령어에 대해서 알아보겠습니다.
+
 ## ADB 명령어
 
 `adb devices (디바이스 검색)`

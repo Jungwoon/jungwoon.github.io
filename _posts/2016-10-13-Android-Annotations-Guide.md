@@ -9,7 +9,8 @@ tags:
 categories:
 - Android
 ---
-## Android Annotations 사용법
+
+Android Annotations 사용법에 대해서 알아보겠습니다.
 
 ### @EActivity
 

@@ -10,8 +10,7 @@ categories:
 - BigData
 ---
 
-# Sqoop 을 이용해서 Import 하기
-
+Sqoop으로 MySQL 데이터 가져오는 방법에 대해 알아보겠습니다.
 
 ## Sqoop
 RDBMS에 있는 데이터를 특별한 전처리 없이 곧바로 HDFS에 적재하거나, 반대로 HDFS에 저장된 데이터를 RDBMS로 제공해야할때 도와주는 프로젝트

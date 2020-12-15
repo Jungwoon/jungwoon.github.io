@@ -9,9 +9,6 @@ categories:
 - JIRA
 ---
 
-
-## JIRA 설치하기
-
 이번에 JIRA를 설치할일이 있어서 한번 설치 과정을 저장해보려고 합니다
 
 [JIRA 아카이브 다운로드 페이지](https://ko.atlassian.com/software/jira/download-archives)에서

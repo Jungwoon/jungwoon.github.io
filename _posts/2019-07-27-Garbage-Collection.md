@@ -9,8 +9,6 @@ categories:
 - Java, GC
 ---
 
-## 가비지 컬렉션(Garbage Collection)
-
 이번에는 자바의 `Garbage Collection`에 대해서 알아보도록 하겠습니다. 자바에서는 프로그램 코드에서 메모리를 명시적으로
 지정하여 해제하지 않습니다. 이 때 `Garbage Collection`는 더 이상 필요로 하지 않는 (쓰레기)객체를 찾아서 지우는 역할을 합니다. GC는 힙 메모리만 다룹니다.
 

@@ -10,8 +10,6 @@ categories:
 - Google Cloud
 ---
 
-## Google Cloud에 SQL 서버 만들기
-
 최근에 Node.js를 공부하다가 데이터베이스 연동을 위해서 Local에 MySQL 서버를 만들 일이 있었는데,
 
 차라리 Cloud에 만들어서사용하는게 좋을거 같아서 이용하고 있던 Google Cloud에 서버를 만들어봤습니다.

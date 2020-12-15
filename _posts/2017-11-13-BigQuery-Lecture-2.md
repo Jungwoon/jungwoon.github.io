@@ -10,9 +10,6 @@ categories:
 - Google Cloud
 ---
 
-
-## Google Cloud에서 Dataflow 정리
-
 Dataflow는 구글의스트림 및 배치 데이터 처리를 위한 솔루션입니다
 
 ---

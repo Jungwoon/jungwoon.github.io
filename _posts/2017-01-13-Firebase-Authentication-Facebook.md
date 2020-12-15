@@ -12,8 +12,7 @@ categories:
 ---
 
 
-## Firebase Authentication을 이용한 Facebook 로그인 연동하기
-> Butterknife를 이용해서 Dependency Injection을 주어서 코드가 좀 더 간결 합니다, 해당 기능을 이용하기 위해서는 Firebase 연동이 되어 있어야 합니다. Firebase 연동은 포스팅된 내용을 확인 바랍니다.
+Butterknife를 이용해서 Dependency Injection을 주어서 코드가 좀 더 간결 합니다, 해당 기능을 이용하기 위해서는 Firebase 연동이 되어 있어야 합니다. Firebase 연동은 포스팅된 내용을 확인 바랍니다.
 
 #### [Facebook 개발자 사이트](http://developers.facebook.com) 에 들어가서 가입을 하고 개인 프로젝트를 만들어 줍니다.
 

@@ -11,8 +11,6 @@ categories:
 - Node.js
 ---
 
-## NPM Express 내용 정리
-
 Express는 웹 및 모바일 애플리케이션을 위한 일련의 강력한 기능을 제공하는 
 간결하고 유연한 Node.js 웹 애플리케이션 프레임워크입니다.
 

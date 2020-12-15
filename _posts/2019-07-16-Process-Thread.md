@@ -9,9 +9,6 @@ categories:
 - Android
 ---
 
-
-## 안드로이드 프로세스 및 스레드 (Android Process and Thread)
-
 이번에 안드로이드 프로세스 및 스레드 개념에 대해서 다시 공부할 일이 있었는데 해당 내용을 포스팅해놓으면 좋을거 같아서 포스팅하겠습니다.
 해당 내용은 안드로이드 공식 홈페이지의 [프로세스 및 스레드](https://developer.android.com/guide/components/processes-and-threads)를 
 참고하여 작성하였습니다.

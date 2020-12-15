@@ -11,9 +11,7 @@ categories:
 - Android
 ---
 
-# Realm 정리
 다음 내용들은 Realm 홈페이지의 내용들을 정리한 내용입니다.
-
 [Realm 페이지](https://realm.io/kr/)
 
 

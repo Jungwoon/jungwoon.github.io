@@ -9,9 +9,6 @@ categories:
 - Google Cloud
 ---
 
-
-## Google Application Default Credentials 사용하기
-
 이번에는 구글 클라우드를 이용하여 Client Library를 이용하는 서비스키를 default로 설정하는 방법에 대해서
 공유 드리려고 합니다.
 

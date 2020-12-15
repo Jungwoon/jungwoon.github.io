@@ -10,8 +10,6 @@ categories:
 - BigData
 ---
 
-## Embulk로 BigQuery에 데이터 로딩하기
-
 최근에 Google Cloud에 큰 관심을 가지면서 자연스럽게 BigQuery에 자연스럽게 관심을 가지게 되었습니다
 
 그래서 이번에는 스터디를 하면서 알게된 Embulk를 통해서 BigQuery에 데이터를 넣는 방법을 포스팅 해보겠습니다

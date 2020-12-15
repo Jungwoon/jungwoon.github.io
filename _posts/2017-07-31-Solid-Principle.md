@@ -12,6 +12,8 @@ categories:
 - SOLID
 ---
 
+객체지향 설계 5대 원칙인 SOLID에 대해서 알아보도록 하겠습니다.
+
 ## 객체지향 설계 5대 원칙 - SOLID
 
 - `S`RP (Single responsibility principle) - 단일 책임 원칙

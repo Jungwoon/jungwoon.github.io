@@ -9,10 +9,7 @@ categories:
 - Anroid
 ---
 
-## Android CPU 온도 구하기
- 
 최근에 회사에서 Android CPU 온도를 구해야 하는 일이 있었는데 관련해서 소스 공유 합니다
-
 따로 API가 지원되는건 아니고 Linux안에 있는 정보를 가져와서 처리를 하는걸로 보입니다
 
 ### Source

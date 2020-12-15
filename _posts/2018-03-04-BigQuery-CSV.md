@@ -10,9 +10,6 @@ categories:
 - BigQuery
 ---
 
-
-## BigQuery
-
 이번에는 BigQuery에 CSV 파일을 업로드 하는 방법을 살펴 보도록 하겠습니다 
 
 ---

@@ -11,7 +11,7 @@ categories:
 ---
 
 
-# Android Decompile 및 ADB로 APK파일 추출하기
+Android Decompile 및 ADB로 APK파일 추출하는 방법에 대해 알아보겠습니다.
 
 ### 준비물
 - apk 파일 : 디컴파일할 apk 파일

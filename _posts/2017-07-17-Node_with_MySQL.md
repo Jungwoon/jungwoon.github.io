@@ -12,6 +12,9 @@ categories:
 - Node.js
 ---
 
+Node.js와 MySQL을 연동하는 방법에 대해서 알아보겠습니다.
+
+
 ## Node.js와 MySQL 연동시키기
 Node.js와 MySQL 연동하기 위해서 우선 MySQL 서버를 준비
 

@@ -9,8 +9,6 @@ categories:
 - Android
 ---
 
-### Activity Lifecycle
-
 이번에 포스팅 할 내용은 안드로이드 액티비티의 생명주기에 관해서 포스팅하려고 합니다.
 
 ![img](https://cdn-images-1.medium.com/max/1600/1*WORms3m3HA475pEcXoXFsQ.png)

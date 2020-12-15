@@ -10,7 +10,7 @@ categories:
 - Anroid
 ---
 
-## Android Fragment 정리
+안드로이드 프레그먼트에 대해서 정리해보겠습니다.
 
 
 ### Fragment? 

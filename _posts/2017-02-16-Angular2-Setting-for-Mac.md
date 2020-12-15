@@ -10,6 +10,8 @@ categories:
 - Angular2
 ---
 
+맥에 Angular2 프로젝트 생성하는 방법에 대해서 알아보도록 하겠습니다.
+
 ### Angular2 Setting for Mac
 
 사전 준비

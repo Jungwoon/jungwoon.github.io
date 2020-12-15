@@ -12,6 +12,8 @@ categories:
 - Android
 ---
 
+Realm과 MVP 패턴을 활용한 간단한 예제를 만들어 보도록 하겠습니다.
+
 ## Realm과 MVP Pattern을 활용한 간단한 예제
 자세한 예제는 [Github](https://github.com/Jungwoon/Realm_MVP_Pattern_Practice)에서 확인할 수 있습니다.
 

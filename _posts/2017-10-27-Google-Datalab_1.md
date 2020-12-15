@@ -10,9 +10,6 @@ categories:
 - Google Cloud
 ---
 
-
-## Google Cloud에서 Datalab 사용하기
-
 Google Cloud 환경에서 제공하는 Datalab은 Jupyter Notebook과 같은 솔루션을 제공합니다
 
 이제 더이상 Jupyter Notebook을 사용하기 위해서 Python 환경 구축을 할 필요 없이 간단하게 Datalab을

@@ -12,7 +12,7 @@ categories:
 - Node.js
 ---
 
-## Passport를 이용하여 Kakao 인증 개발하기
+Passport를 이용하여 Kakao 인증 개발하기
 
 ### passport-kakao
 

@@ -10,7 +10,6 @@ categories:
 - Android
 ---
 
-## Android Annotations 설정방법
 내가 사용하고 있는 프로젝트에 안드로이드 어노테이션 적용을 하려고 보니 초기 설정 해줘야 하는 부분들이 있어서 이 부분 공유 드립니다.
 
 ### Setting 설정

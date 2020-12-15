@@ -9,7 +9,6 @@ categories:
 - Android
 ---
 
-### NetworkOnMainThreadException 해결방법
 `android.os.NetworkOnMainThreadException`이 발생할때 해결방법 관련해서 일어나는 원인은
 허니컴 이후에 네트워크 관련 처리를 메인 쓰레드에서 처리할 경우에 발생합니다.
 

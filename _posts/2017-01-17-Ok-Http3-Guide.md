@@ -11,8 +11,7 @@ categories:
 ---
 
 
-## OkHttp3 시작하기
-> Square사의 오픈소스 라이브러리인 OkHttp3는 Retrofit에서도 이용되고 있는 아주 유용한, 라이브러리 입니다. Restful한 개발이 필요하면 Retrofit을 이용하고, 만약에 Rest를 사용하지 않으면, OkHttp3로 충분하다고 생각이 듭니다. 물론 네트워크 처리는 MainThread와 구분하여 처리해주어야 합니다.
+Square사의 오픈소스 라이브러리인 OkHttp3는 Retrofit에서도 이용되고 있는 아주 유용한, 라이브러리 입니다. Restful한 개발이 필요하면 Retrofit을 이용하고, 만약에 Rest를 사용하지 않으면, OkHttp3로 충분하다고 생각이 듭니다. 물론 네트워크 처리는 MainThread와 구분하여 처리해주어야 합니다.
 
 #### Gradle에 설정하기
 

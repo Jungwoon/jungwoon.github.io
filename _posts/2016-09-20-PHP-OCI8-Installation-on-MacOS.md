@@ -12,7 +12,7 @@ categories:
 - Tips
 ---
 
-### MacOS에서 OCI8 설치가이드!!
+MacOS에서 OCI8 설치하는 방법에 대해서 알아보겠습니다.
 
 El Capitan 이후 버전에서는 다음 설정을 해주어야 설치가 됩니다.
 

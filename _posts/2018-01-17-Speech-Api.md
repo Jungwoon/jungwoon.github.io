@@ -9,11 +9,7 @@ categories:
 - Google Cloud
 ---
 
-
-## Google Cloud의 Speech API 사용해보기
-
-이번에는 구글의 Speech API를 한번 정리해보도록 하겠습니다. 
-
+이번에는 구글의 Speech API를 한번 정리해보도록 하겠습니다.
 Speech API는 구글의 머신러닝 기술을 이용하여 음성을 분석해주는 기술입니다.
 
 크게 아래와 같은 기능들을 이용할 수 있습니다.

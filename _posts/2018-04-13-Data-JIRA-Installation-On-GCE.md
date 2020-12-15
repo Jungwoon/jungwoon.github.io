@@ -11,8 +11,6 @@ categories:
 - Google Cloud
 ---
 
-## Compute Engine에 JIRA 설치하기
-
 이번에 회사에서 JIRA를 사용하게 되면서 서버에 만드는 방법을 한번 정리해보려고 합니다.
 
 Atlassian 자체적으로 클라우드 서비스를 제공해서 굳이 자신의 서버에 설치를 하지 않아도 되지만,

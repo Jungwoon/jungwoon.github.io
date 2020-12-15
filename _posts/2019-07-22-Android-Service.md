@@ -9,8 +9,6 @@ categories:
 - Android
 ---
 
-## 안드로이드 서비스(Android Service)
-
 이번에 안드로이드 서비스에 대해서 정리해보도록 하겠습니다.
 해당 내용은 안드로이드 공식 홈페이지의 [안드로이드 서비스](https://developer.android.com/guide/components/services?hl=ko)를 
 참고하여 작성하였습니다.

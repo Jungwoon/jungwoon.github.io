@@ -11,8 +11,6 @@ categories:
 - Google Cloud
 ---
 
-## Compute Engine에 Bitbucket 설치하기
-
 지난 시간에 이어서 이번에는 Bitbucket을 설치해보겠습니다.
 Bitbucket은 Atlassian에서 제공하는 git 솔루션 입니다.
 

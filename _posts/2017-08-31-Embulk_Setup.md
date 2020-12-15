@@ -9,7 +9,7 @@ categories:
 - BigData
 ---
 
-## Embulk 설치 및 기본 사용법
+Embulk 설치 및 기본 사용법에 대해서 알아보겠습니다.
 
 ### Embulk?
 
