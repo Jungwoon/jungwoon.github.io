@@ -9,8 +9,6 @@ categories:
 - Android
 ---
 
-## 핸들러와 루퍼(Handler & Looper)
-
 이번 포스팅에는 안드로이드의 핸들러와 루퍼에 대해서 알아보도록 하겠습니다.
 
 안드로이드 시스템은 기본적으로 하나의 `Main Thread(=UI Thread)`만을 가지고 있고 보통 이 스레드 안에서 작업을 하는데, 

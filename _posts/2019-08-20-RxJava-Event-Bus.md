@@ -9,9 +9,6 @@ categories:
 - Android
 ---
 
-
-## RxJava로 EventBus 만들기
-
 최근에 `카카오`에서 제공하는 `REST API`를 이용하여 `Retrofit2`과 `MVP 패턴`을 이용하여 토이 프로젝트를 했었는데, Fragment 간에 이벤트를 넘겨주기 위해서
 처음에 `Square사`의 `Otto(Deprecated)`를 사용하여 만들었다가 최근에 다시 공부했던 `RxJava`를 이용하여 `Otto`를 대체하면서 그 부분에 대한 부분을 
 정리해보고자 합니다.

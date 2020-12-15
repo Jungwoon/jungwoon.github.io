@@ -11,15 +11,6 @@ categories:
 - LiveData
 ---
 
-# SingleLiveEvent와 Event 정리
-
-최근 개인적으로 이직을 하고 급하게 프로젝트를 진행하느라 장시간 포스팅이 소홀해졌는데, 프로젝트도 막바지이고 프로젝트를 진행하면서 
-알게된 삽질(?)을 공유하고자 포스팅을 다시 시작하려고 합니다.
-
----
-
-## SingleLiveEvent
-
 최근 프로젝트에서 LiveData 이용해 MVVM을 만드는 경험을 하였습니다. 프로젝트를 만들다 보니 ViewModel에서 특정 이벤트가 발생을 하였는데, 
 딱히 값을 넘겨줄 필요가 없는 경우가 있었습니다. 이러한 경우 `null`을 넣어주거나 사용하지 않는 `불필요한 값`을 넣어주거나 하는 방법을 사용할 수 있는데
 뭔가 섞연치 않아서 찾아보다 보니 이에 대한 해답으로 [구글]((https://medium.com/androiddevelopers/livedata-with-snackbar-navigation-and-other-events-the-singleliveevent-case-ac2622673150)) 에서 `SingleLiveEvent` 란 예시를 주었습니다.
