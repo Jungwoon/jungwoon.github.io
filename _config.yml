@@ -1,27 +1,85 @@
-# Site settings
-title: Jungwoon Blog
-header-img: img/home-bg.jpg
-email: byjungwoon@gmail.com
-copyright_name: byJW
-description: "Everything You need for development"
+# SITE CONFIGURATION
 baseurl: ""
-url: "http://jungwoon.github.io"
-twitter_username: byPJW
-github_username:  jungwoon
-facebook_username:  byjw.park
-email_username:  byjungwoon@gmail.com
+url: "https://jungwoon.github.io/"
 
-# Google Analytics
-# To enable google analytics, uncomment below line with a valid Google Tracking ID
-google_tracking_id: UA-79172120-2
+# THEME-SPECIFIC CONFIGURATION
+theme_settings:
+  # Meta
+  title: Jungwoon Blog
+  avatar: assets/img/avatar.png
+  favicon: assets/favicon.ico
+  gravatar: # Email MD5 hash
+  description: "A website with blog posts and pages" # used by search engines
 
-# Build settings
+  # Header and footer text
+#  header_text: >
+#     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+#
+#     <p>Remove all header text in <code>_config.yml</code> to disable this feature.</p>
+#  header_text_feature_image:
+#  footer_text: >
+#   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
+
+  # Icons
+  rss: false
+  email_address: "byjungwoon@gmail.com" # Full email address, e.g. "sam@example.com"
+  behance:
+  bitbucket:
+  dribbble:
+  facebook: "byjw.park"
+  flickr:
+  gitlab:
+  github: "jungwoon"
+  gitter:
+  google_plus:
+  instagram:
+  linkedin:  # Full URL
+  pinterest:
+  reddit:
+  soundcloud:
+  stack_exchange:  # Full URL
+  steam:
+  tumblr:
+  twitter:
+  wordpress:
+  youtube:
+
+  # Scripts
+  google_analytics: "UA-79172120-2" # Tracking ID, e.g. "UA-000000-01"
+  disqus_shortname:
+  katex: true # Enable if using math markup
+  search: false # Enable the search feature
+
+  # Localization strings
+  str_follow_on: "Follow on"
+  str_rss_follow: "Follow RSS feed"
+  str_email: "Email"
+  str_next_post: "Next post"
+  str_previous_post: "Previous post"
+  str_next_page: "Next"
+  str_previous_page: "Prev"
+  str_continue_reading: "Continue reading"
+  str_javascript_required_disqus: "Please enable JavaScript to view comments."
+  str_search_no_results: "No results found."
+
+  # Colours, typography and padding
+  # Open the "_sass > base" folder, and open "_variables.scss"
+  google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
+
+  # Post navigation
+  post_navigation: false
+
+# PAGINATION
+paginate: 5
+paginate_path: "blog/page:num"
+
+# BUILD SETTINGS
 markdown: kramdown
 highlighter: rouge
-permalink: pretty
-paginate: 20
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-
-gems: [jekyll-paginate, jekyll-feed]
-
-theme: jekyll-theme-minimal
+sass:
+  sass_dir: _sass
+  style: :compressed
+plugins: [jekyll-paginate]
+exclude:
+  - Gemfile
+  - Gemfile.lock

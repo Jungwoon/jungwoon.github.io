@@ -1,25 +1,11 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<html lang="en">
-
-{% include head.html %}
-
-<body>
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KL328RF"
-                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    {% include nav.html %}
-
-    {{ content }}
-
+<html class="no-js">
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <div class="content">
+      {{ content }}
+    </div>
     {% include footer.html %}
-
-    {% include ga.html %}
-
-</body>
-
+  </body>
 </html>
