@@ -9,6 +9,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1lg2OohTsxZAKSb4JBoWcyo0EON" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -144,5 +145,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new blog theme" />
     <option name="LAST_COMMIT_MESSAGE" value="new blog theme" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="683" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609237710786">
+      <screen x="0" y="25" width="1920" height="976" />
+    </state>
+    <state x="683" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1920.976@0.25.1920.976" timestamp="1609237710786" />
   </component>
 </project>
