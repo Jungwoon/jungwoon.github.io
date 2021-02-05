@@ -17,8 +17,13 @@ theme_settings:
 #
 #     <p>Remove all header text in <code>_config.yml</code> to disable this feature.</p>
 #  header_text_feature_image:
+<<<<<<< HEAD
   footer_text: >
    Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
+=======
+#  footer_text: >
+#   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
+>>>>>>> posting
 
   # Icons
   rss: false
@@ -33,7 +38,11 @@ theme_settings:
   gitter:
   google_plus:
   instagram:
+<<<<<<< HEAD
   linkedin:  "https://www.linkedin.com/in/jungwoon-park/" # Full URL
+=======
+  linkedin:  # Full URL
+>>>>>>> posting
   pinterest:
   reddit:
   soundcloud:
@@ -46,13 +55,18 @@ theme_settings:
 
   # Scripts
   google_analytics: "UA-79172120-2" # Tracking ID, e.g. "UA-000000-01"
+<<<<<<< HEAD
   disqus_shortname: "jungwoon"
+=======
+  disqus_shortname:
+>>>>>>> posting
   katex: true # Enable if using math markup
   search: false # Enable the search feature
 
   # Localization strings
   str_follow_on: "Follow on"
   str_rss_follow: "Follow RSS feed"
+<<<<<<< HEAD
   str_email: "이메일"
   str_next_post: "다음 포스트"
   str_previous_post: "이전 포스트"
@@ -61,6 +75,16 @@ theme_settings:
   str_continue_reading: "자세히 보기"
   str_javascript_required_disqus: "Comments를 확인하려면 Java스크립트를 활성화 하여야 합니다."
   str_search_no_results: "검색 결과가 없습니다"
+=======
+  str_email: "Email"
+  str_next_post: "Next post"
+  str_previous_post: "Previous post"
+  str_next_page: "Next"
+  str_previous_page: "Prev"
+  str_continue_reading: "Continue reading"
+  str_javascript_required_disqus: "Please enable JavaScript to view comments."
+  str_search_no_results: "No results found."
+>>>>>>> posting
 
   # Colours, typography and padding
   # Open the "_sass > base" folder, and open "_variables.scss"
@@ -70,7 +94,11 @@ theme_settings:
   post_navigation: false
 
 # PAGINATION
+<<<<<<< HEAD
 paginate: 15
+=======
+paginate: 5
+>>>>>>> posting
 paginate_path: "blog/page:num"
 
 # BUILD SETTINGS

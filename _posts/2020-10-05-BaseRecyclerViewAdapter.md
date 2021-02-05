@@ -375,14 +375,17 @@ import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
 
 abstract class BaseRecyclerViewAdapter<T, VDB : ViewDataBinding>(var items: List<T>) :
-    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    RecyclerView.Adapter<BaseRecyclerViewAdapter<T, VDB>.BaseViewHolder>() {
 
     @LayoutRes
     abstract fun getLayoutResId(): Int
 
     var binding: Any? = null
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): BaseRecyclerViewAdapter<T, VDB>.BaseViewHolder {
         return BaseViewHolder(
             LayoutInflater.from(parent.context).inflate(
                 getLayoutResId(),
@@ -393,9 +396,7 @@ abstract class BaseRecyclerViewAdapter<T, VDB : ViewDataBinding>(var items: List
     }
 
     override fun getItemCount() = items.size
-    
 
-    // 위에서 만들어 놓은 BindingViewHolder를 여기서 사용합니다.
     inner class BaseViewHolder(view: View) : BindingViewHolder<VDB>(view)
 
 }
@@ -427,7 +428,7 @@ abstract class BaseRecyclerViewAdapter<T, VDB : ViewDataBinding>(var items: List
             android:layout_width="80dp"
             android:layout_height="100dp"
             android:scaleType="centerCrop"
-            app:src="@{item.thumbnail}" // 이 부분 조심
+            app:src="@{item.thumbnail}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -542,9 +543,7 @@ class GameAdapter(items: List<GameData>) : BaseRecyclerViewAdapter<GameData, Ite
     override fun getLayoutResId() = R.layout.item_game
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        this.BaseViewHolder(holder.itemView).apply {
-            this.binding?.item = items[position]
-        }
+        holder.binding?.item = items[position]
     }
 }
 ```

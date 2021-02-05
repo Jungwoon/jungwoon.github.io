@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="c4979a70-8291-4510-8b77-0b72e1e65c1c" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="c4979a70-8291-4510-8b77-0b72e1e65c1c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+>>>>>>> posting
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,7 +15,18 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
     <option name="UPDATE_TYPE" value="MERGE" />
+=======
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+>>>>>>> posting
   </component>
   <component name="ProjectId" id="1lg2OohTsxZAKSb4JBoWcyo0EON" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -23,6 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/img" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -38,6 +56,12 @@
       <recent name="$PROJECT_DIR$/assets/img" />
     </key>
   </component>
+=======
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+>>>>>>> posting
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -46,6 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608004387773</updated>
+<<<<<<< HEAD
       <workItem from="1608004391144" duration="3292000" />
       <workItem from="1608007756628" duration="158000" />
       <workItem from="1608009433765" duration="516000" />
@@ -137,11 +162,16 @@
       <updated>1608027904238</updated>
     </task>
     <option name="localTasksCounter" value="13" />
+=======
+      <workItem from="1608004391144" duration="307000" />
+    </task>
+>>>>>>> posting
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+<<<<<<< HEAD
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new blog theme" />
     <option name="LAST_COMMIT_MESSAGE" value="new blog theme" />
@@ -151,5 +181,22 @@
       <screen x="0" y="25" width="1920" height="976" />
     </state>
     <state x="683" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1920.976@0.25.1920.976" timestamp="1609237710786" />
+=======
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Posting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Posting" />
+>>>>>>> posting
   </component>
 </project>
