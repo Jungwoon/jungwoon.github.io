@@ -11,8 +11,6 @@ categories:
 - Retrofit
 ---
 
-# Retrofit 으로 파일 업로드 하기
-
 Retrofit을 이용해서 파일 업로드 하는 방법에 대해서 알아보도록 하겠습니다. 
 
 ---
