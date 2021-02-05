@@ -2,125 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4979a70-8291-4510-8b77-0b72e1e65c1c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gruntfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/ga.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/nav.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/youtube.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/default.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/Gemfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/Gemfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/about/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2016/09/18/Activity-Lifecycle/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2016/09/18/Glide/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2016/09/18/NetworkOnMainThreadException-해결방법/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2016/09/18/Setting-화면-띄우기/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2016/09/18/SharedPreference-동기화-문제/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2016/09/19/Background-Processing-with-AsyncTask/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2016/09/21/Android-Firebase-Setting/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2016/09/22/TextWatcher-사용법/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2016/09/24/Android-Annotations-Settings/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2016/09/28/Gradle-library-duplication/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2016/10/03/Accessibility-Service/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2016/10/07/ADB-Command/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2016/10/10/Android-Support-Annotations-Guide/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2016/10/13/Android-Annotations-Guide/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2016/10/13/안드로이드-설정된-언어-지역-정보-가져오기/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2016/12/27/File-IO-with-Stream/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2016/12/27/Usage-Stats-권한-체크하기/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2016/12/27/안드로이드-핸드폰-번호-가져오기/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2017/01/13/Firebase-Authentication-Facebook/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2017/01/13/Firebase-Authentication-Google-Login-API/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2017/01/13/Firebase-Authentication/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2017/01/13/Firebase-Setting-with-Android-Studio/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2017/01/17/Ok-Http3-Guide/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2017/02/15/Recycler-View-Practice/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2017/02/19/Realm-Review/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2017/02/27/AVD-Error/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2017/03/08/Realm-MVP-Pattern-Practice/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2017/03/27/ANDROID-EXPORT-DECOMPILE/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/android/2017/06/14/Android-App-Launch-On-Web/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/angular2/2017/02/16/Angular2-Setting-for-Mac/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/angular2/2017/02/19/Angular2-Component/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/bigdata/2017/03/23/HADOOP-SETUP-EC2/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/bigdata/2017/05/30/Google-Data-Flow/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/bigdata/2017/05/30/REALTIME-DATA-PROCESSING-CONCEPT/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/bigdata/2017/07/01/Sqoop-with-MySQL/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/2017/06/19/GitHub-Pages/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/contact/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/css/clean-blog.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/css/clean-blog.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/css/syntax.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/img/about-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/img/contact-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/img/home-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/java/2017/06/12/Singleton-Pattern-with-Multi-Thread/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/jekyll/2017/07/04/Install-Jekyll-For-Mac/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/js/clean-blog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/js/clean-blog.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/js/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/mail/contact_me.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/material design/2016/09/18/Bottom-Navigation/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/page2/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/page3/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/page4/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/page5/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/tips/2016/09/18/Google에서-지원하는-Pictogram-찾기/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/tips/2016/09/20/PHP-OCI8-Installation-on-MacOS/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/tips/2016/12/27/Coding-Naming-규칙/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/tips/2017/01/09/Zencoding(=Emmet)-사용법/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/web/angular2/typescript/2017/02/01/TypeScript/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ads.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/clean-blog.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/clean-blog.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/syntax.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/about-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/contact-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/home-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/clean-blog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/clean-blog.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/less/clean-blog.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/less/mixins.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/less/variables.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mail/contact_me.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,8 +12,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1lg2OohTsxZAKSb4JBoWcyo0EON" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -140,6 +32,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -156,5 +50,21 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Posting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Posting" />
   </component>
 </project>
