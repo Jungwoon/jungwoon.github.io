@@ -17,7 +17,7 @@ GoF(Gang of Four) 디자인 패턴 중 하나로 생성자가 여러 차례 호�
 
 ### 일반적인 형태
 
-```java
+```kotlin
 class Singleton {
     private static Singleton ourInstance = null;
 
@@ -35,7 +35,7 @@ class Singleton {
 ```
 
 ### 호출 방법
-```java
+```kotlin
 // 보통 인스턴스 호출 방법(새로운 인스턴스가 생성)
 Singleton singletonInstance = new Singleton();
 
@@ -54,7 +54,7 @@ Singleton singletonInstance = Singleton.getInstance();
 ### 해결방법 1)
 인스턴스를 필요할 때 생성하지 않고, 처음부터 인스턴스를 만들어 버린다, 단 인스턴스를 미리 만들어 버리게 되면, 불필요한 시스템 리소스를 낭비할 가능성이 있다.
 
-```java
+```kotlin
 public class Singleton {
 	private static Singleton ourInstance = new Singleton();
 
@@ -69,7 +69,7 @@ public class Singleton {
 ### 해결방법 2)
 getInstance() 메서드를 동기화시킨다. 대신 메서드를 동기화 시키면 일반적으로 성능이 100배 정도는 저하된다.
 
-```java
+```kotlin
 
 class Singleton {
     private static Singleton ourInstance = null;
@@ -92,7 +92,7 @@ class Singleton {
 ### 해결방법 3)
 DCL 기법을 사용한다. 현재는 권고하지 않는 방법이다.
 
-```java
+```kotlin
 class Singleton {
     private static Singleton ourInstance = null;
 
@@ -116,7 +116,7 @@ class Singleton {
 ### 해결방법 4)
 LazyHolder 기법으로 synchronized도 필요 없고, 자바 버전도 상관없는 방법으로, Singleton 클래스의 getInstance() 메서드에서 LazyHolder.INSTANCE를 참조하는 순간 Class가 로딩되며 초기화가 진행된다. Class를 로딩하고 초기화하는 시점은 thread-safe를 보장하기 때문에 volatile이나 synchronized 같은 키워드가 없어도 된다.
 
-```java
+```kotlin
 class Singleton {
     private Singleton() {}
 
@@ -139,7 +139,7 @@ class Singleton {
 
 먼저 Kotlin 코드를 보도록 하겠습니다.
 
-```java
+```kotlin
 object SingletoneTest {
 
     fun test() {
@@ -152,7 +152,7 @@ object SingletoneTest {
 다음은 아래 Kotlin 코드를 자바 코드로 디컴파일 한 부분을 살펴보도록 하겠습니다.
 보면 `INSTANCE`를 `static`으로 만들어 놓고 `static 블록`에서 할당하는 것을 볼 수 있습니다. 
 
-```java
+```kotlin
 import kotlin.Metadata;
 
 @Metadata(

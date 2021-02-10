@@ -31,7 +31,7 @@ categories:
 
 ![](http://reactivex.io/documentation/operators/images/S.PublishSubject.png)
 
-```java
+```kotlin
 val subject = PublishSubject.create<String>()
 subject.subscribe { data -> println("Subscriber #1 => $data") }
 subject.onNext("1")
@@ -63,7 +63,7 @@ Subscriber #2 => 3
 2. 개별 이벤트별로 `PublishSubject` 생성
 3. 위에서 생성한 `PublishSubject`의 데이터를 발행하는 `onNext 함수`를 선언
 
-```java
+```kotlin
 package com.byjw.jungwoon.util
 
 import com.byjw.jungwoon.util.retrofit.scheme.BaseContent
@@ -82,7 +82,7 @@ object RxEventBus {
 
 그 다음 호출하는 곳은 아래와 같습니다. 해당 이벤트가 발생해야 하는 곳에 `RxEventBus.searchKeyword(it)`와 같이 호출을 합니다.
 
-```java
+```kotlin
 searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
     override fun onQueryTextSubmit(query: String?): Boolean {
         query?.let {
@@ -102,7 +102,7 @@ searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 이벤트가 처리되어야 하는 쪽에는 `생명주기`에 맞도록 넣어줍니다. 아래 예제는 `Fragment`의 `onCreateView()`에서 `searchPresenter()`를 생성해줬기
 때문에, 그 다음인 `onResume()`에서 위의 소스에서 호출했을때, 동작해야할 부분을 구현합니다.
 
-```java
+```kotlin
 override fun onResume() {
     super.onResume()
 
@@ -123,7 +123,7 @@ override fun onResume() {
 
 `MVP Pattern`에 맞도록 명세를 한 `SearchContract`에는 다음과 같이 선언했습니다.
 
-```java
+```kotlin
 package com.byjw.jungwoon.searchPage
 
 interface SearchContract {
@@ -156,7 +156,7 @@ interface SearchContract {
 
 그리고 위의 `SearchContract`를 구현하는 `SearchPresenter`에서는 아래와 같이 만들어놨습니다.
 
-```java
+```kotlin
 package com.byjw.jungwoon.searchPage.presenter
 
 class SearchPresenter(
@@ -182,7 +182,7 @@ class SearchPresenter(
 
 그리고 이를 사용하는 `SearchFragment`의 `onDestroy()` 부분에서 해제합니다.
 
-```java
+```kotlin
 package com.byjw.jungwoon.searchPage
 
 class SearchFragment : Fragment() {

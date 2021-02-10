@@ -164,14 +164,14 @@ MediaItem은 Media을 재생하기 가장 작은 항목으로 Uri를 기반으�
 
 아래 예제는 간단히 `MediaItem`을 만드는 샘플입니다.
 
-```java
+```kotlin
 val mediaItem = MediaItem.fromUri(Uri.parse(videoUrl))
 ```
 
 아례 예제는 `MediaItem`에 여러 `MetaData`를 `추가`하여 생성하는 단계 입니다. 아래에는 `MediaId`와 `TAG`만 달았는데 그 이외에도 `DRM`이나 `광고`등 다양한
 설정들을 세팅할 수 있습니다. 자세한 내용은 [여기](https://exoplayer.dev/media-items.html) 를 통해 좀 더 자세히 알아볼 수 있습니다.
 
-```java
+```kotlin
 val extendMediaItem = MediaItem.Builder().apply { 
     setUri(Uri.parse(url))
     setMediaId("video-01")
@@ -188,7 +188,7 @@ val extendMediaItem = MediaItem.Builder().apply {
 
 - ProgressiveMediaSource : 일반 미디어 파일 형식 재생
 
-```java
+```kotlin
 // 비디오 URL
 val url = "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
 
@@ -203,7 +203,7 @@ val progressiveMediaSource = ProgressiveMediaSource.Factory(factory).createMedia
 
 - DashMediaSource : DASH 형식 재생
 
-```java
+```kotlin
 // 비디오 URL
 val url = "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
 
@@ -218,7 +218,7 @@ val dashMediaSource = DashMediaSource.Factory(factory).createMediaSource(mediaIt
 
 - SsMediaSource : SmoothStreaming 형식 재생
 
-```java
+```kotlin
 // 비디오 URL
 val url = "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
 
@@ -233,7 +233,7 @@ val ssMediaSource = SsMediaSource.Factory(factory).createMediaSource(mediaItem)
 
 - HlsMediaSource : HLS 형식 재생
 
-```java
+```kotlin
 // 비디오 URL
 val url = "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4"
 
@@ -254,7 +254,7 @@ val hlsMediaSource = HlsMediaSource.Factory(factory).createMediaSource(mediaItem
 TrackSelector는 영상의 Track정보를 세팅하는 역할들 하는 컴포넌트로 비디오의 비트레이트, 비디오 사이즈, 대역폭등 다양한 설정을 도와줍니다.
 아래 예제 이외에도 다양한 옵션들이 있기에 [여기](https://exoplayer.dev/track-selection.html) 를 확인하면 더 자세히 알 수 있습니다.
 
-```java
+```kotlin
 val trackSelector = DefaultTrackSelector(this)
 trackSelector.setParameters(
 trackSelector.buildUponParameters()
@@ -294,7 +294,7 @@ PlayerControlView는 아래와 같이 재생을 도와주는 UI 컴포넌트입�
 
 플레이어의 상태별로 특정 동작을 하도록 리스너를 추가할 수도 있습니다.
 
-```java
+```kotlin
 SimpleExoPlayer.Builder(context).build().apply {
     this.addListener(object : Player.EventListener {
         override fun onPlayerStateChanged(playWhenReady: Boolean, playbackState: Int) {
@@ -326,7 +326,7 @@ SimpleExoPlayer.Builder(context).build().apply {
 캐시를 바로는 사용하는 방법은 (저는)못찾았고, 찾아보니 `DataSource.Factory`를 상속하여 만들어서 사용하는 방법을 찾아서 그 방법에 대해 말해보려고 합니다.
 우선 아래 `CacheDataSourceFactory.kt`를 구현합니다.
 
-```java
+```kotlin
 import android.content.Context
 import com.google.android.exoplayer2.database.ExoDatabaseProvider
 import com.google.android.exoplayer2.upstream.DataSource
@@ -390,7 +390,7 @@ ExoPlayer 테이블을 자체 데이터베이스에서 격리된 상태로 유�
 
 사용 방법은 아래와 같이 사용할 수 있습니다. 바뀌는 부분은 아래 부분으로 `MediaSource` 생성시 `cacheDataSourceFactory`를 이용하여 생성합니다.
 
-```java
+```kotlin
 private val cacheDataSourceFactory = CacheDataSourceFactory(
     context = context,
     maxCacheSize = 50.MB(), // 이 부분은 직접 계산해야합니다.
@@ -525,7 +525,7 @@ dependency {
 ![](https://miro.medium.com/max/1716/1*qN5SAQQ9SgeYLrUNOJPBQw.png)
 
 
-```java
+```kotlin
 package com.global.exoplayer
 
 import android.net.Uri
@@ -584,7 +584,7 @@ class MainActivity : AppCompatActivity() {
 
 만약 사용하려면 매번 만들어진 인스턴스를 `release()`를 통해 풀어주고 사용해야 합니다. 아니면 `PlayerView.switchTargetView()` 메소드를 통해서 만들어놓은 인스턴스를 `재활용`해야합니다.
 
-```java
+```kotlin
 PlayerView.switchTargetView(player 인스턴스, 바꾸기 전 PlayerView, 바꿀 PlayerView)
 or
 simpleExoPlayer.release()

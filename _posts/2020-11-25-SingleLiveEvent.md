@@ -19,7 +19,7 @@ categories:
 예를 들어서 `ViewModel`에서 `startMyActivity()`란 메소드 호출이 발생하면 `View`에서 `감지`하고 있다가 `MyActivity::class.java`를 
 실행해야한다고 가정했을때 `LiveData`를 이용해서 구현하려면 다음과 같이 구현해야 할것입니다.
 
-```java
+```kotlin
 class MyViewModel : BaseViewModel() {
 
     val eventMyActivity: MutableLiveData<Boolean> = MutableLiveData() // 타입은 상관없지만 여기선 Boolean으로 하겠습니다.
@@ -35,7 +35,7 @@ class MyViewModel : BaseViewModel() {
 
 이제 `View`에서는 다음 `LiveData`를 감지하고 있어야 할것입니다.
 
-```java
+```kotlin
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
 여기서 큰 문제가 있는데 `eventMyActivity`란 `LiveData`에 사용하지도 않는 `불필요 값`을 넣어야 합니다.
 심지어 여기서 아래 두 케이스 전부 동작 합니다.
 
-```java
+```kotlin
 
 eventMyActivity.value = true
 eventMyActivity.value = false
@@ -71,7 +71,7 @@ eventMyActivity.value = false
 이에 구글에서는 `SingleLiveEvent`를 예시로 줬습니다.
 우선 아래의 `SingleLiveEvent.kt`를 만듭니다.
 
-```java
+```kotlin
 import androidx.annotation.MainThread
 import androidx.annotation.Nullable
 import androidx.lifecycle.LifecycleOwner
@@ -121,7 +121,7 @@ class SingleLiveEvent<T> : MutableLiveData<T>() {
 
 그 다음에 `ViewModel`에서 다음과 같이 사용할 수 있습니다.
 
-```java
+```kotlin
 import androidx.lifecycle.LiveData
 
 class MyViewModel : BaseViewModel() {
@@ -141,7 +141,7 @@ class MyViewModel : BaseViewModel() {
 
 그 다음 `View`에서는 다음과 같이 사용할 수 있습니다.
 
-```java
+```kotlin
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -169,7 +169,7 @@ class MainActivity : AppCompatActivity() {
 하지만 여기에 또다른 `문제(?)`가 있습니다. 모든 이벤트마다 매번 `SingleLiveData` 객체를 만들어줘야 하는 문제가 발생합니다.
 여기서 위에 글에서는 `Event.kt`를 사용하라고 하였습니다.
 
-```java
+```kotlin
 /**
  * Used as a wrapper for data that is exposed via a LiveData that represents an event.
  */
@@ -200,7 +200,7 @@ open class Event<out T>(private val content: T) {
 
 저는 여기서 만든 `Event`를 `BaseViewModel`이란 모든 `ViewModel`이 상속받는 `SuperClass`에 다음과 같이 넣어 주었습니다.
 
-```java
+```kotlin
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -221,7 +221,7 @@ open class BaseViewModel : ViewModel() {
 
 이렇게 한 다음에 `ViewModel`에서 다음과 같이 사용할 수 있습니다.
 
-```java
+```kotlin
 class MyViewModel : BaseViewModel() {
 
     companion object {
@@ -236,7 +236,7 @@ class MyViewModel : BaseViewModel() {
 
 그 다음 `View`에서는 이렇게 사용합니다.
 
-```
+```kotlin
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -268,7 +268,7 @@ class MainActivity : AppCompatActivity() {
 이렇게 하게 되면 매번 `SingleLiveEvent`를 만들 필요도 없고, `여러 이벤트`에 대해서 `한번에` 처리할 수도 있습니다. 여기서 `MyActivity2`란 액티비티를
 호출하는 이벤트를 하나 더 `추가`해보겠습니다. 
 
-```java
+```kotlin
 class MyViewModel : BaseViewModel() {
 
     companion object {
@@ -286,7 +286,7 @@ class MyViewModel : BaseViewModel() {
 
 그 다음에 `View`에서도 `MyActivity2` 만 호출하는 부분을 추가합니다.
 
-```java
+```kotlin
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

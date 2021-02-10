@@ -51,7 +51,7 @@ UI 관련 작업은 반드시 `Main Thread(=UI Thread)`에서 처리를 해야�
 | removeMessages(what: Int) | void | 전달한 `what` 코드 메시지를 메시지 큐에서 삭제합니다. 
 | handleMessage(msg: Message) | void | 루퍼를 통해 메시지 큐에서 꺼낸  `Message`나 `Runnable` 처리 
 
-```java
+```kotlin
 handler = object : Handler() {
     override fun handleMessage(msg: Message) {
         super.handleMessage(msg)
@@ -79,7 +79,7 @@ handler = object : Handler() {
 | arg2 | 메시지를 통해 전달되는 정수 값2
 | obj | 메시지를 통해 전달되는 객체
 
-```java
+```kotlin
 val message = Message()
 message.what = PROGRESS_CODE
 message.arg1 = count
@@ -124,7 +124,7 @@ sendMessage() -> handleMessage()
 [실행화면]
 
 
-```java
+```kotlin
 package com.byjw.handlerthread
 
 import androidx.appcompat.app.AppCompatActivity
@@ -151,7 +151,7 @@ class MainActivity : AppCompatActivity() {
 ```
 [MainActivity.kt]
 
-```java
+```kotlin
 package com.byjw.handlerthread
 
 import android.os.Handler
@@ -170,7 +170,7 @@ class MyHandler(private val countTextView: TextView) : Handler() {
 ```
 [MyHandler.kt]
 
-```java
+```kotlin
 package com.byjw.handlerthread
 
 interface Contract {
@@ -184,7 +184,7 @@ interface Contract {
 ```
 [Contract.kt]
 
-```java
+```kotlin
 package com.byjw.handlerthread
 
 import android.os.Bundle
@@ -248,7 +248,7 @@ Looper를 생성하고 메시지를 받을 수 있습니다. 이를 쉽게 이�
 `quit()`함수를 호출하기 전까지는 계속 루프를 돌고 `quit()`함수가 호출이 되면 `Looper`가 종료가 됩니다. 액티비티 LifeCycle()에 따라서 Destroy()때 호출하는 식으로
 처리할 수 있습니다.
 
-```java
+```kotlin
 // 별도의 스레드에 Looper와 MessageQueue가 자동으로 생성됨
 val handlerThread = HandlerThread("Jungwoon")
 handlerThread.start()
@@ -261,7 +261,7 @@ Handler(handlerThread.looper).post {
 
 아니면 직접 HandlerThread를 상속받아 처리할 수 있습니다.
 
-```java
+```kotlin
 package com.byjw.handlerthread
 
 import android.os.Handler

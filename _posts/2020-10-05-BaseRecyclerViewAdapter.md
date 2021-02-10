@@ -35,7 +35,7 @@ categories:
 
 먼저 `MainActivity.kt` 에서 RecyclerView에 더미 데이터를 넣어서 넣는 부분입니다.
 
-```java
+```kotlin
 package com.byjw.practice
 
 import androidx.appcompat.app.AppCompatActivity
@@ -95,7 +95,7 @@ class  MainActivity : AppCompatActivity() {
 
 먼저 ViewHolder로 전달받은 데이터를 레이아웃과 연결하는 부분입니다. `(* 이 부분이 공통으로 빠지는 부분입니다.)`
 
-```java
+```kotlin
 package com.byjw.practice
 
 import android.view.View
@@ -215,7 +215,7 @@ class GameViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
 그 다음은 Adapter 부분입니다. `(* 이 부분이 공통으로 빠지는 부분입니다.)`
 
-```java
+```kotlin
 package com.byjw.practice
 
 import android.view.LayoutInflater
@@ -347,7 +347,7 @@ dependencies {
 
 먼저 ViewHolder를 Base로 빼도록 하겠습니다.
 
-```java
+```kotlin
 package com.byjw.practice.base
 
 import android.view.View
@@ -364,7 +364,7 @@ abstract class BindingViewHolder<out T: ViewDataBinding>(view: View) : RecyclerV
 위에서 만들어 놓은 `BindingViewHolder`를 여기서 사용합니다.
 
 
-```java
+```kotlin
 package com.byjw.practice.base
 
 import android.view.LayoutInflater
@@ -529,7 +529,7 @@ fun ImageView.setThumbnail(thumbnail: Int) {
 이제 실질적으로 바뀌는 부분입니다. 위에서 `Base`로 만들어 준 부분 때문에 항상 만들어 주던 `ViewHolder`와 `onCreateViewHolder` 부분을 매번 구현 안해줘도
 되었습니다.
 
-```java
+```kotlin
 package com.byjw.practice
 
 import androidx.annotation.LayoutRes
@@ -550,7 +550,7 @@ class GameAdapter(items: List<GameData>) : BaseRecyclerViewAdapter<GameData, Ite
 
 MainActivity.kt는 동일하게 갑니다.
 
-```java
+```kotlin
 package com.byjw.practice
 
 import androidx.appcompat.app.AppCompatActivity
