@@ -35,7 +35,7 @@ Multipart 말 그대로 메시지(=파일)를 여러 파트로 나누어서 메�
 아래는 API 부분입니다. Retrofit에서 Multipart를 사용하기 위해서는 가장 바깥쪽에 `@Multipart` 를 지정하고
 앞쪽에 `@Part`를 지정해하고 데이터 타입은 `MultipartBody.Part`로 지정하여야 합니다. 
 
-```java
+```kotlin
 interface ReviewApi {
 
     @Multipart // <- 이 부분이 중요 
@@ -53,7 +53,7 @@ interface ReviewApi {
 
 아래 코드는 파일이나 데이터를 `MultipartBody`로 변경하는 부분입니다. 매번 호출해서 사용하기 귀찮아서 `object class`를 만들어 재활용하여 사용하였습니다.
 
-```java
+```kotlin
 import android.net.Uri
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MultipartBody
@@ -87,7 +87,7 @@ object FormDataUtil {
 실제로 api를 호출하여 파일을 업로드 하는 부분입니다.
 api에 들어가야 하는 데이터 타입이 `MultipartBody.Part`이기 때문에 `FormDataUtil` 클래스를 이용하여 `데이터를 변환`하여 전달 해주었습니다.
 
-```java
+```kotlin
 fun writeReview(id: Long, reviewImage: File, reviewType: String) {
 
     val formId = FormDataUtil.getBody("productId", id)
