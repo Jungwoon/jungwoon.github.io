@@ -6,7 +6,6 @@ A free and open-source [Jekyll](https://jekyllrb.com) theme. Great for blogs and
 
 [Demo](https://rohanchandra.github.io/type-theme/)
 
-<<<<<<< HEAD
 - Github Pages
 - Jekyll
 - Markdown
@@ -301,4 +300,3 @@ subtitle: "This is a subtitle"
 
 ## License
 [The MIT License (MIT)](https://github.com/rohanchandra/type-theme/blob/master/LICENSE)
->>>>>>> posting
