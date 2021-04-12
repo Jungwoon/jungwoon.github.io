@@ -174,7 +174,7 @@ data class GameResponse(
 
 여기서는 api 통신을 통해서 가져온 데이터를 위에서 선언한 model에서 가져온다고 해보겠습니다.
 
-```koltin
+```kotlin
 package com.byjw.data.api
  
 import com.byjw.data.model.GameResponse
