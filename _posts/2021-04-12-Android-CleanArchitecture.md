@@ -16,7 +16,7 @@ categories:
 
 ## 클린 아키텍처
 
-클린 아키텍처의 개념은 우리가 잘 알고 있는 Uncle Bob인 로버트.C 마틴의 Clean Architecture에서 시작되었습니다.
+`클린 아키텍처의 개념`은 우리가 잘 알고 있는 Uncle Bob인 로버트.C 마틴의 Clean Architecture에서 시작되었습니다.
 책에서는 서버에 대한 내용이라 안드로이드에 맞게끔 변경된 부분으로 정리를 해보고자 합니다.
 
 ![](https://miro.medium.com/max/4800/1*qCJKf3qh53dGvo4p4etpwQ.jpeg)
