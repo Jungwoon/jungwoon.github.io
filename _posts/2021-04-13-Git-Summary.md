@@ -1,372 +1,351 @@
 ---
 layout: post
-title: "안드로이드에서 클린 아키텍처 구현하기"
+title: "Git(Local) 정리 #1"
 image: '/assets/img/'
-description: 'Implement Clean Architecture on Android'
+description: 'Git(Local) Summary #1'
 tags:
-- Android
+- Git
 categories:
-- Android
+- Git
 ---
 
-지난 3월부터 새로운 회사로 이직을 하게 되었고 해당 회사에서는 Clean Architecture를 사용하고 있었습니다. 처음 접하는 Clean Architecture라 해당 부분
-학습하면서 정리한 내용입니다.
-
----
-
-## 클린 아키텍처
-
-`클린 아키텍처의 개념`은 우리가 잘 알고 있는 Uncle Bob인 로버트.C 마틴의 Clean Architecture에서 시작되었습니다.
-책에서는 서버에 대한 내용이라 안드로이드에 맞게끔 변경된 부분으로 정리를 해보고자 합니다.
-
-![](https://miro.medium.com/max/4800/1*qCJKf3qh53dGvo4p4etpwQ.jpeg)
-> 로버트 C. 마틴의 클린 아키텍처 구조
-
-![](https://miro.medium.com/max/4800/1*3F7Wg1-TBqkhib7O-hXRIQ.png)
-> 레이어간 의존성을 생각했을 때 구조
-
-![](https://miro.medium.com/max/4800/1*4Fz9-oG-KSUzGizIwqoHlQ.png)
-> 그래서 내가 이해한 아키텍처 구조 
-
-### 패키지 구조
-
-패키지 구조는 아래와 같이 크게 3개의 Module로 나눠집니다.
-
-1. domain
-2. data
-3. presentation
-
-![](https://miro.medium.com/max/600/1*KO82aKDvc7UC6mWuvm8x4w.png)
+최근에 이직을 하고 지금까지 혼자 개발한것과 다르게 팀으로 개발을 하다가 보니까 Git을 제대로(?) 사용해야하는 상황이 많아졌습니다. 그래서
+최근에 다시한번 Git 관련 책을 읽으면서 공부한 내용을 정리해보고자 합니다.
 
 ---
 
-### 패키지 의존성
+## Git 이란?
 
-각 레이어마다 모듈을 분리하면 아래와 같이 개별 build.gradle이 생기는데 
-여기에 각각에 계층에서 필요한 레이어만 의존성 주입해주면 
-Clean Architecture와 한방향으로만 의존성을 가지게 됩니다.
+2005년에 리누스 토발즈에 의해서 개발된 대표적인 버전 관리 시스템입니다. (아마 현재는 가장 많이 쓰고 있지 않을까 합니다)
 
-![](https://miro.medium.com/max/4800/1*-FlpFdZpLHkvVfDD9g2tgg.png)
+크게 Local과 Remote로 이루어진 Repository를 별도로 가지고 작업을 할 수 있기 때문에 네트워크가 연결되어 있지 않은 상태에서도 자신의 
+컴퓨터에서 작업을 할 수 있습니다.
 
-Domain Layer는 의존성을 가지지 않습니다.
-![](https://miro.medium.com/max/4800/1*rITsP6CgWOtUBiZkdclh-Q.png)
 
-Data Layer는 Domain에 대한 의존성만 가집니다.
-![](https://miro.medium.com/max/4800/1*HBVRdEfd7wFiMZC_AE6fug.png)
+## Git 설치
 
-Presentation Layer는 Data Layer와 Domain Layer 두개의 의존성을 가집니다
-![](https://miro.medium.com/max/4800/1*0LAPF_MwMkx5DBWJcIyz5A.png)
+Mac을 사용한다면 기본적으로 Git은 설치가 되어 있어서 바로 사용이 가능합니다. 
 
----
+Windows 환경에서는 깃 [공식사이트](https://git-scm.com)에서 직접 다운받아 이용할 수 있습니다. 
 
-### Domain 레이어 (순수 코틀린 or 순수 자바 코드)
+## Git 명령어
 
-![](https://miro.medium.com/max/600/1*E4ap5tk60XOd0NOwNifrUg.png)
+Git의 버전을 확인하는 명령어
 
-- 비즈니스 로직을 포함하며 비즈니스 로직에 필요한 Entity(=Model)와 UseCase와 Repository를 포함합니다.
-- UseCase
-    - 행동들의 최소 단위
-        - ex)
-            - 사용자를 가져오는 UseCase
-            - Token을 가져오는 UseCase
-            - 로그인을 하는 UseCase
-        - 장점
-            - 전체적인 코드 파악과 의존성이 낮아지므로 유지보수에 용이
-        - 단점
-            - 클래스의 양이 많아짐
-    - 개별 기능 or 비즈니스 로직 단위 (=앱에서 일어날 동작)
-    - 보통 한 개의 행동을 담당하고 UseCase의 이름만 보고 이게 무슨 기능을 가졌을지 짐작하고 구분할 수 있어야 합니다. (ex - LoginUseCase)
-    - Domain 레이어는 Presentation 레이어와 Data 레이어와 어떤 의존성도 맺지 않고 독립적이어야 합니다.
-    - UseCase는 Presentation 레이어의 UI에서 어떠한 이벤트나 동작에 의하여 호출되는 방향으로 설계
-    - UseCase 구현은 Data 레이어에서 실제로 어떻게 데이터를 가져올지에 대한 정의는 하지 않고 해당 메서드를 호출하는 방식으로 정의
-    - Domain 레이어에서 Repository Interface 정의
-    - Usecase 구성시 어떤 데이터베이스를 사용했는지에 대한 고민을 하지 않고 적당한 Domain레이어에서 정의한 Repository를 주입
-- Repository
-    - Domain 레이어에서 User와 관련된 행동을 Interface로 정의한 UserRepository 입니다.
-- Model(=Entity)
-    - 프레임워크와 의존성을 가지면 안됩니다.
-    - 다른 프로젝트에서도 동일하게 사용할 수 있는 클래스를 작성합니다.
-
-Domain은 안드로이드 프레임워크에 의존성이 없는 순수한 코틀린 또는 자바 코드만을 사용합니다. (어떤 프레임워크에서도 같이 사용할 수 있습니다.)
-우선 Game이란 데이터 클래스를 만들어보도록 하겠습니다. 
-
-```kotlin
-package com.byjw.domain.model
- 
-import java.math.BigDecimal
- 
-data class Game(
-    val name: String,
-    val genre: String,
-    val manufacture: String,
-    val imageUrl: String,
-    val price: BigDecimal
-)
+```shell
+$ git --version
+git version 2.31.0
 ```
+Git에 있는 명령어들을 확인하는 명령어
 
-그리고 이에대한 비즈니스 로직인 Repository를 선언하도록 하겠습니다. 여기서 선언된 Repository는 data 계층에서 concrete해서 사용합니다.
+```shell
+$ git help
 
-```kotlin
-package com.byjw.domain.repository
- 
-import com.byjw.domain.model.Game
- 
-interface GameRepository {
- 
-    suspend fun getGameInfo(query: String): Game
- 
-    suspend fun getGameList(): List<Game>
- 
-}
-```
+사용법: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
 
-이제 위의 Repository를 이용하여 실제 사용자들이 하는 동작이나 행동인 UseCase를 만들어 보도록 하겠습니다. 이 UseCase는 presenter 계층에서 ViewModel이나 Presenter에 주입하여 사용합니다.
+다음은 여러가지 상황에서 자주 사용하는 깃 명령입니다:
 
-UseCase에는 위에서 만든 repository를 주입하는데 실제 주입되는건 domain에서 만드는 concrete된 repositoryImpl 클래스입니다.
+작업 공간 시작 (참고: git help tutorial)
+   clone             저장소를 복제해 새 디렉터리로 가져옵니다
+   init              빈 깃 저장소를 만들거나 기존 저장소를 다시 초기화합니다
 
-```kotlin
-package com.byjw.domain.usecase
- 
-import com.byjw.domain.model.Game
-import com.byjw.domain.repository.GameRepository
- 
-class GetGameListUseCase(private val repository: GameRepository) {
- 
-    suspend fun invoke(): List<Game> {
-        return repository.getGameList()
-    }
-}
-```
+변경 사항에 대한 작업 (참고: git help everyday)
+   add               파일 내용을 인덱스에 추가합니다
+   mv                파일, 디렉터리, 심볼릭 링크를 옮기거나 이름을 바꿉니다
+   restore           Restore working tree files
+   rm                파일을 작업 폴더에서 제거하고 인덱스에서도 제거합니다
+   sparse-checkout   Initialize and modify the sparse-checkout
 
-### Data 레이어 (Domain 모듈 포함)
+커밋 내역과 상태 보기 (참고: git help revisions)
+   bisect            이진 탐색으로 버그를 만들어낸 커밋을 찾습니다
+   diff              커밋과 커밋 사이, 커밋과 작업 내용 사이 등의 바뀐 점을 봅니다
+   grep              패턴과 일치하는 줄을 표시합니다
+   log               커밋 기록을 표시합니다
+   show              여러가지 종류의 오브젝트를 표시합니다
+   status            작업 폴더 상태를 표시합니다
 
-![](https://miro.medium.com/max/600/1*wvhbovor_NYeS_58OqN_uQ.png)
+커밋 내역을 키우고, 표시하고, 조작하기
+   branch            브랜치를 만들거나, 삭제하거나, 목록을 출력합니다
+   commit            바뀐 사항을 저장소에 기록합니다
+   merge             여러 개의 개발 내역을 하나로 합칩니다
+   rebase            커밋을 다른 베이스 끝의 최상위에서 적용합니다
+   reset             현재 HEAD를 지정한 상태로 재설정화합니다
+   switch            Switch branches
+   tag               태그를 만들거나, 표시하거나, 삭제하거나, GPG 서명을 검증합니다
 
-- Domain레이어에서 설계한 Repository 구현체
-- Data Model
-    - Repository에서 사용하는 DTO
-- Repository
-    - Local (Room or SharedPreference…)
-    - Remote (Server API)
-- DataSource
-    - Local (Room or SharedPreference…)
-        - Remote (Server API)
-- Mapper
-    - 데이터모델에 의해 가져온 데이터를 Entity에 맞게 바꿔주는 매핑 작업을 하여 UseCase 로 반환
-    - Mapper 클래스를 통해 DB로부터 받아온 데이터모델과 UI에 맞는 데이터 모델을 매핑
+협동 작업 (참고: git help workflows)
+   fetch             다른 저장소에서 오브젝트와 레퍼런스를 다운로드합니다
+   pull              다른 저장소 또는 다른 로컬 브랜치에서 가져오거나 통합합니다
+   push              원격 레퍼런스 및 그와 관련된 오브젝트를 업데이트합니다
 
-Model 은 Api 통신을 하거나 DB 통신을 할때, Data Layer에서 사용하는 DTO들을 선언합니다. 여기서는 API 통신을 통해서 받게되는 Response 로 이용하였습니다.
-
-```kotlin
-package com.byjw.data.model
- 
-import com.google.gson.annotations.SerializedName
-import java.math.BigDecimal
- 
-data class GameResponse(
-    @SerializedName("name") val name: String,
-    @SerializedName("genre") val genre: String,
-    @SerializedName("manufacture") val manufacture: String,
-    @SerializedName("imageUrl") val imageUrl: String,
-    @SerializedName("price") val price: BigDecimal
-)
-```
-
-여기서는 api 통신을 통해서 가져온 데이터를 위에서 선언한 model에서 가져온다고 해보겠습니다.
-
-```kotlin
-package com.byjw.data.api
- 
-import com.byjw.data.model.GameResponse
-import retrofit2.http.GET
- 
-interface GameApi {
- 
-    @GET("/game")
-    suspend fun getGame(): GameResponse
- 
-    @GET("/games")
-    suspend fun getGameList(): List<GameResponse>
- 
-}
-```
-
-이를 이용하여 datasource를 만들어줍니다. interface로 필요한 기능들을 선언하고 이에 api(=retrofit)나 dao(=room)을 주입하여 concrete 하는 클래스를 만들어 사용합니다.
-
-```kotlin
-package com.byjw.data.datasource
- 
-import com.byjw.data.model.GameResponse
- 
-interface GameRemoteDataSource {
- 
-    suspend fun getGame(): GameResponse
- 
-    suspend fun getGameList(): List<GameResponse>
- 
-}
- 
-class GameRemoteDataSourceImpl(private val api: GameApi): GameRemoteDataSource {
- 
-    override suspend fun getGame(): GameResponse {
-        return api.getGame()
-    }
- 
-    override suspend fun getGameList(): List<GameResponse> {
-        return api.getGameList()
-    }
- 
-}
-```
-
-이렇게 만들어진 Datasource를 이용하기 위해서 repository를 만듭니다. 여기서 concrete 하는 repository는 domain에 선언한 repository interface를 구현합니다.
-
-```kotlin
-package com.byjw.data.repository
- 
-import com.byjw.data.datasource.GameRemoteDataSource
-import com.byjw.data.mapper.GameMapper
-import com.byjw.domain.model.Game
-import com.byjw.domain.repository.GameRepository
- 
-class GameRepositoryImpl(
-    private val dataSource: GameRemoteDataSource
-): GameRepository {
- 
-    override suspend fun getGameInfo(query: String): Game {
-        // GameMapper를 이용하여 GameResponse -> Game으로 바꿔줍니다.
-        return GameMapper.mapperToGame(dataSource.getGame())
-    }
- 
-    override suspend fun getGameList(): List<Game> {
-        // GameMapper를 이용하여 GameResponseList -> GameList로 바꿔줍니다.
-        return dataSource.getGameList().map {
-            GameMapper.mapperToGame(it)
-        }
-    }
-}
-```
-
-여기서 주의할 점은 domain에 있는 Game 데이터로 바꿔주기 위한 Mapper를 만들어주어야 하는 겁니다. 서로다른 계층간 데이터를 변경하기 위해 Mapper Class를 만들어줍니다.
-
-```kotlin
-package com.byjw.data.mapper
- 
-import com.byjw.data.model.GameResponse
-import com.byjw.domain.model.Game
- 
-object GameMapper {
- 
-    fun mapperToGame(gameResponse: GameResponse): Game {
-        return Game(
-            name = gameResponse.name,
-            genre = gameResponse.genre,
-            manufacture = gameResponse.manufacture,
-            imageUrl = gameResponse.imageUrl,
-            price = gameResponse.price
-        )
-    }
- 
-    fun mapperToGameResponse(game: Game): GameResponse {
-        return  GameResponse(
-            name = game.name,
-            genre = game.genre,
-            manufacture = game.manufacture,
-            imageUrl = game.imageUrl,
-            price = game.price
-        )
-    }
- 
-}
-```
-
-### Presentation 레이어 (Domain 모듈, Data 모듈 포함)
-
-![](https://miro.medium.com/max/744/1*eiPKWc-Gth8-DlT22cxkPw.png)
-
-- UI (Activity, Fragment, View..), Presenter 및 ViewModel을 포함
-- 화면표시와 사용자 액션(=입력)에 대한 처리 등 UI와 직접적으로 관련된 부분을 담당합니다.
-- 내부적으로 프레임워크 의존성을 처리하기 위해 MVP 패턴이나 MVVM 패턴 사용
-
-Presentation Layer에서의 주요 기능은 UI(=Android Framework)와의 상호작용이므로 기존에 많이들 사용하는 MVP 패턴이나 MVVM 패턴을 이용하여 처리할 수 있습니다. 여기서는 AAC의 MVVM 패턴을 적용한 예제를 볼 예정이며, ViewModel에 Domain의 UseCase를 주입하는 형태로 만들어줍니다.
-
-여기서 중요한점은 Domain Layer의 UseCase를 직접 주입해서 비즈니스 모델을 만든다는 점입니다.
-(의존성 주입은 DI Tool인 Degger나 Hilt, Koin등으로 주입을 합니다)
-
-```kotlin
-package com.byjw.cleanarchitecture.viewmodel
- 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.byjw.domain.model.Game
-import com.byjw.domain.usecase.GetGameListUseCase
-import com.byjw.domain.usecase.GetGameUseCase
-import kotlinx.coroutines.launch
- 
-class GameViewModel(
-    private val getGameUseCase: GetGameUseCase,
-    private val getGameListUseCase: GetGameListUseCase
-) : ViewModel() {
- 
-    private val _game: MutableLiveData<Game> = MutableLiveData()
-    val game: LiveData<Game> = _game
- 
-    private val _gameList: MutableLiveData<List<Game>> = MutableLiveData()
-    val gameList: LiveData<List<Game>> = _gameList
- 
- 
-    fun getGame(query: String) {
-        viewModelScope.launch {
-            _game.value = getGameUseCase.invoke(query)
-        }
-    }
- 
-    fun getGameList() {
-        viewModelScope.launch {
-            _gameList.value = getGameListUseCase.invoke()
-        }
-    }
-}
-```
-
-위에서 만든 viewModel은 Activity에서 주입을 시켜서 사용합니다. 아래 코드에서는
-Koin을 이용하여 주입을 시켰고 이를 DataBinding을 사용하여 처리합니다.
-
-여기서부터는 우리가 일반적으로 많이 사용하는 MVP, MVVM, AAC MVVM 등 다양한 디자인 아키텍처를
-이용하여 설계를 하면 됩니다.
-
-```kotlin
-package com.byjw.cleanarchitecture.view
-
-import android.os.Bundle
-import androidx.annotation.LayoutRes
-import com.byjw.cleanarchitecture.R
-import com.byjw.cleanarchitecture.base.BindingActivity
-import com.byjw.cleanarchitecture.databinding.ActivityMainBinding
-import org.koin.androidx.viewmodel.ext.android.getViewModel
-
-class MainActivity : BindingActivity<ActivityMainBinding>() {
-
-    @LayoutRes
-    override fun getLayoutResId() = R.layout.activity_main
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        binding.viewModel = getViewModel()
-        binding.lifecycleOwner = this
-
-    }
-
-}
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
 ```
 
 ---
 
-### 마무리
+## Git 환경설정하기
 
-처음 클린 아키텍처에 대한 내용을 확인하고 흐름을 따라가는게 힘들었습니다. 일단은 제가 생각했을때는
-맨 위쪽에 다이어그램을 확인해보고 이해를 하고자 하면 어느정도 이해가 되실거라 생각합니다. 물론
-처음이라 잘못된 부분도 있을텐데 그럼 편하게 댓글 남겨주시면 확인후에 다시 수정하도록 하겠습니다.
+가장 먼저 Git의 기본적인 사용자 등록 방법입니다. (Local)
+
+```shell
+$ git config user.name "Jungwoon" # 사용자 이름
+$ git config user.email "byjungwoon@gmail.com" # 사용자 메일
+```
+
+만약에 설정한걸 취소하고 싶다면 `--unset`을 아래와 같이 사용합니다.
+
+```shell
+$ git config --unset user.name
+$ git config --unset user.email
+```
+
+Git의 글로벌 사용자 등록 방법입니다. (Global)
+
+```shell
+$ git config --global user.name "Jungwoon"
+$ git config --global user.email "byjungwoon@gmail.com"
+```
+
+이것도 역시 취소하고 싶다면 `--unset`을 사용합니다.
+
+```shell
+$ git config --unset --global user.name
+$ git config --unset --global user.email
+```
+
+Git에 설정된 내용을 확인하고 싶으면 아래 명령어로 확인할 수 있습니다.
+
+```shell
+$ git config --list
+```
+
+아래와 같이 출력이 됩니다.
+
+```text
+credential.helper=osxkeychain
+core.excludesfile=/Users/jungwoon/.gitignore_global
+difftool.sourcetree.cmd=opendiff "$LOCAL" "$REMOTE"
+difftool.sourcetree.path=
+mergetool.sourcetree.cmd=/Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh "$LOCAL" "$REMOTE" -ancestor "$BASE" -merge "$MERGED"
+mergetool.sourcetree.trustexitcode=true
+user.name=Jungwoon
+user.email=byjungwoon.gmail.com
+core.repositoryformatversion=0
+```
+
+---
+
+## Git 세팅하기
+
+Git을 사용하고 싶다면 아래 명령어로 관리하고 싶은 디렉토리 안에서 Git을 초기화 해야 합니다.
+
+```shell
+$ git init
+```
+
+그럼 내부적으로 `.git`이란 숨겨진 디렉토리가 생기면서 설정이 완료됩니다.
+(`.git` 디렉토리를 삭제하면 설정도 다 지워지게 됩니다.)
+
+```shell
+$ ls -al
+
+total 0
+drwxr-xr-x   3 jungwoon  staff    96 May  6 22:33 .
+drwxr-xr-x+ 47 jungwoon  staff  1504 May  6 22:34 ..
+drwxr-xr-x  12 jungwoon  staff   384 Apr 14 21:28 .git
+```
+
+이렇게 되면 `워킹 디렉토리`란 영역으로 바뀌며 Git이 관리를 하는 영역으로 변경됩니다.
+
+```shell
+$ mkdir test # test 디렉토리를 만듭니다.
+$ cd test    # test 디렉토리로 이동합니다.
+$ git init   # test 디렉토리를 git으로 관리하기 위해 초기화 합니다.
+/Users/jungwoon/test/.git/ 안의 빈 깃 저장소를 다시 초기화했습니다
+$ ls -al     # 디렉토리 안을 보면 .git 이 생긴걸 확인할 수 있습니다.
+total 0
+drwxr-xr-x   3 jungwoon  staff    96 Apr 14 00:16 .
+drwxr-xr-x+ 40 jungwoon  staff  1280 Apr 14 00:23 ..
+drwxr-xr-x   9 jungwoon  staff   288 Apr 14 00:16 .git
+```
+`git status 명령어`를 사용하면 아래와 같이 현재 git의 상태를 알 수 있습니다.
+
+```shell
+$ echo "Hello World" > test.txt
+$ ls
+test.txt
+$ cat text.txt
+Hello World
+$ git status
+
+현재 브랜치 master
+
+아직 커밋이 없습니다
+
+추적하지 않는 파일:
+  (커밋할 사항에 포함하려면 "git add <파일>..."을 사용하십시오)
+        test.txt
+
+커밋할 사항을 추가하지 않았지만 추적하지 않는 파일이 있습니다 (추적하려면 "git
+add"를 사용하십시오)
+```
+
+하지만 git은 크게 아래 두 상태를 가집니다.
+
+- tracked(=추적) : Git이 파일 내부의 변화를 감지
+- untracked(=추적하지 않는) : Git이 파일 내부의 변화를 감지하지 않음 
+
+기본적으로 파일이 생성될때 바로 추적하지는 않고 `add 명령어`를 통해서 추적을 하게 됩니다.
+
+```shell
+$ git add test.txt  # 추적하고자 하는 파일 경로
+$ git status
+
+현재 브랜치 master
+
+아직 커밋이 없습니다
+
+커밋할 변경 사항:
+  (스테이지 해제하려면 "git rm --cached <파일>..."을 사용하십시오)
+        새 파일:       test.txt
+```
+
+Git에는 또 다른 아래 두 가지 영역이 있습니다.
+
+- STAGE 영역 : 작업이 끝난 파일이 저장되는 임시 영역 (생성/수정 완료 후 등록된 상태 = 수정 후 Commit 된 상태)
+- UNSTAGE 영역 : 작업이 끝나기 전의 영역 (등록되지 않거나 등록 후 수정된 상태 = 수정 후 Commit 안 된 상태) 
+
+일단 위의 개념은 저런게 있구나 하고 넘어가도록 하겠습니다.
+
+왜냐면 아래 두가지 상태가 더 있기 때문입니다.
+
+- modified(=수정된 상태) : Commit 후 수정이 된 상태
+- unmodified(=수정되지 않은 상태) : Commit 후 수정이 없는 상태
+
+위에서 이미 사용했지만 Git의 상태를 확인하는 명령어는 아래 명령어입니다.
+
+```shell
+$ git status
+
+현재 브랜치 master
+
+아직 커밋이 없습니다
+
+커밋할 변경 사항:
+  (스테이지 해제하려면 "git rm --cached <파일>..."을 사용하십시오)
+        새 파일:       test.txt
+```
+
+추적하기 전 상태(tracked -> untracked 상태)로 변경하기 위해서는 `--cached 옵션`을 사용해야 합니다.
+
+그럼 스테이지 영역에 등록되어서 tracked된 파일을 untracked 상태로 변경할 수 있습니다.
+
+```shell
+$ git rm --cached test.txt # git rm 명령어에 --cached 옵션을 추가합니다.
+rm 'test.txt'
+$ git status
+
+현재 브랜치 master
+커밋할 변경 사항:
+  (use "git restore --staged <file>..." to unstage)
+        삭제함:        test.txt
+
+추적하지 않는 파일:
+  (커밋할 사항에 포함하려면 "git add <파일>..."을 사용하십시오)
+        test.txt
+
+$ ls -al
+drwxr-xr-x   4 jungwoon  staff   128 Apr 14 00:47 .
+drwxr-xr-x+ 40 jungwoon  staff  1280 Apr 14 21:29 ..
+drwxr-xr-x  12 jungwoon  staff   384 Apr 14 21:28 .git
+-rw-r--r--   1 jungwoon  staff    16 Apr 14 00:47 test.txt
+```
+
+단 한 번 이라도 커밋을 했다면 rm이 아니라 reset 명령어를 사용해야 합니다
+
+```shell
+$ git reset test.txt  # 추적을 취소하고자 하는 파일 경로
+```
+
+이번에는 Git의 포인터에 대해서 알아보도록 하겠습니다.
+
+- HEAD : HEAD는 커밋을 가리키는 포인터
+
+Git을 설치하고 처음 커밋할때는 HEAD의 포인터가 없습니다. 최소한 한 번 이상 커밋을 해야만 HEAD가 존재합니다.
+
+그리고 HEAD는 커밋할 때 마다 한 단계씩 이동합니다. 결과적으로 HEAD는 커밋이 변화한 최신 포인터입니다.
+
+- Commit : 변경된 상태를 기록하는 상태
+
+각각의 커밋 시점에서 얼마만큼 변경되었는지 기록이 되며 파일이 tracked 된 상태에서만 Commit을
+할 수 있습니다. 커밋 명령어는 아래와 같습니다.
+
+```shell
+$ git commit
+```
+
+이렇게 하면 Vi Editor가 열리면서 Commit Message를 쓰라고 합니다.
+
+만약에 Vi Editor를 열지않고 바로 메시지를 넣으려면 `-m` 옵션을 같이 사용합니다.
+
+```shell
+$ git commit -m "First Commit" # 따옴표 안에 커밋 메시지를 넣습니다.
+```
+
+커밋을 하기 위해서는 반드시 수정된 파일들이 Stage 영역에 있어야 하는데 그러기 위해서는
+매번 `git add 명령어`를 입력해야 합니다. 이 부분을 한번에 해결해주는 옵션이 `-a` 옵션입니다.
+
+```shell
+$ git commit -a # 스테이지 영역에 등록되지 않은 파일들을 자동으로 등록하고 커밋
+```
+
+그럼 위의 두 개를 조합해보겠습니다. 아래와 같이 명령어를 입력하면 수정된 파일들을 자동으로 등록하면서
+커밋 메시지도 한번에 넣어서 커밋을 할 수 있게 됩니다.
+
+```shell
+$ git commit -am "First Commit"
+```
+
+커밋의 기록을 보고 싶으면 아래 메세지를 이용합니다.
+
+```shell
+$ git log
+commit 47aa28b69059418f05acc9e2cb72197f3cc25558 (HEAD -> master, origin/master, origin/HEAD)
+Author: 박정운 <byjungwoon@gmail.com>
+Date:   Tue Apr 13 00:37:47 2021 +0900
+
+    posting
+
+commit c5f7be0132c2e0f00232d6ca73de329737749b42
+Author: 박정운 <byjungwoon@gmail.com>
+Date:   Mon Apr 12 22:13:43 2021 +0900
+...
+```
+
+만약 커밋 기록을 좀 더 간략히 보고 싶으면 아래와 같이 `--oneline` 옵션을 사용합니다.
+
+나갈때는 `q`를 누릅니다.
+
+```shell
+$ git log --oneline
+
+80866bd (HEAD -> master) posting
+c5f7be0 change syntax css
+6761de4 change syntax css
+62e3b5c change syntax css
+0c0c66f change syntax css
+```
+
+만약 커밋 메시지를 잘못 입력했을때에는 아래 명령어를 입력하여 `Vi Editor`를 이용하여 수정할 수 있습니다.
+
+```shell
+$ git commit --amend
+```
