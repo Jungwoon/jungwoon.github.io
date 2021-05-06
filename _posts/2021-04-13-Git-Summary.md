@@ -96,7 +96,7 @@ See 'git help git' for an overview of the system.
 가장 먼저 Git의 기본적인 사용자 등록 방법입니다. (Local)
 
 ```shell
-$ git config user.name "Jungwoon" # 사용자 이름
+$ git config user.name "Jungwoon"              # 사용자 이름
 $ git config user.email "byjungwoon@gmail.com" # 사용자 메일
 ```
 
@@ -179,18 +179,18 @@ drwxr-xr-x   9 jungwoon  staff   288 Apr 14 00:16 .git
 `git status 명령어`를 사용하면 아래와 같이 현재 git의 상태를 알 수 있습니다.
 
 ```shell
-$ echo "Hello World" > test.txt
-$ ls
+$ echo "Hello World" > test.txt   # "Hello World"란 글자를 가진 test.txt 파일을 만듭니다.
+$ ls                              # 잘 생성될걸 확인할 수 있습니다.
 test.txt
-$ cat text.txt
+$ cat text.txt                    # 확인해보니 글자가 잘 들어가있죠?
 Hello World
-$ git status
+$ git status                      # Git의 상태를 보니 새로 만들어져 추적하지 않은 test.txt 파일이 있는걸 알 수 있습니다.
 
 현재 브랜치 master
 
 아직 커밋이 없습니다
 
-추적하지 않는 파일:
+추적하지 않는 파일:                    # 이 부분을 보면 아직 tracked 되어있지 않았다고 나옵니다.
   (커밋할 사항에 포함하려면 "git add <파일>..."을 사용하십시오)
         test.txt
 
@@ -198,22 +198,26 @@ $ git status
 add"를 사용하십시오)
 ```
 
-하지만 git은 크게 아래 두 상태를 가집니다.
+---
+
+## Git의 상태
+
+위에서 나온 상태는 git이 변화를 추적하는 파일인지 아닌지의 상태입니다.
 
 - tracked(=추적) : Git이 파일 내부의 변화를 감지
 - untracked(=추적하지 않는) : Git이 파일 내부의 변화를 감지하지 않음 
 
-기본적으로 파일이 생성될때 바로 추적하지는 않고 `add 명령어`를 통해서 추적을 하게 됩니다.
+기본적으로 파일이 생성될때 바로 추적하지는 않고 `add 명령어`를 통해서 특정 파일을 추적하겠다고 등록하면 추적을 하게 됩니다.
 
 ```shell
 $ git add test.txt  # 추적하고자 하는 파일 경로
-$ git status
+$ git status        # 잘 변경이 되었는지 Git의 상태를 확인해봅니다.
 
 현재 브랜치 master
 
 아직 커밋이 없습니다
 
-커밋할 변경 사항:
+커밋할 변경 사항:        # 위에서 add를 했기 대문에 tracked 되고 있다고 나옵니다.
   (스테이지 해제하려면 "git rm --cached <파일>..."을 사용하십시오)
         새 파일:       test.txt
 ```
@@ -239,7 +243,7 @@ $ git status
 
 아직 커밋이 없습니다
 
-커밋할 변경 사항:
+커밋할 변경 사항:      # add를 해서 tracked 되었기 때문에 commit을 하라고 나옵니다.
   (스테이지 해제하려면 "git rm --cached <파일>..."을 사용하십시오)
         새 파일:       test.txt
 ```
@@ -269,19 +273,18 @@ drwxr-xr-x  12 jungwoon  staff   384 Apr 14 21:28 .git
 -rw-r--r--   1 jungwoon  staff    16 Apr 14 00:47 test.txt
 ```
 
-단 한 번 이라도 커밋을 했다면 rm이 아니라 reset 명령어를 사용해야 합니다
+단 한 번 이라도 `커밋을 했다면` `rm`이 아니라 `reset` 명령어를 사용해야 합니다
 
 ```shell
 $ git reset test.txt  # 추적을 취소하고자 하는 파일 경로
 ```
 
-이번에는 Git의 포인터에 대해서 알아보도록 하겠습니다.
+---
 
-- HEAD : HEAD는 커밋을 가리키는 포인터
+## Commit(=작업 완료)
 
-Git을 설치하고 처음 커밋할때는 HEAD의 포인터가 없습니다. 최소한 한 번 이상 커밋을 해야만 HEAD가 존재합니다.
-
-그리고 HEAD는 커밋할 때 마다 한 단계씩 이동합니다. 결과적으로 HEAD는 커밋이 변화한 최신 포인터입니다.
+작업을 하고 작업이 완료된 시점을 저장해야 하는데 이 부분을 Commit으로 이해하면 좋습니다.
+그럼 그때 시점으로 저장을 하게 됩니다.
 
 - Commit : 변경된 상태를 기록하는 상태
 
@@ -349,3 +352,13 @@ c5f7be0 change syntax css
 ```shell
 $ git commit --amend
 ```
+---
+## Git의 포인터
+
+이번에는 Git의 포인터에 대해서 알아보도록 하겠습니다.
+
+- HEAD : HEAD는 커밋을 가리키는 포인터
+
+Git을 설치하고 처음 커밋할때는 HEAD의 포인터가 없습니다. 최소한 한 번 이상 커밋을 해야만 HEAD가 존재합니다.
+
+그리고 HEAD는 커밋할 때 마다 한 단계씩 이동합니다. 결과적으로 `HEAD는 커밋이 변화한 최신 포인터`입니다.
