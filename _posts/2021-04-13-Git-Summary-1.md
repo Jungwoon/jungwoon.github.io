@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Git(Local) 정리 #1"
+title: "Git 정리 #1 - 로컬"
 image: '/assets/img/'
-description: 'Git(Local) Summary #1'
+description: 'Git Summary #1 - Local'
 tags:
 - Git
 categories:
