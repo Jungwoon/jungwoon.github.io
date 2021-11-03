@@ -27,7 +27,7 @@ Git은 Local(내 컴퓨터)에 저장하는 공간 외에도 Remote(서버)에 �
 
 ---
 
-### Github의 내 Remote Repository 주소 알기 
+### Github의 내 원격 저장소 주소 알기 
 
 `Github`을 기준으로 해서 설명하겠습니다. 각각의 `Repository`에 들어가면 `Code -> HTTPS` 쪽에 보면 주소를 알 수 있습니다.
 
@@ -36,7 +36,7 @@ Git은 Local(내 컴퓨터)에 저장하는 공간 외에도 Remote(서버)에 �
 이 주소가 원격 주소가 되고 해당 주소를 가지고 `Git`에 원격으로 등록하는 방법에 대해서 알아보도록 하겠습니다.
 (물론 아무나 다 등록할 수 있는건 아니고 권한이 필요합니다.)
 
-### Remote Repository 등록
+### 원격 저장소 등록
 
 위에서 알게된 Repository 주소를 Remote로 등록합니다.
 
@@ -46,9 +46,9 @@ Git은 Local(내 컴퓨터)에 저장하는 공간 외에도 Remote(서버)에 �
 $ git remote add origin https://github.com/Jungwoon/jungwoon.github.io.git
 ```
 
-### Remote Repository 확인
+### 설정된 원격 저장소 확인
 
-Remote가 잘 등록되었는지 확인합니다.
+원격저장소가 잘 등록되었는지 확인합니다.
 
 ```shell
 $ git remote -v
@@ -56,16 +56,16 @@ origin  https://github.com/Jungwoon/jungwoon.github.io.git (fetch)
 origin  https://github.com/Jungwoon/jungwoon.github.io.git (push)
 ```
 
-### Remote Repository 삭제
+### 원격 저장소 삭제
 
 필요가 없어진 원격 저장소를 제거합니다.
 
 ```shell
-# 원경저장소별칭 = origin
+# 원격저장소별칭 = origin
 $ git remote rm origin
 ```
 
-#### Remote Repository 전송
+#### 원격 저장소로 전송
 
 `Local Repository` 의 커밋된 내용들은 `push`를 통해서 `Remote Repository`로 보낼 수 있습니다. 
 
@@ -103,15 +103,40 @@ origin  https://github.com/Jungwoon/jungwoon.github.io.git (fetch)
 origin  https://github.com/Jungwoon/jungwoon.github.io.git (push)
 ```
 
-#### 원격저장소 변경된 내용 최신화 하기
+#### 원격 저장소 변경된 내용 최신화 하기
 
 `fetch` 명령어를 통해서 최신화 할 수 있습니다.
 
 ```shell
 $ git fetch origin
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 4 (delta 3), reused 4 (delta 3), pack-reused 0
+오브젝트 묶음 푸는 중: 100% (4/4), 983 bytes | 327.00 KiB/s, 완료.
+https://github.com/Jungwoon/jungwoon.github.io URL에서
+   5b47eaf..01a7a08  master     -> origin/master
 ```
 
-#### 원격저장소의 내용으로 최신화 하기
+#### 원격 저장소의 내용으로 로컬 저장소 내용과 합치기
+
+`merge` 명령어는 서로다른 저장소의 내용을 하나로 합칠때 사용합니다.
+
+아래 과정은 로컬의 develop 브랜치에 내용을 원격의 develop 브랜치 내용을 가져와 합치는 작업입니다. (보통은 최신화)
+
+> 로컬에서 가지고 있는 develop 내용이 최신화 되어 있지 않으면 변화하지 않기 때문에 fetch를 통해서 먼저 최신화 합니다.
+
+```shell
+# 로컬 develop으로 이동
+$ git checkout develop
+
+# 원격 저장소 별칭 = origin
+# 합치고자 하는 저장소 이름 = develop
+$ git merge origin/develop
+```
+
+
+#### 원격 저장소의 내용으로 최신화 하기
 
 `pull` 명령어를 사용하면 원격에 최신화된 정보를 로컬에 반영할 수 있습니다.
 
