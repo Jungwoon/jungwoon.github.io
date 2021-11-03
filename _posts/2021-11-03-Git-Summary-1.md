@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Git 정리 #1 - 로컬"
+title: "Git 정리 #1 - 로컬 저장소"
 image: '/assets/img/'
 description: 'Git Summary #1 - Local'
 tags:
@@ -18,7 +18,7 @@ categories:
 
 2005년에 리누스 토발즈에 의해서 개발된 대표적인 버전 관리 시스템입니다. (아마 현재는 가장 많이 쓰고 있지 않을까 합니다)
 
-크게 Local과 Remote로 이루어진 Repository를 별도로 가지고 작업을 할 수 있기 때문에 네트워크가 연결되어 있지 않은 상태에서도 자신의 
+크게 `Local`과 `Remote`로 이루어진 `Repository`를 별도로 가지고 작업을 할 수 있기 때문에 네트워크가 연결되어 있지 않은 상태에서도 자신의 
 컴퓨터에서 작업을 할 수 있습니다.
 
 
@@ -353,6 +353,7 @@ c5f7be0 change syntax css
 $ git commit --amend
 ```
 ---
+
 ## Git의 포인터
 
 이번에는 Git의 포인터에 대해서 알아보도록 하겠습니다.

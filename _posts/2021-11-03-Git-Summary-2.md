@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Git 정리 #2 - 원격"
+title: "Git 정리 #2 - 원격 저장소"
 image: '/assets/img/'
 description: 'Git Summary #2 - Remote'
 tags:
@@ -14,13 +14,14 @@ categories:
 
 ---
 
-## Remote Repository
+## 원격 저장소 (=Remote Repository)
 
 Git은 Local(내 컴퓨터)에 저장하는 공간 외에도 Remote(서버)에 저장을 할 수 있습니다.
 
 근데 생각해보면 모두가 같이 코드를 수정해서 합칠때 개별 컴퓨터가 아닌 공통된 공간이 필요하죠 그 공간이 원격 저장소입니다.
 
 원격 공간은 다양한 서비스들을 이용할 수 있는데 보통은 `Github`이나 `Gitlab`등의 서비스를 이용할 것입니다.
+(위의 서비스들을 통해서 Repository를 생성하면 자동으로 원격 저장소가 생성됩니다.)
 
 여기에서 각각의 프로젝트 공간을 `Repository`라고 하는데, `Local(내 컴퓨터)`에서 사용할때는 `Local Repository`라고 하고,
 `Remote(서버)`에 있다면 `Remote Repository`라고 합니다.
@@ -38,17 +39,17 @@ Git은 Local(내 컴퓨터)에 저장하는 공간 외에도 Remote(서버)에 �
 
 ### 원격 저장소 등록
 
-위에서 알게된 Repository 주소를 Remote로 등록합니다.
+위에서 알게된 원격 저장소 주소를 `origin`란 별칭으로 등록합니다.
 
 ```shell
-# 원격저장소별칭 = origin
+# 원격 저장소 별칭 = origin
 # 복사한 주소 = https://github.com/Jungwoon/jungwoon.github.io.git
 $ git remote add origin https://github.com/Jungwoon/jungwoon.github.io.git
 ```
 
 ### 설정된 원격 저장소 확인
 
-원격저장소가 잘 등록되었는지 확인합니다.
+원격 저장소가 잘 등록되었는지 확인합니다.
 
 ```shell
 $ git remote -v
@@ -61,7 +62,7 @@ origin  https://github.com/Jungwoon/jungwoon.github.io.git (push)
 필요가 없어진 원격 저장소를 제거합니다.
 
 ```shell
-# 원격저장소별칭 = origin
+# 원격 저장소 별칭 = origin
 $ git remote rm origin
 ```
 
@@ -70,7 +71,7 @@ $ git remote rm origin
 `Local Repository` 의 커밋된 내용들은 `push`를 통해서 `Remote Repository`로 보낼 수 있습니다. 
 
 ```shell
-# 원격저장소별칭 = remote
+# 원격 저장소 별칭 = remote
 # 브랜치명 = develop
 $ git push remote develop
 ```
@@ -127,7 +128,7 @@ https://github.com/Jungwoon/jungwoon.github.io URL에서
 > 로컬에서 가지고 있는 develop 내용이 최신화 되어 있지 않으면 변화하지 않기 때문에 fetch를 통해서 먼저 최신화 합니다.
 
 ```shell
-# 로컬 develop으로 이동
+# 로컬의 develop 브랜치로 이동
 $ git checkout develop
 
 # 원격 저장소 별칭 = origin
@@ -157,7 +158,7 @@ https://github.com/Jungwoon/jungwoon.github.io URL에서
    de1ecc9..5b47eaf  master     -> origin/master
 업데이트 중 de1ecc9..5b47eaf
 Fast-forward
- _posts/2021-04-14-Git-Summary-2.md | 112 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ _posts/2021-11-03-Git-Summary-2.md | 112 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  1 file changed, 112 insertions(+)
- create mode 100644 _posts/2021-04-14-Git-Summary-2.md
+ create mode 100644 _posts/2021-11-03-Git-Summary-2.md
 ```
