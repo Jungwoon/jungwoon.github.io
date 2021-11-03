@@ -103,10 +103,36 @@ origin  https://github.com/Jungwoon/jungwoon.github.io.git (fetch)
 origin  https://github.com/Jungwoon/jungwoon.github.io.git (push)
 ```
 
-#### 원격저장소의 내용으로 최신화 하기
+#### 원격저장소 변경된 내용 최신화 하기
+
+`fetch` 명령어를 통해서 최신화 할 수 있습니다.
 
 ```shell
-$  git pull
-이미 업데이트 상태입니다.
+$ git fetch origin
 ```
 
+#### 원격저장소의 내용으로 최신화 하기
+
+`pull` 명령어를 사용하면 원격에 최신화된 정보를 로컬에 반영할 수 있습니다.
+
+가져오는 정보는 로컬의 정보와 비교하여 변경된 부분만 가져옵니다.
+
+실제로 `pull` 명령어는 아래 명령어 두개를 합한 동작을 합니다.  
+
+> `pull` 명령어는 = `fetch` 명령어(최신화) + `merge` 명령어(로컬과 합치기)
+
+```shell
+$ git pull
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 4 (delta 2), reused 4 (delta 2), pack-reused 0
+오브젝트 묶음 푸는 중: 100% (4/4), 2.01 KiB | 685.00 KiB/s, 완료.
+https://github.com/Jungwoon/jungwoon.github.io URL에서
+   de1ecc9..5b47eaf  master     -> origin/master
+업데이트 중 de1ecc9..5b47eaf
+Fast-forward
+ _posts/2021-04-14-Git-Summary-2.md | 112 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 112 insertions(+)
+ create mode 100644 _posts/2021-04-14-Git-Summary-2.md
+```
