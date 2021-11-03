@@ -66,7 +66,7 @@ origin  https://github.com/Jungwoon/jungwoon.github.io.git (push)
 $ git remote rm origin
 ```
 
-#### 원격 저장소로 전송
+### 원격 저장소로 전송
 
 `Local Repository` 의 커밋된 내용들은 `push`를 통해서 `Remote Repository`로 보낼 수 있습니다. 
 
@@ -76,7 +76,7 @@ $ git remote rm origin
 $ git push remote develop
 ```
 
-#### Remote Repository 복사하기
+### Remote Repository 복사하기
 
 `clone` 명령어를 이용하면 원격 저장소에 정보와 함께 기본적인 git 세팅까지 된 상태로 다운받을 수 있습니다.
 
@@ -104,7 +104,7 @@ origin  https://github.com/Jungwoon/jungwoon.github.io.git (fetch)
 origin  https://github.com/Jungwoon/jungwoon.github.io.git (push)
 ```
 
-#### 원격 저장소 변경된 내용 최신화 하기
+### 원격 저장소 변경된 내용 최신화 하기
 
 `fetch` 명령어를 통해서 최신화 할 수 있습니다.
 
@@ -119,7 +119,7 @@ https://github.com/Jungwoon/jungwoon.github.io URL에서
    5b47eaf..01a7a08  master     -> origin/master
 ```
 
-#### 원격 저장소의 내용으로 로컬 저장소 내용과 합치기
+### 원격 저장소의 내용으로 로컬 저장소 내용과 합치기
 
 `merge` 명령어는 서로다른 저장소의 내용을 하나로 합칠때 사용합니다.
 
