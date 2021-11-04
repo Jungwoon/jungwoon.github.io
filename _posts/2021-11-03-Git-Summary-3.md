@@ -116,3 +116,37 @@ $ git branch -v
 (master) $ git branch -d develop
 develop 브랜치 삭제 (과거 c69b87a).
 ```
+
+#### 업스트림 트래킹
+
+브랜치를 원격 저장소의 특정 브랜치를 바라보게 설정하고 싶을때 아래와 같이 사용할 수 있습니다.
+
+`-u` 옵션을 사용하면 자동으로 원격 저장소가 설정이 되기 때문에 추후에 `git push` 만으로 원격에 업로드 할 수 있습니다.
+
+```shell
+# 원격 저장소 = upstream
+# 선택한 브랜치 = develop
+# 아래 develop을 upstream에 업로드 한다는 의미입니다.
+$ git push -u upstream develop
+```
+
+각각의 브랜치의 트래킹 브랜치를 확인하고 싶으면 아래 명령어를 사용합니다.
+
+```shell
+(master) $ git barnch -vv
+* master 771ff76 [origin/master] Posting
+```
+
+기존에 있는 브랜치를 업스트림에 연결하려면
+
+```shell
+# 로컬의 develop 브랜치를 upstream에 있는 develop에 연결한다는 의미입니다.
+# --set-upstream-to 는 -u 로 생략 가능
+(develop) $ git barnch --set-upstream-to upstream/develop 
+```
+
+푸시를 하면서 연결을 하려면 아래 명령어를 사용할 수 있습니다.
+
+```shell
+(develop) $ git push --set-upstream upstream develop 
+```
