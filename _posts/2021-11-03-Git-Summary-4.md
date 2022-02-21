@@ -2,7 +2,7 @@
 layout: post
 title: "Git 정리 #4 - 병합"
 image: '/assets/img/'
-description: 'Git Summary #3 - Merge & Rebase'
+description: 'Git Summary #4 - Merge'
 tags:
 - Git
 categories:
