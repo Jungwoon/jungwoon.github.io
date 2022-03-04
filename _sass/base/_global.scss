@@ -72,8 +72,10 @@ td {
 th {
   vertical-align: bottom;
 }
-code {
+code .language-plaintext .highlighter-rouge {
+  background-color: #f8f8f8;
   color: #1ABC9C;
+  padding: .2px;
 }
 table,
 dl,
