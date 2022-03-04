@@ -73,9 +73,10 @@ th {
   vertical-align: bottom;
 }
 code.language-plaintext.highlighter-rouge {
+  border-radius: 25px;
   color: #1ABC9C;
-  background-color: #383838;
-  padding: 2px;
+  background: #d0d0d0;
+  padding: 3px;
 }
 table,
 dl,
