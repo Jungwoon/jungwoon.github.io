@@ -20,6 +20,8 @@ categories:
 
 이때 사용할 수 있는게 `Reset`과 `Revert` 입니다.
 
+테스트 와 `테스트`
+
 ---
 
 ### Reset
