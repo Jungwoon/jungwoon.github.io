@@ -22,13 +22,18 @@ layout: default
         <p class="meta">
           {{ post.date | date: "%B %-d, %Y" }}
         </p>
+        <p>
+          <a class="button" href="{{ post.url | relative_url }}">
+            {{ site.theme_settings.str_continue_reading }}
+          </a>
+        </p>
       </header>
-      <div class="excerpt">
-        {{ post.excerpt }}
-        <a class="button" href="{{ post.url | relative_url }}">
-          {{ site.theme_settings.str_continue_reading }}
-        </a>
-      </div>
+<!--      <div class="excerpt">-->
+<!--        {{ post.excerpt }}-->
+<!--        <a class="button" href="{{ post.url | relative_url }}">-->
+<!--          {{ site.theme_settings.str_continue_reading }}-->
+<!--        </a>-->
+<!--      </div>-->
     </div>
     {% endfor %}
   </div>
