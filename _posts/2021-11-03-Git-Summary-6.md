@@ -5,7 +5,7 @@ image: '/assets/img/'
 description: 'Git Summary #6 - Revert'
 tags:
 - Git
-  categories:
+categories:
 - Git
 ---
 
