@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Jetpack Compose #1"
+title: "Jetpack Compose"
 image: '/assets/img/'
-description: 'Jetpack Compose #1'
+description: 'Jetpack Compose'
 tags:
 - Jetpack
 - Compose
@@ -19,7 +19,7 @@ categories:
 
 ## 지금까지의 방식
 
-지금까지 `Android`의 뷰와 레이아웃은 XML을 통해서 `UI 계층 트리`를 구성하여 만들었었고 이로 인해서 UI를 변경해야하는 이벤트가 발생하면
+지금까지 `Android`의 `뷰`와 `레이아웃`은 XML을 통해서 `UI 계층 트리`를 구성하여 만들었었고 이로 인해서 UI를 변경해야하는 이벤트가 발생하면
 `findViewById()`로 트리를 찾고 `setter()`나 `getter()`를 통해서 위젯의 내부 상태를 변경하였습니다.
 이렇게 수동으로 뷰를 조작할 경우 복잡도가 올라가서 오류가 발생할 가능성이 커지고 그로 인해 유지 관리가 힘들어지게 됩니다.
 
@@ -413,3 +413,327 @@ fun MoviesScreen(movies: List<Movie>) {
 ```
 
 ![](https://developer.android.com/images/jetpack/compose/lifecycle-newelement-top-keys.png?authuser=1&hl=ko)
+
+---
+
+## 수정자
+
+수정자를 이용하면 레이아웃, 크기, 동작 및 모양 변경 등의 작업들을 처리할 수 있습니다.
+
+```kotlin
+@Composable
+private fun Greeting(name: String) {
+  Column(modifier = Modifier
+    .padding(24.dp)
+    .fillMaxWidth()
+  ) {
+    Text(text = "Hello,")
+    Text(text = name)
+  }
+}
+```
+
+수정자는 `순서`가 매우 중요합니다.
+
+먼저 아래 코드에서는 `clickable`이 `padding` 적용 전에 적용되었기 때문에 클릭시에 `padding이 적용되기 전 영역`이 전부 클릭이 됩니다.
+
+```kotlin
+@Composable
+fun Card(onClick: () -> Unit) {
+    Column(
+        Modifier
+            .clickable(onClick = onClick)
+            .padding(16.dp)
+            .fillMaxWidth()
+    ) {
+        // rest of the implementation
+    }
+}
+```
+반대로 아래 코드는 `padding`을 먼저 적용을 하고 `clickable`이 적용이 되었기 때문에 `padding이 적용된 영역`이 클릭이 됩니다.
+
+```kotlin
+@Composable
+fun Card(onClick: () -> Unit) {
+    Column(
+        Modifier
+            .padding(16.dp)
+            .clickable(onClick = onClick)
+            .fillMaxWidth()
+    ) {
+        // rest of the implementation
+    }
+}
+```
+
+컴포즈는 기본적으로 `상위 레이아웃의 특성(크기, 너비, 색 등등)`을 그대로 하위 레이아웃이 가져옵니다.
+하지만 `상위 레이아웃의 특성을 무시`하고 `size`를 정하고 싶으면 `requireSize`를 이용합니다.
+
+```kotlin
+@Composable
+fun ArtistCard(/*...*/) {
+    Row(
+        modifier = Modifier.size(width = 400.dp, height = 100.dp)
+    ) {
+        Image(
+            // 위의 높이는 100dp 이지만 requiredSized에 의해서 150dp가 됨
+            modifier = Modifier.requiredSize(150.dp) 
+        )
+        Column { /*...*/ }
+    }
+}
+```
+
+> 수정자에 대한 자세한 내용은 (다음 링크)[https://developer.android.com/jetpack/compose/modifiers-list?authuser=1&hl=ko]에서 확인 가능합니다.
+
+---
+
+## Compose의 부수 효과
+
+컴포저블에서는 `부수 효과`가 없어야 하지만 케이스에 따라서 필요한 경우에는 컴포저블의 수명 주기를 고려해서 `부수 효과`를 호출해야 합니다. 그래서
+이러한 부수 효과를 예측 가능하게 실행하기 위해서 `Effect API`를 사용합니다.
+
+> 부수 효과 : 구성 가능한 함수의 범위 밖에서 발생하는 앱 상태에 관한 변경사항
+
+---
+
+### LaunchedEffect
+
+`컴포저블 함수내`에서 `Suspend Function`을 사용하기 위해서는 `LaunchedEffect`를 사용해야 합니다.
+
+```kotlin
+@Composable
+fun MyScreen(
+    state: UiState<List<Movie>>,
+    scaffoldState: ScaffoldState = rememberScaffoldState()
+) {
+
+    if (state.hasError) {
+        // `scaffoldState.snackbarHostState`의 상태변화에 따라 실행됩니다.
+        LaunchedEffect(scaffoldState.snackbarHostState) {
+            // 아래 함수는 코루틴을 이용한 정지함수로 `LauchedEffect` 블록 안에 있어야 합니다.
+            scaffoldState.snackbarHostState.showSnackbar(
+                message = "Error message",
+                actionLabel = "Retry message"
+            )
+        }
+    }
+
+    Scaffold(scaffoldState = scaffoldState) {
+        /* ... */
+    }
+}
+```
+
+---
+
+### rememberCoroutineScope
+
+`LaunchedEffect`는 컴포저블 함수내에서만 사용할 수 있기 때문에 밖에서 사용하면서, 컴포지션 종료시에 자동으로 취소되도록 하려면 `rememberCoroutineScope`를
+사용해야 합니다.
+
+```kotlin
+@Composable
+fun MoviesScreen(scaffoldState: ScaffoldState = rememberScaffoldState()) {
+
+    // scope를 컴포저블 함수 바깥에서 정의
+    val scope = rememberCoroutineScope()
+
+    Scaffold(scaffoldState = scaffoldState) {
+        Column {
+            /* ... */
+            Button(
+                onClick = {
+                    scope.launch {
+                        // 정지함수 호출
+                        scaffoldState.snackbarHostState.showSnackbar("Something happened!")
+                    }
+                }
+            ) {
+                Text("Press me")
+            }
+        }
+    }
+}
+```
+---
+
+### rememberUpdatedState
+
+주요 매개변수의 상태가 바뀌면 `LauchedEffect`가 다시 시작되는데, 이때, 다시 시작하지 않게 하기 위해서는 `rememberUpdatedState`를 사용하여야 합니다.
+
+```kotlin
+@Composable
+fun LandingScreen(onTimeout: () -> Unit) {
+    
+    // 여기서 이렇게 선언을 해줘야지 아래에서 상태변경시 다시 시작하지 않습니다.
+    val currentOnTimeout by rememberUpdatedState(onTimeout)
+
+    LaunchedEffect(true) {
+        delay(SplashWaitTimeMillis)
+        currentOnTimeout()
+    }
+
+    /* Landing screen content */
+}
+```
+
+
+---
+
+### DisposableEffect
+
+변화가 일어났을때 직접 `정리`가 필요한 경우에는 `DisposableEffect`를 사용합니다.
+`DisposableEffect`dml `키`가 `변경`되면 컴포저블이 현재 효과를 삭제(정리)하고 효과를 다시 호출하여 재설정해야 합니다.
+
+```kotlin
+@Composable
+fun HomeScreen(
+    lifecycleOwner: LifecycleOwner = LocalLifecycleOwner.current,
+    onStart: () -> Unit,
+    onStop: () -> Unit
+) {
+    val currentOnStart by rememberUpdatedState(onStart)
+    val currentOnStop by rememberUpdatedState(onStop)
+
+    // `lifecycleOwner`의 상태 변화에 따라서 호출됩니다.
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_START) {
+                currentOnStart()
+            } else if (event == Lifecycle.Event.ON_STOP) {
+                currentOnStop()
+            }
+        }
+
+        lifecycleOwner.lifecycle.addObserver(observer)
+        
+        // Dispose 시에 Observer를 제거해줍니다.
+        onDispose {
+            lifecycleOwner.lifecycle.removeObserver(observer)
+        }
+    }
+
+    /* Home screen content */
+}
+```
+
+---
+
+### SideEffect
+
+Compose 상태를 Compose에서 관리하지 않는 객체와 공유하려면 리컴포지션 성공 시마다 호출되는 `SideEffect`를 사용합니다.
+
+```kotlin
+@Composable
+fun rememberAnalytics(user: User): FirebaseAnalytics {
+    val analytics: FirebaseAnalytics = remember {
+        /* ... */
+    }
+
+    SideEffect {
+        analytics.setUserProperty("userType", user.userType)
+    }
+    return analytics
+}
+```
+
+---
+
+### produceState
+
+`State`를 해야하는 경우에는 `produceState`를 사용합니다.
+
+`Flow`, `LiveData`, `RxJava` 같은 `비 Compose상태 -> Compose 상태`로 반환하기 위해서는 `produceState`를 사용해야 합니다.
+컴포지션이 시작하면 프로듀서가 실행되고, 컴포지션을 종료하면 취소됩니다.
+
+`반환된 State`는 합성되며 `동일한 값`을 설정해도 `리컴포지션`이 일어나지 않습니다.
+
+`구독을 삭제`할때에는 `awaitDispose 함수`를 사용해야 합니다.
+
+```kotlin
+@Composable
+fun loadNetworkImage(
+    url: String,
+    imageRepository: ImageRepository
+): State<Result<Image>> {
+
+    return produceState<Result<Image>>(initialValue = Result.Loading, url, imageRepository) {
+        val image = imageRepository.load(url)
+
+        value = if (image == null) {
+            Result.Error
+        } else {
+            Result.Success(image)
+        }
+    }
+}
+```
+
+
+---
+
+### derivedStateOf
+
+여러개의 상태를 바라보다가 하나라도 변경되면 호출이 필요할때는 `derivedStateOf`를 사용합니다.
+
+```kotlin
+@Composable
+fun TodoList(highPriorityKeywords: List<String> = listOf("Review", "Unblock", "Compose")) {
+
+    val todoTasks = remember { mutableStateListOf<String>() }
+
+    // highPriorityKeywords의 상태를 따라 재구성됩니다.
+    val highPriorityTasks by remember(highPriorityKeywords) {
+        // 하지만 여기에 todoTasks의 상태도 따라가게끔 추가됩니다.
+        derivedStateOf { 
+            todoTasks.filter { 
+                it.containsWord(highPriorityKeywords) 
+            } 
+        }
+    }
+
+    Box(Modifier.fillMaxSize()) {
+        LazyColumn {
+            items(highPriorityTasks) { /* ... */ }
+            items(todoTasks) { /* ... */ }
+        }
+        /* Rest of the UI where users can add elements to the list */
+    }
+}
+```
+
+---
+
+### snapshotFlow
+
+`State<T> 객체`를 `콜드 Flow`로 변환합니다.
+`snapshotFlow` 블록 내의 State 객체의 변경이 되었을때 새 값이 이전에 내보낸 값과 같지 않은 경우 Flow에서 새 값을 수집기에 내보냅니다
+
+```kotlin
+val listState = rememberLazyListState()
+
+LazyColumn(state = listState) {
+    // ...
+}
+
+LaunchedEffect(listState) {
+    snapshotFlow { listState.firstVisibleItemIndex }
+        .map { index -> index > 0 }
+        .distinctUntilChanged()
+        .filter { it == true }
+        .collect {
+            MyAnalyticsService.sendScrolledPastFirstItemEvent()
+        }
+}
+```
+
+---
+
+## Compose의 단계
+
+![](https://developer.android.com/images/jetpack/compose/phases-3-phases.svg)
+
+1. Composition : Composable 함수를 싱행하여 UI를 만듭니다.
+2. Layout : UI를 측정하고 배치합니다.
+3. Drawing : UI가 실제 캠퍼스에 그려집니다.
