@@ -18,7 +18,7 @@ categories:
 
 - `결과를 갖는` 비동기 작업을 수행합니다.
 - `Deferred`는 `Job`을 상속합니다.
-- 다른 언어의 Future, Promises 와 동ㅇ리합니다.
+- 다른 언어의 Future, Promises 와 동일합니다.
 - 객체를 반환하며, 객체는 비동기 작업이 완료될 때까지 비어 있습니다.
 - `Async()`를 사용해 `Deferred`를 생성합니다.
 
@@ -53,9 +53,9 @@ fun main() = runBlocking {
 
 ---
 
-### Deferred 에외
+### Deferred 예외
 
-Deferred는 Job과 달리 처리되지 않은 예외를 자동으로 전파하지 않습니다. 왜냐하면 Deferred는 결과를 대기할것으로 예상하였기 때문입니다.
+`Deferred`는 `Job`과 달리 처리되지 않은 예외를 자동으로 전파하지 않습니다. 왜냐하면 `Deferred`는 결과를 대기할것으로 예상하였기 때문입니다.
 실행이 성공했는지 확인하는 것은 결국 사용자의 역할입니다.
 
 ```kotlin
@@ -75,7 +75,7 @@ fun main() = runBlocking {
 정상 실행
 ```
 
-만약에 결과를 받기 위해 await()을 사용한다면 예외가 전파됩니다.
+만약에 결과를 받기 위해 `await()`을 사용한다면 예외가 전파됩니다.
 
 ```kotlin
 import kotlinx.coroutines.*
@@ -104,7 +104,7 @@ Exception in thread "main" java.lang.Exception: Exception Test
 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:697)
 ```
 
-아래와 같이 try-catch 블록을 사용해 예외를 처리할 수 있습니다.
+아래와 같이 `try-catch` 블록을 사용해 예외를 처리할 수 있습니다.
 
 ```kotlin
 import kotlinx.coroutines.*
