@@ -286,4 +286,4 @@ fun main() = runBlocking {
 - `Sequence`는 상태가 없고 각 호출 후에는 자체적으로 Reset 됩니다. 인덱스를 가지고 한번에 여러 그룹을 얻을 수 있습니다.
 - `Iterator`와 `Sequence`는 생성한 후에는 일시 중단할 수 있지만 실행 중에는 일시 중단할 수 없기 때문에 비동기 작업이 필요 없는 경우에 적합합니다.
 - `Producer`는 생성 후, 실행 후 언제든지 중단할 수 있습니다.
-  - `Producer`는 `suspend 연산`이나 Coroutine에서만 호출할 수 있습니다.
+- `Producer`는 `suspend 연산`이나 Coroutine에서만 호출할 수 있습니다.
