@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "코틀린 동시성 프로그래밍 - Deferred"
+title: "코틀린 동시성 프로그래밍 #2 - Deferred"
 image: '/assets/img/'
 description: 'Kotlin Concurrency'
 tags:

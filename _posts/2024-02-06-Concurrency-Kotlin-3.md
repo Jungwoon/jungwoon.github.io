@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "코틀린 동시성 프로그래밍 - Dispatcher"
+title: "코틀린 동시성 프로그래밍 #3 - Dispatcher"
 image: '/assets/img/'
 description: 'Kotlin Concurrency'
 tags:

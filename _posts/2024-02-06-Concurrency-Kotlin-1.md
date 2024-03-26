@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "코틀린 동시성 프로그래밍 - Job"
+title: "코틀린 동시성 프로그래밍 #1 - Job"
 image: '/assets/img/'
 description: 'Kotlin Concurrency'
 tags:

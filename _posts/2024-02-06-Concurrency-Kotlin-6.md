@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "코틀린 동시성 프로그래밍 - 원자성 위반, 스레드 한정, 액터 그리고 뮤텍스"
+title: "코틀린 동시성 프로그래밍 #6 - 원자성 위반, 스레드 한정, 액터 그리고 뮤텍스"
 image: '/assets/img/'
 description: 'Kotlin Concurrency'
 tags:
